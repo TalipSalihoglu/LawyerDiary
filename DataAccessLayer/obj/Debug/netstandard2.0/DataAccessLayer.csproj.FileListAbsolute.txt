@@ -1,0 +1,12 @@
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.deps.json
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.dll
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.pdb
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\bin\Debug\netstandard2.0\EntityLayer.dll
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\bin\Debug\netstandard2.0\EntityLayer.pdb
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.dll
+C:\Users\EV\Desktop\LawyerDairy\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.pdb
