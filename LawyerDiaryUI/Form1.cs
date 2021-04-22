@@ -56,5 +56,40 @@ namespace LawyerDiaryUI
             }
             label1.Text = Userid.ToString();
        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LawyerManager lm = new LawyerManager(new LawyerDal());
+            //Lawyer p = new Lawyer()
+            //{
+            //    Name = "Burak",
+            //    Address = "Görükle/Bursa",
+            //    Email = "burak@hotmail.com",
+            //    Password = "121212",
+            //};
+            //lm.Add(p);
+            var l=lm.Get(2);
+            l.Email = "burakkk@hotmail.com";
+            lm.Update(l);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //var date1 = new DateTime(2008, 3, 1, 7, 0, 0);
+            // Displays 01/03/2008 07:00:00
+            CaseManger cm = new CaseManger(new CaseDal());
+            Case c = new Case()
+            {
+                ClientId = 4,
+                Topic = "boşanma",
+                Description = "boşanma davası",
+                Status = true,
+                CaseDate = new DateTime(2021, 4, 5, 15, 30, 0),
+                CourtId = 1,
+                LawyerId=2,
+            };
+            cm.Add(c);
+           
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace EntityLayer.Concrete
         public bool Status { get; set; }
         public DateTime CaseDate { get; set; }
 
+        public int LawyerId { get; set; }
         public int CourtId { get; set; }
         public virtual Court Court{ get; set; }
 

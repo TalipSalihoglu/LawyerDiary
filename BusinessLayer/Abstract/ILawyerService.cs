@@ -10,7 +10,6 @@ namespace BusinessLayer.Abstract
         Lawyer Get(int id);
         void Add(Lawyer lawyer);
         void Update(Lawyer lawyer);
-        //void Delete(Lawyer lawyer);
         int Login(string email,string password);
     }
 }
