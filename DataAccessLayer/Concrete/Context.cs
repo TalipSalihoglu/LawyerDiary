@@ -20,5 +20,6 @@ namespace DataAccessLayer.Concrete
         public DbSet<Court> Courts{ get; set; }
         public DbSet<Appointment> Appointments{ get; set; }
         public DbSet<Bill> Bills{ get; set; }
+        public DbSet<ToDo> ToDos { get; set; }
     }
 }
