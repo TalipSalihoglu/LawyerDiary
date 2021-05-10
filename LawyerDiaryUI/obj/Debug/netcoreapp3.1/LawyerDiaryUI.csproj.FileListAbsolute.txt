@@ -118,3 +118,4 @@ C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.dll
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.pdb
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.genruntimeconfig.cache
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.Form_Appointment.resources
