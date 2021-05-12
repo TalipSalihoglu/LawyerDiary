@@ -17,7 +17,7 @@ namespace LawyerDiaryUI
         {
             InitializeComponent();
         }
-        Form1 form1 ;
+        //Form1 form1 ;
         private void button1_Click(object sender, EventArgs e)
         {
             LawyerManager lawyerManager = new LawyerManager(new LawyerDal());
@@ -26,9 +26,9 @@ namespace LawyerDiaryUI
                 MessageBox.Show("Hatali giris");
             else
             {
-                form1 = new Form1(result);
+                //form1 = new Form1(result);
                 this.Hide();
-                form1.Show();
+                //form1.Show();
             }
                 
         }
