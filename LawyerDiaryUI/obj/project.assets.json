@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "FontAwesome.Sharp/5.15.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1526,6 +1538,22 @@
     }
   },
   "libraries": {
+    "FontAwesome.Sharp/5.15.3": {
+      "sha512": "b72giuP5i2aR2W+u1gdYfYnTRkMIvI78idSDgrgcSV0aSE/nwJcMoh3sItxugMqOcNeIHxveGxAxcrcTYmwlHA==",
+      "type": "package",
+      "path": "fontawesome.sharp/5.15.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fontawesome.sharp.5.15.3.nupkg.sha512",
+        "fontawesome.sharp.nuspec",
+        "lib/net40/FontAwesome.Sharp.dll",
+        "lib/net45/FontAwesome.Sharp.dll",
+        "lib/net472/FontAwesome.Sharp.dll",
+        "lib/net48/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
+      ]
+    },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
       "type": "package",
@@ -5736,24 +5764,30 @@
     ".NETCoreApp,Version=v3.1": [
       "BusinessLayer >= 1.0.0",
       "EntityLayer >= 1.0.0",
+      "FontAwesome.Sharp >= 5.15.3",
       "Microsoft.EntityFrameworkCore >= 3.1.14",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.14"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\EV\\.nuget\\packages\\": {}
+    "C:\\Users\\serhat\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\LawyerDiaryUI\\LawyerDiaryUI.csproj",
+      "projectUniqueName": "C:\\Users\\serhat\\source\\repos\\LawyerDiary\\LawyerDiaryUI\\LawyerDiaryUI.csproj",
       "projectName": "LawyerDiaryUI",
-      "projectPath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\LawyerDiaryUI\\LawyerDiaryUI.csproj",
-      "packagesPath": "C:\\Users\\EV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\LawyerDiaryUI\\obj\\",
+      "projectPath": "C:\\Users\\serhat\\source\\repos\\LawyerDiary\\LawyerDiaryUI\\LawyerDiaryUI.csproj",
+      "packagesPath": "C:\\Users\\serhat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\serhat\\source\\repos\\LawyerDiary\\LawyerDiaryUI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\EV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\serhat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5767,11 +5801,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\serhat\\source\\repos\\LawyerDiary\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\serhat\\source\\repos\\LawyerDiary\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\EntityLayer\\EntityLayer.csproj": {
-              "projectPath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\EntityLayer\\EntityLayer.csproj"
+            "C:\\Users\\serhat\\source\\repos\\LawyerDiary\\EntityLayer\\EntityLayer.csproj": {
+              "projectPath": "C:\\Users\\serhat\\source\\repos\\LawyerDiary\\EntityLayer\\EntityLayer.csproj"
             }
           }
         }
@@ -5786,6 +5820,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "FontAwesome.Sharp": {
+            "target": "Package",
+            "version": "[5.15.3, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.1.14, )"
@@ -5815,7 +5853,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
