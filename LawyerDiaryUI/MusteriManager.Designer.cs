@@ -52,14 +52,14 @@ namespace LawyerDiaryUI
             // 
             this.müsAdı.Location = new System.Drawing.Point(480, 122);
             this.müsAdı.Name = "müsAdı";
-            this.müsAdı.Size = new System.Drawing.Size(332, 32);
+            this.müsAdı.Size = new System.Drawing.Size(332, 27);
             this.müsAdı.TabIndex = 0;
             // 
             // müsMail
             // 
             this.müsMail.Location = new System.Drawing.Point(480, 204);
             this.müsMail.Name = "müsMail";
-            this.müsMail.Size = new System.Drawing.Size(332, 32);
+            this.müsMail.Size = new System.Drawing.Size(332, 27);
             this.müsMail.TabIndex = 1;
             // 
             // müsAdres
@@ -76,7 +76,7 @@ namespace LawyerDiaryUI
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(337, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.Size = new System.Drawing.Size(97, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Müşteri Adı";
             // 
@@ -86,7 +86,7 @@ namespace LawyerDiaryUI
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(332, 207);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 23);
+            this.label2.Size = new System.Drawing.Size(102, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Müşteri Mail";
             // 
@@ -96,7 +96,7 @@ namespace LawyerDiaryUI
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(315, 326);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 23);
+            this.label3.Size = new System.Drawing.Size(115, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Müşteri Adres";
             // 
@@ -130,6 +130,7 @@ namespace LawyerDiaryUI
             this.ıconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ıconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ıconButton1.UseVisualStyleBackColor = true;
+            this.ıconButton1.Click += new System.EventHandler(this.ıconButton1_Click);
             // 
             // anaMenuyeDon
             // 
@@ -207,7 +208,7 @@ namespace LawyerDiaryUI
             this.müsteriEklemeLabel.ForeColor = System.Drawing.Color.Silver;
             this.müsteriEklemeLabel.Location = new System.Drawing.Point(9, 9);
             this.müsteriEklemeLabel.Name = "müsteriEklemeLabel";
-            this.müsteriEklemeLabel.Size = new System.Drawing.Size(219, 22);
+            this.müsteriEklemeLabel.Size = new System.Drawing.Size(185, 18);
             this.müsteriEklemeLabel.TabIndex = 12;
             this.müsteriEklemeLabel.Text = "Müşteri Ekleme ve Silme";
             this.müsteriEklemeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -228,6 +229,7 @@ namespace LawyerDiaryUI
             this.saveBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.saveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // deleteBtn
             // 
@@ -245,10 +247,11 @@ namespace LawyerDiaryUI
             this.deleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.deleteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // MusteriManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 578);
             this.Controls.Add(this.deleteBtn);

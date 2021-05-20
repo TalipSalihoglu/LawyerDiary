@@ -9,6 +9,7 @@ namespace BusinessLayer.Abstract
     {
         Client Get(int id);
         IList<Client> GetList();
+        IList<Client> Search(string name);
         void Add(Client client);
         void Update(Client client);
         void Delete(Client client);

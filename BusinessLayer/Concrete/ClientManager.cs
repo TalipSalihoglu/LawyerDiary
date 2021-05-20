@@ -18,6 +18,8 @@ namespace BusinessLayer.Concrete
 
         public void Add(Client client)
         {
+            client.LawyerId = 1;
+            client.Status = true;
             _clientDal.Add(client);
         }
 
@@ -36,6 +38,11 @@ namespace BusinessLayer.Concrete
         public IList<Client> GetList()
         {
             return _clientDal.GetList().Where(x => x.Status == true).ToList();
+        }
+
+        public IList<Client> Search(string name)
+        {
+            return _clientDal.GetList().Where(x => x.ClientName.ToLower().Contains(name)).ToList();
         }
 
         public void Update(Client client)

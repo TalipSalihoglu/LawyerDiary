@@ -36,9 +36,9 @@ namespace LawyerDiaryUI
             this.button3 = new System.Windows.Forms.Button();
             this.musteriyonetimLabel = new System.Windows.Forms.Label();
             this.musteriAdi = new System.Windows.Forms.TextBox();
-            this.ıconButton1 = new FontAwesome.Sharp.IconButton();
-            this.ıconButton2 = new FontAwesome.Sharp.IconButton();
-            this.ıconButton3 = new FontAwesome.Sharp.IconButton();
+            this.Guncelle = new FontAwesome.Sharp.IconButton();
+            this.Sil = new FontAwesome.Sharp.IconButton();
+            this.Ekle = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.solPanel.SuspendLayout();
@@ -132,7 +132,7 @@ namespace LawyerDiaryUI
             this.musteriyonetimLabel.ForeColor = System.Drawing.Color.Silver;
             this.musteriyonetimLabel.Location = new System.Drawing.Point(0, 9);
             this.musteriyonetimLabel.Name = "musteriyonetimLabel";
-            this.musteriyonetimLabel.Size = new System.Drawing.Size(197, 27);
+            this.musteriyonetimLabel.Size = new System.Drawing.Size(161, 23);
             this.musteriyonetimLabel.TabIndex = 8;
             this.musteriyonetimLabel.Text = "Müşteri Yönetimi";
             // 
@@ -140,54 +140,57 @@ namespace LawyerDiaryUI
             // 
             this.musteriAdi.Location = new System.Drawing.Point(440, 118);
             this.musteriAdi.Name = "musteriAdi";
-            this.musteriAdi.Size = new System.Drawing.Size(212, 28);
+            this.musteriAdi.Size = new System.Drawing.Size(212, 24);
             this.musteriAdi.TabIndex = 2;
+            this.musteriAdi.TextChanged += new System.EventHandler(this.musteriAdi_TextChanged);
             // 
-            // ıconButton1
+            // Guncelle
             // 
-            this.ıconButton1.BackColor = System.Drawing.Color.Navy;
-            this.ıconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ıconButton1.ForeColor = System.Drawing.Color.White;
-            this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ıconButton1.IconColor = System.Drawing.Color.Navy;
-            this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton1.Location = new System.Drawing.Point(217, 268);
-            this.ıconButton1.Name = "ıconButton1";
-            this.ıconButton1.Size = new System.Drawing.Size(435, 34);
-            this.ıconButton1.TabIndex = 3;
-            this.ıconButton1.Text = "Müşteriyi Güncelle";
-            this.ıconButton1.UseVisualStyleBackColor = false;
-            this.ıconButton1.Click += new System.EventHandler(this.ıconButton1_Click);
+            this.Guncelle.BackColor = System.Drawing.Color.Navy;
+            this.Guncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Guncelle.ForeColor = System.Drawing.Color.White;
+            this.Guncelle.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Guncelle.IconColor = System.Drawing.Color.Navy;
+            this.Guncelle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Guncelle.Location = new System.Drawing.Point(217, 268);
+            this.Guncelle.Name = "Guncelle";
+            this.Guncelle.Size = new System.Drawing.Size(435, 34);
+            this.Guncelle.TabIndex = 3;
+            this.Guncelle.Text = "Müşteriyi Güncelle";
+            this.Guncelle.UseVisualStyleBackColor = false;
+            this.Guncelle.Click += new System.EventHandler(this.Guncelle_Click);
             // 
-            // ıconButton2
+            // Sil
             // 
-            this.ıconButton2.BackColor = System.Drawing.Color.Navy;
-            this.ıconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ıconButton2.ForeColor = System.Drawing.Color.White;
-            this.ıconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ıconButton2.IconColor = System.Drawing.Color.Navy;
-            this.ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton2.Location = new System.Drawing.Point(217, 325);
-            this.ıconButton2.Name = "ıconButton2";
-            this.ıconButton2.Size = new System.Drawing.Size(435, 34);
-            this.ıconButton2.TabIndex = 4;
-            this.ıconButton2.Text = "Müşteriyi Sil";
-            this.ıconButton2.UseVisualStyleBackColor = false;
+            this.Sil.BackColor = System.Drawing.Color.Navy;
+            this.Sil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sil.ForeColor = System.Drawing.Color.White;
+            this.Sil.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Sil.IconColor = System.Drawing.Color.Navy;
+            this.Sil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Sil.Location = new System.Drawing.Point(217, 325);
+            this.Sil.Name = "Sil";
+            this.Sil.Size = new System.Drawing.Size(435, 34);
+            this.Sil.TabIndex = 4;
+            this.Sil.Text = "Müşteriyi Sil";
+            this.Sil.UseVisualStyleBackColor = false;
+            this.Sil.Click += new System.EventHandler(this.Sil_Click);
             // 
-            // ıconButton3
+            // Ekle
             // 
-            this.ıconButton3.BackColor = System.Drawing.Color.Navy;
-            this.ıconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ıconButton3.ForeColor = System.Drawing.Color.White;
-            this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ıconButton3.IconColor = System.Drawing.Color.Navy;
-            this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton3.Location = new System.Drawing.Point(217, 519);
-            this.ıconButton3.Name = "ıconButton3";
-            this.ıconButton3.Size = new System.Drawing.Size(435, 34);
-            this.ıconButton3.TabIndex = 5;
-            this.ıconButton3.Text = "Yeni Müşteri Ekle";
-            this.ıconButton3.UseVisualStyleBackColor = false;
+            this.Ekle.BackColor = System.Drawing.Color.Navy;
+            this.Ekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ekle.ForeColor = System.Drawing.Color.White;
+            this.Ekle.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Ekle.IconColor = System.Drawing.Color.Navy;
+            this.Ekle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Ekle.Location = new System.Drawing.Point(217, 519);
+            this.Ekle.Name = "Ekle";
+            this.Ekle.Size = new System.Drawing.Size(435, 34);
+            this.Ekle.TabIndex = 5;
+            this.Ekle.Text = "Yeni Müşteri Ekle";
+            this.Ekle.UseVisualStyleBackColor = false;
+            this.Ekle.Click += new System.EventHandler(this.Ekle_Click);
             // 
             // label1
             // 
@@ -196,7 +199,7 @@ namespace LawyerDiaryUI
             this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(217, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 21);
+            this.label1.Size = new System.Drawing.Size(178, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Aradığınız Müşterinin Adı:";
             // 
@@ -215,15 +218,15 @@ namespace LawyerDiaryUI
             // 
             // MusteriYonetimEkrani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1178, 578);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ıconButton3);
-            this.Controls.Add(this.ıconButton2);
-            this.Controls.Add(this.ıconButton1);
+            this.Controls.Add(this.Ekle);
+            this.Controls.Add(this.Sil);
+            this.Controls.Add(this.Guncelle);
             this.Controls.Add(this.musteriAdi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.solPanel);
@@ -246,9 +249,9 @@ namespace LawyerDiaryUI
         private System.Windows.Forms.Panel solPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox musteriAdi;
-        private FontAwesome.Sharp.IconButton ıconButton1;
-        private FontAwesome.Sharp.IconButton ıconButton2;
-        private FontAwesome.Sharp.IconButton ıconButton3;
+        private FontAwesome.Sharp.IconButton Guncelle;
+        private FontAwesome.Sharp.IconButton Sil;
+        private FontAwesome.Sharp.IconButton Ekle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private FontAwesome.Sharp.IconButton anaMenuyeDon;

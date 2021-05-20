@@ -77,7 +77,10 @@ namespace LawyerDiaryUI
 
         private void müsteri_yonetim_ekrani_Click(object sender, EventArgs e)
         {
+            MusteriYonetimEkrani musteriYonetimEkrani = new MusteriYonetimEkrani();
             ActivateButton(sender, RGBColors.color1);
+            this.Hide();
+            musteriYonetimEkrani.Show();
         }
 
         private void muhasebe_yonetimi_Click(object sender, EventArgs e)
@@ -113,6 +116,7 @@ namespace LawyerDiaryUI
         private void cikis_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color7);
+            Application.Exit();
 
         }
 
