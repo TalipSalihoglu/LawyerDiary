@@ -25,10 +25,7 @@ namespace LawyerDiaryUI
             Application.Exit();
         }
 
-        private void RandevuLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {

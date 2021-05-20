@@ -184,3 +184,8 @@ C:\Users\serhat\Source\Repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\L
 C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.MusteriManager.resources
 C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.RandevuYonetim.resources
 C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.RandevuEkleSil.resources
+C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.DavaYonetimAnaEkran.resources
+C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.DavaYonetimIslem.resources
+C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.MahkemeIslemleri.resources
+C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.FaturaAnaEkran.resources
+C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.FaturaIslemEkranı.resources

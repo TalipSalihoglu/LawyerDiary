@@ -6,14 +6,33 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
- 
+using System.Runtime.InteropServices;
+
 namespace LawyerDiaryUI
 {
     public partial class Giris : Form
     {
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+        private static extern IntPtr CreateRoundRectRgn(
+
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+
+            );
+
+
         public Giris()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

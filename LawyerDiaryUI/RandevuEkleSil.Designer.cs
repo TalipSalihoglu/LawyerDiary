@@ -89,7 +89,6 @@ namespace LawyerDiaryUI
             this.RandevuLabel.Size = new System.Drawing.Size(172, 27);
             this.RandevuLabel.TabIndex = 4;
             this.RandevuLabel.Text = "Randevu Kayıt";
-            this.RandevuLabel.Click += new System.EventHandler(this.RandevuLabel_Click);
             // 
             // panel2
             // 

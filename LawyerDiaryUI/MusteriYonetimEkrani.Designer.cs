@@ -230,7 +230,7 @@ namespace LawyerDiaryUI
             this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MusteriYonetimEkrani";
-            this.Text = "MusteriYonetimEkrani";
+            this.Text = "MuvekkilYonetimEkranı";
             this.Load += new System.EventHandler(this.MusteriYonetimEkrani_Load);
             this.solPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
