@@ -59,7 +59,7 @@ namespace LawyerDiaryUI
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            if(müsAdı.Text != null && müsAdres.Text != null && müsMail.Text != null)
+            if(müsAdı.Text != "" || müsAdres.Text != "" || müsMail.Text != "")
             {
                 if (musteri == null)
                 {

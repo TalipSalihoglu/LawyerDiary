@@ -199,5 +199,5 @@ C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.MusteriManager.resources
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.MusteriYonetimEkrani.resources
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.Properties.Resources.resources
-C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.RandevuEkleSil.resources
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.RandevuYonetim.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.RandevuIslemleri.resources

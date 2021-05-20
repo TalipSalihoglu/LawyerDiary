@@ -283,7 +283,6 @@ namespace LawyerDiaryUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainPage";
             this.Text = "MüsteriYönetim";
-            this.Load += new System.EventHandler(this.MüsteriYönetim_Load);
             this.panel1.ResumeLayout(false);
             this.kontrolPaneli.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

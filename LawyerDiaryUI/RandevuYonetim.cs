@@ -1,8 +1,11 @@
-﻿using System;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -10,34 +13,71 @@ namespace LawyerDiaryUI
 {
     public partial class RandevuYonetim : Form
     {
+        AppointmentManager _manager = new AppointmentManager(new AppointmentDal());
         public RandevuYonetim()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void cikis_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void musteriyonetimLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void RandevuYonetim_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = _manager.GetList();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void anaMenuyeDon_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage main = new MainPage();
+            main.Show();
+        }
+
+        private void musteriAdi_TextChanged(object sender, EventArgs e)
+        {
+
+
+            dataGridView1.DataSource = _manager.Search(subject.Text, gecmisRandevular.Checked,gelecekRandevular.Checked);
+         
+
+        }
+
+        private void ekleBtn_Click(object sender, EventArgs e)
+        {
+            RandevuIslemleri randevuIslemleri = new RandevuIslemleri();
+            randevuIslemleri.Show();
+            this.Hide();
+        }
+
+        private void güncelleBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                RandevuIslemleri randevu = new RandevuIslemleri(id);
+                randevu.Show();
+                this.Hide();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+            }
+        }
+
+        private void ıconButton3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

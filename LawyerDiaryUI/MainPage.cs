@@ -70,10 +70,7 @@ namespace LawyerDiaryUI
         }
 
 
-        private void MüsteriYönetim_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void müsteri_yonetim_ekrani_Click(object sender, EventArgs e)
         {
@@ -91,7 +88,11 @@ namespace LawyerDiaryUI
 
         private void randevu_yonetim_ekrani_Click(object sender, EventArgs e)
         {
+            RandevuYonetim randevuYonetim = new RandevuYonetim();
             ActivateButton(sender, RGBColors.color2);
+            randevuYonetim.Show();
+            this.Hide();
+            
 
         }
 

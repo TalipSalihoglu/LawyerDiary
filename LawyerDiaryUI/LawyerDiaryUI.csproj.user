@@ -28,7 +28,7 @@
     <Compile Update="MusteriYonetimEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RandevuEkleSil.cs">
+    <Compile Update="RandevuIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="RandevuYonetim.cs">
