@@ -5,8 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using System.Drawing;
 using System.Runtime.InteropServices;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
 
 namespace LawyerDiaryUI
 {
@@ -99,6 +100,26 @@ namespace LawyerDiaryUI
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LawyerManager manager = new LawyerManager(new LawyerDal());
+            int result =manager.Login(nameLogin.Text,passwordLogin.Text);
+            if (result == -1)
+            {
+                MessageBox.Show("Kullanıcı adi veya şifre hatalı");
+                nameLogin.Text = "";
+                passwordLogin.Text = "";
+            }
+               
+            else
+            {
+                this.Hide();
+                MainPage page = new MainPage();
+                page.Show();
+            }
 
         }
     }

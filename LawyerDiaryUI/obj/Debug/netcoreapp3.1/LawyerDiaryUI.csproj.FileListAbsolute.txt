@@ -108,7 +108,6 @@ C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\bin\Debug\netcoreapp3.
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\bin\Debug\netcoreapp3.1\EntityLayer.pdb
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.csprojAssemblyReference.cache
-C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.Login.resources
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.csproj.GenerateResource.cache
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.AssemblyInfoInputs.cache
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.AssemblyInfo.cs
@@ -189,3 +188,16 @@ C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\L
 C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.MahkemeIslemleri.resources
 C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.FaturaAnaEkran.resources
 C:\Users\serhat\source\repos\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.FaturaIslemEkranı.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\bin\Debug\netcoreapp3.1\FontAwesome.Sharp.dll
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.DavaYonetimAnaEkran.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.DavaYonetimIslem.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.FaturaAnaEkran.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.FaturaIslemEkranı.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.Giris.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.MahkemeIslemleri.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.MainPage.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.MusteriManager.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.MusteriYonetimEkrani.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.Properties.Resources.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.RandevuEkleSil.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.RandevuYonetim.resources
