@@ -44,6 +44,11 @@ namespace BusinessLayer.Concrete
         {
             return _clientDal.GetList().Where(x => x.ClientName.ToLower().Contains(name)).ToList();
         }
+        public int GetClientIdWithName(string name) 
+        {
+            var cl = _clientDal.GetList().Where(x => x.ClientName == name).FirstOrDefault();
+           return cl.ClientId;
+        }
 
         public void Update(Client client)
         {

@@ -38,7 +38,6 @@ namespace LawyerDiaryUI
             this.anaMenuyeDon = new FontAwesome.Sharp.IconButton();
             this.cikis = new FontAwesome.Sharp.IconButton();
             this.RandevuKonu = new System.Windows.Forms.TextBox();
-            this.textBoxSanık = new System.Windows.Forms.TextBox();
             this.müsteriId = new System.Windows.Forms.Label();
             this.tarih = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@ namespace LawyerDiaryUI
             this.kaydetBtn = new FontAwesome.Sharp.IconButton();
             this.ıconButton3 = new FontAwesome.Sharp.IconButton();
             this.textBoxTarih = new System.Windows.Forms.TextBox();
+            this.CB_musteriIdleri = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -185,14 +185,6 @@ namespace LawyerDiaryUI
             this.RandevuKonu.Size = new System.Drawing.Size(327, 23);
             this.RandevuKonu.TabIndex = 2;
             // 
-            // textBoxSanık
-            // 
-            this.textBoxSanık.Location = new System.Drawing.Point(479, 194);
-            this.textBoxSanık.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxSanık.Name = "textBoxSanık";
-            this.textBoxSanık.Size = new System.Drawing.Size(327, 23);
-            this.textBoxSanık.TabIndex = 2;
-            // 
             // müsteriId
             // 
             this.müsteriId.AutoSize = true;
@@ -295,11 +287,20 @@ namespace LawyerDiaryUI
             this.textBoxTarih.Size = new System.Drawing.Size(327, 23);
             this.textBoxTarih.TabIndex = 6;
             // 
+            // CB_musteriIdleri
+            // 
+            this.CB_musteriIdleri.FormattingEnabled = true;
+            this.CB_musteriIdleri.Location = new System.Drawing.Point(479, 195);
+            this.CB_musteriIdleri.Name = "CB_musteriIdleri";
+            this.CB_musteriIdleri.Size = new System.Drawing.Size(208, 23);
+            this.CB_musteriIdleri.TabIndex = 7;
+            // 
             // RandevuIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1031, 434);
+            this.Controls.Add(this.CB_musteriIdleri);
             this.Controls.Add(this.textBoxTarih);
             this.Controls.Add(this.ıconButton3);
             this.Controls.Add(this.kaydetBtn);
@@ -308,7 +309,6 @@ namespace LawyerDiaryUI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.müsteriId);
-            this.Controls.Add(this.textBoxSanık);
             this.Controls.Add(this.RandevuKonu);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -336,7 +336,6 @@ namespace LawyerDiaryUI
         private System.Windows.Forms.Label RandevuLabel;
         private FontAwesome.Sharp.IconButton backwardBtn;
         private System.Windows.Forms.TextBox RandevuKonu;
-        private System.Windows.Forms.TextBox textBoxSanık;
         private System.Windows.Forms.Label müsteriId;
         private System.Windows.Forms.Label tarih;
         private System.Windows.Forms.Label label3;
@@ -346,5 +345,6 @@ namespace LawyerDiaryUI
         private FontAwesome.Sharp.IconButton ıconButton3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBoxTarih;
+        private System.Windows.Forms.ComboBox CB_musteriIdleri;
     }
 }

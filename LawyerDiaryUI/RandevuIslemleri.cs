@@ -29,16 +29,17 @@ namespace LawyerDiaryUI
 
         private void RandevuIslemleri_Load_1(object sender, EventArgs e)
         {
+            var list = _clientManager.GetList();
+            foreach (var i in list)
+                CB_musteriIdleri.Items.Add(i.ClientName);
 
             if (appointment != null)
             {
                 RandevuKonu.Text = appointment.Subject;
-                textBoxAcıklama.Text = appointment.Description;
-                textBoxSanık.Text = _clientManager.Get(appointment.ClientId).ClientName;
+                textBoxAcıklama.Text = appointment.Description;  
                 textBoxTarih.Text = appointment.AppointmentDate.ToString();
-                textBoxSanık.Enabled = false;
+                CB_musteriIdleri.SelectedItem = (_clientManager.Get(appointment.ClientId).ClientName);
             }
- 
 
         }
         private void kaydetBtn_Click(object sender, EventArgs e)
@@ -53,6 +54,7 @@ namespace LawyerDiaryUI
                 appointment.Subject= RandevuKonu.Text;
                 appointment.Description=textBoxAcıklama.Text ;
                 appointment.AppointmentDate = DateTime.Parse(textBoxTarih.Text);
+                appointment.ClientId= _clientManager.GetClientIdWithName(CB_musteriIdleri.SelectedItem.ToString());
                 _manager.Update(appointment); 
             }
             else
@@ -62,8 +64,8 @@ namespace LawyerDiaryUI
                     Subject = RandevuKonu.Text,
                     Description = textBoxAcıklama.Text,
                     AppointmentDate = DateTime.Parse(textBoxTarih.Text),
-                    ClientId = int.Parse(textBoxSanık.Text),
-                 };
+                    ClientId = _clientManager.GetClientIdWithName(CB_musteriIdleri.SelectedItem.ToString())
+            };
                 _manager.Add(newAppointment);
             }
             RandevuYonetim ry = new RandevuYonetim();
@@ -106,6 +108,6 @@ namespace LawyerDiaryUI
             ry.Show();
         }
 
-       
+        
     }
 }
