@@ -9,6 +9,8 @@ namespace BusinessLayer.Abstract
     {
         Bill Get(int id);
         IList<Bill> GetList();
+        IList<Bill> Search(string name,bool isPast,bool isNext);
+
         void Add(Bill obj);
         void Update(Bill obj);
         void Delete(Bill obj);

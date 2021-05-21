@@ -77,6 +77,17 @@ namespace LawyerDiaryUI
 
         private void ıconButton3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                _manager.Delete(_manager.Get(id));
+                MessageBox.Show("Silme işlemi başarıyla tamamlandı");
+                dataGridView1.DataSource = _manager.GetList();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("Lütfen silmek istediğiniz sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+            }
 
         }
     }

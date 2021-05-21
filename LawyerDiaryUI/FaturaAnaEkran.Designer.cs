@@ -30,23 +30,23 @@ namespace LawyerDiaryUI
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.faturaAnaEkraniLabel = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.anaMenuBtn = new FontAwesome.Sharp.IconButton();
             this.cikisBtn = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grupBox = new System.Windows.Forms.GroupBox();
             this.gelecekDavalar = new System.Windows.Forms.RadioButton();
             this.gecmisDavalar = new System.Windows.Forms.RadioButton();
             this.musteriAd = new System.Windows.Forms.Label();
             this.musteriAdi = new System.Windows.Forms.TextBox();
-            this.davaEkleBtn = new FontAwesome.Sharp.IconButton();
-            this.davaSilBtn = new FontAwesome.Sharp.IconButton();
+            this.FaturaEkleBtn = new FontAwesome.Sharp.IconButton();
+            this.FaturaSilBtn = new FontAwesome.Sharp.IconButton();
             this.disaAktarBtn = new FontAwesome.Sharp.IconButton();
-            this.davaGuncelleBtn = new FontAwesome.Sharp.IconButton();
+            this.FaturaGuncelleBtn = new FontAwesome.Sharp.IconButton();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,6 +64,22 @@ namespace LawyerDiaryUI
             this.panel3.Size = new System.Drawing.Size(1198, 39);
             this.panel3.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Navy;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(1125, -2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(39, 39);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // faturaAnaEkraniLabel
             // 
             this.faturaAnaEkraniLabel.AutoSize = true;
@@ -71,7 +87,7 @@ namespace LawyerDiaryUI
             this.faturaAnaEkraniLabel.ForeColor = System.Drawing.Color.Silver;
             this.faturaAnaEkraniLabel.Location = new System.Drawing.Point(1, 9);
             this.faturaAnaEkraniLabel.Name = "faturaAnaEkraniLabel";
-            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(206, 27);
+            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(172, 23);
             this.faturaAnaEkraniLabel.TabIndex = 15;
             this.faturaAnaEkraniLabel.Text = "Fatura Ana Ekranı";
             // 
@@ -119,6 +135,7 @@ namespace LawyerDiaryUI
             this.anaMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.anaMenuBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.anaMenuBtn.UseVisualStyleBackColor = true;
+            this.anaMenuBtn.Click += new System.EventHandler(this.anaMenuBtn_Click);
             // 
             // cikisBtn
             // 
@@ -149,22 +166,6 @@ namespace LawyerDiaryUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(382, 47);
             this.panel2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(1125, -2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 39);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -198,7 +199,7 @@ namespace LawyerDiaryUI
             this.gelecekDavalar.AutoSize = true;
             this.gelecekDavalar.Location = new System.Drawing.Point(259, 133);
             this.gelecekDavalar.Name = "gelecekDavalar";
-            this.gelecekDavalar.Size = new System.Drawing.Size(202, 27);
+            this.gelecekDavalar.Size = new System.Drawing.Size(160, 25);
             this.gelecekDavalar.TabIndex = 5;
             this.gelecekDavalar.TabStop = true;
             this.gelecekDavalar.Text = "Gelecek Davalar";
@@ -209,7 +210,7 @@ namespace LawyerDiaryUI
             this.gecmisDavalar.AutoSize = true;
             this.gecmisDavalar.Location = new System.Drawing.Point(41, 133);
             this.gecmisDavalar.Name = "gecmisDavalar";
-            this.gecmisDavalar.Size = new System.Drawing.Size(191, 27);
+            this.gecmisDavalar.Size = new System.Drawing.Size(153, 25);
             this.gecmisDavalar.TabIndex = 5;
             this.gecmisDavalar.TabStop = true;
             this.gecmisDavalar.Text = "Geçmiş Davalar";
@@ -220,7 +221,7 @@ namespace LawyerDiaryUI
             this.musteriAd.AutoSize = true;
             this.musteriAd.Location = new System.Drawing.Point(20, 68);
             this.musteriAd.Name = "musteriAd";
-            this.musteriAd.Size = new System.Drawing.Size(0, 23);
+            this.musteriAd.Size = new System.Drawing.Size(0, 21);
             this.musteriAd.TabIndex = 4;
             // 
             // musteriAdi
@@ -228,42 +229,45 @@ namespace LawyerDiaryUI
             this.musteriAdi.Location = new System.Drawing.Point(41, 65);
             this.musteriAdi.Name = "musteriAdi";
             this.musteriAdi.PlaceholderText = "Müvekkil Adı";
-            this.musteriAdi.Size = new System.Drawing.Size(420, 32);
+            this.musteriAdi.Size = new System.Drawing.Size(420, 27);
             this.musteriAdi.TabIndex = 4;
+            this.musteriAdi.TextChanged += new System.EventHandler(this.musteriAdi_TextChanged);
             // 
-            // davaEkleBtn
+            // FaturaEkleBtn
             // 
-            this.davaEkleBtn.FlatAppearance.BorderSize = 0;
-            this.davaEkleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.davaEkleBtn.ForeColor = System.Drawing.Color.Navy;
-            this.davaEkleBtn.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.davaEkleBtn.IconColor = System.Drawing.Color.Navy;
-            this.davaEkleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.davaEkleBtn.Location = new System.Drawing.Point(1017, 423);
-            this.davaEkleBtn.Name = "davaEkleBtn";
-            this.davaEkleBtn.Size = new System.Drawing.Size(146, 54);
-            this.davaEkleBtn.TabIndex = 13;
-            this.davaEkleBtn.Text = "Ekle";
-            this.davaEkleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.davaEkleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.davaEkleBtn.UseVisualStyleBackColor = true;
+            this.FaturaEkleBtn.FlatAppearance.BorderSize = 0;
+            this.FaturaEkleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FaturaEkleBtn.ForeColor = System.Drawing.Color.Navy;
+            this.FaturaEkleBtn.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.FaturaEkleBtn.IconColor = System.Drawing.Color.Navy;
+            this.FaturaEkleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.FaturaEkleBtn.Location = new System.Drawing.Point(1017, 423);
+            this.FaturaEkleBtn.Name = "FaturaEkleBtn";
+            this.FaturaEkleBtn.Size = new System.Drawing.Size(146, 54);
+            this.FaturaEkleBtn.TabIndex = 13;
+            this.FaturaEkleBtn.Text = "Ekle";
+            this.FaturaEkleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FaturaEkleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.FaturaEkleBtn.UseVisualStyleBackColor = true;
+            this.FaturaEkleBtn.Click += new System.EventHandler(this.FaturaEkleBtn_Click);
             // 
-            // davaSilBtn
+            // FaturaSilBtn
             // 
-            this.davaSilBtn.FlatAppearance.BorderSize = 0;
-            this.davaSilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.davaSilBtn.ForeColor = System.Drawing.Color.Navy;
-            this.davaSilBtn.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.davaSilBtn.IconColor = System.Drawing.Color.Navy;
-            this.davaSilBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.davaSilBtn.Location = new System.Drawing.Point(1007, 338);
-            this.davaSilBtn.Name = "davaSilBtn";
-            this.davaSilBtn.Size = new System.Drawing.Size(156, 59);
-            this.davaSilBtn.TabIndex = 14;
-            this.davaSilBtn.Text = "Sil";
-            this.davaSilBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.davaSilBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.davaSilBtn.UseVisualStyleBackColor = true;
+            this.FaturaSilBtn.FlatAppearance.BorderSize = 0;
+            this.FaturaSilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FaturaSilBtn.ForeColor = System.Drawing.Color.Navy;
+            this.FaturaSilBtn.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.FaturaSilBtn.IconColor = System.Drawing.Color.Navy;
+            this.FaturaSilBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.FaturaSilBtn.Location = new System.Drawing.Point(1007, 338);
+            this.FaturaSilBtn.Name = "FaturaSilBtn";
+            this.FaturaSilBtn.Size = new System.Drawing.Size(156, 59);
+            this.FaturaSilBtn.TabIndex = 14;
+            this.FaturaSilBtn.Text = "Sil";
+            this.FaturaSilBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FaturaSilBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.FaturaSilBtn.UseVisualStyleBackColor = true;
+            this.FaturaSilBtn.Click += new System.EventHandler(this.FaturaSilBtn_Click);
             // 
             // disaAktarBtn
             // 
@@ -284,34 +288,35 @@ namespace LawyerDiaryUI
             this.disaAktarBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.disaAktarBtn.UseVisualStyleBackColor = false;
             // 
-            // davaGuncelleBtn
+            // FaturaGuncelleBtn
             // 
-            this.davaGuncelleBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.davaGuncelleBtn.FlatAppearance.BorderSize = 0;
-            this.davaGuncelleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.davaGuncelleBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.davaGuncelleBtn.ForeColor = System.Drawing.Color.Navy;
-            this.davaGuncelleBtn.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.davaGuncelleBtn.IconColor = System.Drawing.Color.Navy;
-            this.davaGuncelleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.davaGuncelleBtn.Location = new System.Drawing.Point(793, 338);
-            this.davaGuncelleBtn.Name = "davaGuncelleBtn";
-            this.davaGuncelleBtn.Size = new System.Drawing.Size(184, 59);
-            this.davaGuncelleBtn.TabIndex = 12;
-            this.davaGuncelleBtn.Text = "Güncelle";
-            this.davaGuncelleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.davaGuncelleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.davaGuncelleBtn.UseVisualStyleBackColor = false;
+            this.FaturaGuncelleBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.FaturaGuncelleBtn.FlatAppearance.BorderSize = 0;
+            this.FaturaGuncelleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FaturaGuncelleBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FaturaGuncelleBtn.ForeColor = System.Drawing.Color.Navy;
+            this.FaturaGuncelleBtn.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.FaturaGuncelleBtn.IconColor = System.Drawing.Color.Navy;
+            this.FaturaGuncelleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.FaturaGuncelleBtn.Location = new System.Drawing.Point(793, 338);
+            this.FaturaGuncelleBtn.Name = "FaturaGuncelleBtn";
+            this.FaturaGuncelleBtn.Size = new System.Drawing.Size(184, 59);
+            this.FaturaGuncelleBtn.TabIndex = 12;
+            this.FaturaGuncelleBtn.Text = "Güncelle";
+            this.FaturaGuncelleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FaturaGuncelleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.FaturaGuncelleBtn.UseVisualStyleBackColor = false;
+            this.FaturaGuncelleBtn.Click += new System.EventHandler(this.FaturaGuncelleBtn_Click);
             // 
             // FaturaAnaEkran
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1307, 531);
-            this.Controls.Add(this.davaEkleBtn);
-            this.Controls.Add(this.davaSilBtn);
+            this.Controls.Add(this.FaturaEkleBtn);
+            this.Controls.Add(this.FaturaSilBtn);
             this.Controls.Add(this.disaAktarBtn);
-            this.Controls.Add(this.davaGuncelleBtn);
+            this.Controls.Add(this.FaturaGuncelleBtn);
             this.Controls.Add(this.grupBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
@@ -321,6 +326,7 @@ namespace LawyerDiaryUI
             this.Name = "FaturaAnaEkran";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FaturaAnaEkran";
+            this.Load += new System.EventHandler(this.FaturaAnaEkran_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -347,9 +353,9 @@ namespace LawyerDiaryUI
         private System.Windows.Forms.RadioButton gecmisDavalar;
         private System.Windows.Forms.Label musteriAd;
         private System.Windows.Forms.TextBox musteriAdi;
-        private FontAwesome.Sharp.IconButton davaEkleBtn;
-        private FontAwesome.Sharp.IconButton davaSilBtn;
+        private FontAwesome.Sharp.IconButton FaturaEkleBtn;
+        private FontAwesome.Sharp.IconButton FaturaSilBtn;
         private FontAwesome.Sharp.IconButton disaAktarBtn;
-        private FontAwesome.Sharp.IconButton davaGuncelleBtn;
+        private FontAwesome.Sharp.IconButton FaturaGuncelleBtn;
     }
 }

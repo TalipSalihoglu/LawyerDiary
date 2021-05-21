@@ -30,22 +30,22 @@ namespace LawyerDiaryUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.faturaBackwardBtn = new FontAwesome.Sharp.IconButton();
             this.anaMenuBtn = new FontAwesome.Sharp.IconButton();
+            this.ıconButton1 = new FontAwesome.Sharp.IconButton();
             this.cikisBtn = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.faturaAnaEkraniLabel = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CB_FaturaMusteri = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.ıconButton3 = new FontAwesome.Sharp.IconButton();
             this.kaydetBtn = new FontAwesome.Sharp.IconButton();
-            this.faturaBackwardBtn = new FontAwesome.Sharp.IconButton();
-            this.ıconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -63,6 +63,25 @@ namespace LawyerDiaryUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(155, 652);
             this.panel1.TabIndex = 5;
+            // 
+            // faturaBackwardBtn
+            // 
+            this.faturaBackwardBtn.FlatAppearance.BorderSize = 0;
+            this.faturaBackwardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.faturaBackwardBtn.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.faturaBackwardBtn.ForeColor = System.Drawing.Color.Silver;
+            this.faturaBackwardBtn.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.faturaBackwardBtn.IconColor = System.Drawing.Color.Silver;
+            this.faturaBackwardBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.faturaBackwardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.faturaBackwardBtn.Location = new System.Drawing.Point(0, 129);
+            this.faturaBackwardBtn.Name = "faturaBackwardBtn";
+            this.faturaBackwardBtn.Size = new System.Drawing.Size(155, 92);
+            this.faturaBackwardBtn.TabIndex = 17;
+            this.faturaBackwardBtn.Text = "Fatura Ana Ekranına Dön";
+            this.faturaBackwardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.faturaBackwardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.faturaBackwardBtn.UseVisualStyleBackColor = true;
             // 
             // anaMenuBtn
             // 
@@ -82,6 +101,28 @@ namespace LawyerDiaryUI
             this.anaMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.anaMenuBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.anaMenuBtn.UseVisualStyleBackColor = true;
+            // 
+            // ıconButton1
+            // 
+            this.ıconButton1.BackColor = System.Drawing.Color.Navy;
+            this.ıconButton1.FlatAppearance.BorderSize = 0;
+            this.ıconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ıconButton1.ForeColor = System.Drawing.Color.Silver;
+            this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.ıconButton1.IconColor = System.Drawing.Color.Silver;
+            this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ıconButton1.Location = new System.Drawing.Point(0, 227);
+            this.ıconButton1.Name = "ıconButton1";
+            this.ıconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ıconButton1.Size = new System.Drawing.Size(155, 85);
+            this.ıconButton1.TabIndex = 13;
+            this.ıconButton1.Text = "Çıkış";
+            this.ıconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ıconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ıconButton1.UseVisualStyleBackColor = false;
+            this.ıconButton1.Click += new System.EventHandler(this.cikisBtn_Click);
             // 
             // cikisBtn
             // 
@@ -130,7 +171,7 @@ namespace LawyerDiaryUI
             this.faturaAnaEkraniLabel.ForeColor = System.Drawing.Color.Silver;
             this.faturaAnaEkraniLabel.Location = new System.Drawing.Point(-6, 9);
             this.faturaAnaEkraniLabel.Name = "faturaAnaEkraniLabel";
-            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(219, 27);
+            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(182, 23);
             this.faturaAnaEkraniLabel.TabIndex = 15;
             this.faturaAnaEkraniLabel.Text = "Fatura İşlem Ekranı";
             // 
@@ -152,9 +193,9 @@ namespace LawyerDiaryUI
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CB_FaturaMusteri);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(249, 71);
@@ -163,13 +204,22 @@ namespace LawyerDiaryUI
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
-            // textBox1
+            // CB_FaturaMusteri
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Ücret";
-            this.textBox1.Size = new System.Drawing.Size(539, 32);
-            this.textBox1.TabIndex = 0;
+            this.CB_FaturaMusteri.FormattingEnabled = true;
+            this.CB_FaturaMusteri.Location = new System.Drawing.Point(160, 326);
+            this.CB_FaturaMusteri.Name = "CB_FaturaMusteri";
+            this.CB_FaturaMusteri.Size = new System.Drawing.Size(221, 29);
+            this.CB_FaturaMusteri.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(160, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Fatura Açıklaması";
             // 
             // richTextBox1
             // 
@@ -184,25 +234,16 @@ namespace LawyerDiaryUI
             this.textBox2.Location = new System.Drawing.Point(160, 278);
             this.textBox2.Name = "textBox2";
             this.textBox2.PlaceholderText = "Tarih";
-            this.textBox2.Size = new System.Drawing.Size(539, 32);
+            this.textBox2.Size = new System.Drawing.Size(539, 27);
             this.textBox2.TabIndex = 0;
             // 
-            // textBox3
+            // textBox1
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 328);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = "Müşteri";
-            this.textBox3.Size = new System.Drawing.Size(539, 32);
-            this.textBox3.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Fatura Açıklaması";
+            this.textBox1.Location = new System.Drawing.Point(160, 39);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "Ücret";
+            this.textBox1.Size = new System.Drawing.Size(539, 27);
+            this.textBox1.TabIndex = 0;
             // 
             // ıconButton3
             // 
@@ -239,51 +280,11 @@ namespace LawyerDiaryUI
             this.kaydetBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.kaydetBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.kaydetBtn.UseVisualStyleBackColor = true;
-            // 
-            // faturaBackwardBtn
-            // 
-            this.faturaBackwardBtn.FlatAppearance.BorderSize = 0;
-            this.faturaBackwardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.faturaBackwardBtn.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.faturaBackwardBtn.ForeColor = System.Drawing.Color.Silver;
-            this.faturaBackwardBtn.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.faturaBackwardBtn.IconColor = System.Drawing.Color.Silver;
-            this.faturaBackwardBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.faturaBackwardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.faturaBackwardBtn.Location = new System.Drawing.Point(0, 129);
-            this.faturaBackwardBtn.Name = "faturaBackwardBtn";
-            this.faturaBackwardBtn.Size = new System.Drawing.Size(155, 92);
-            this.faturaBackwardBtn.TabIndex = 17;
-            this.faturaBackwardBtn.Text = "Fatura Ana Ekranına Dön";
-            this.faturaBackwardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.faturaBackwardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.faturaBackwardBtn.UseVisualStyleBackColor = true;
-            // 
-            // ıconButton1
-            // 
-            this.ıconButton1.BackColor = System.Drawing.Color.Navy;
-            this.ıconButton1.FlatAppearance.BorderSize = 0;
-            this.ıconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ıconButton1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ıconButton1.ForeColor = System.Drawing.Color.Silver;
-            this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.ıconButton1.IconColor = System.Drawing.Color.Silver;
-            this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ıconButton1.Location = new System.Drawing.Point(0, 227);
-            this.ıconButton1.Name = "ıconButton1";
-            this.ıconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.ıconButton1.Size = new System.Drawing.Size(155, 85);
-            this.ıconButton1.TabIndex = 13;
-            this.ıconButton1.Text = "Çıkış";
-            this.ıconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ıconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ıconButton1.UseVisualStyleBackColor = false;
-            this.ıconButton1.Click += new System.EventHandler(this.cikisBtn_Click);
+            this.kaydetBtn.Click += new System.EventHandler(this.kaydetBtn_Click);
             // 
             // FaturaIslemEkranı
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 650);
             this.Controls.Add(this.ıconButton3);
@@ -296,6 +297,7 @@ namespace LawyerDiaryUI
             this.Name = "FaturaIslemEkranı";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FaturaIslemEkranı";
+            this.Load += new System.EventHandler(this.FaturaIslemEkranı_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -317,12 +319,12 @@ namespace LawyerDiaryUI
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconButton ıconButton3;
         private FontAwesome.Sharp.IconButton kaydetBtn;
         private FontAwesome.Sharp.IconButton faturaBackwardBtn;
         private FontAwesome.Sharp.IconButton ıconButton1;
+        private System.Windows.Forms.ComboBox CB_FaturaMusteri;
     }
 }

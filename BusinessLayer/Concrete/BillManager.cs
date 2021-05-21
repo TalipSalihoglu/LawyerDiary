@@ -3,6 +3,7 @@ using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace BusinessLayer.Concrete
@@ -34,6 +35,17 @@ namespace BusinessLayer.Concrete
         public IList<Bill> GetList()
         {
             return _billDal.GetList();
+        }
+
+        public IList<Bill> Search(string description, bool isPast, bool isNext)
+        {
+            var faturaList = _billDal.GetList().Where(x=>x.Description.ToLower().Contains(description) == true).ToList();
+            if (isPast)
+                return faturaList.Where(x => x.LastDate < DateTime.Today).ToList();
+            if (isNext)
+                return faturaList.Where(x => x.LastDate >= DateTime.Today).ToList();
+            else
+                return faturaList;
         }
 
         public void Update(Bill obj)

@@ -82,7 +82,10 @@ namespace LawyerDiaryUI
 
         private void muhasebe_yonetimi_Click(object sender, EventArgs e)
         {
+            FaturaAnaEkran faturaAnaEkran = new FaturaAnaEkran();
             ActivateButton(sender, RGBColors.color4);
+            this.Hide();
+            faturaAnaEkran.Show();
 
         }
 
