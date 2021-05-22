@@ -9,8 +9,7 @@ namespace BusinessLayer.Abstract
     {
         Case Get(int id);
         IList<Case> GetList();
-        IList<Case> Search(string clientName,bool isPast,bool isNext);
-        IList<Case> Search(int CourtNo,bool isPast, bool isNext);
+        IList<Case> FilterWithDate(bool isPast,bool isNext);
         void Add(Case obj);
         void Update(Case obj);
         void Delete(Case obj);

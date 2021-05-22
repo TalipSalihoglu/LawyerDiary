@@ -8,13 +8,14 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using BusinessLayer.Concrete;
 using DataAccessLayer.Concrete;
+using System.Linq;
 
 namespace LawyerDiaryUI
 {
     public partial class DavaYonetimAnaEkran : Form
     {
         CaseManager _caseManager = new CaseManager(new CaseDal());
-
+        ClientManager _clientManager = new ClientManager(new ClientDal());
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
         private static extern IntPtr CreateRoundRectRgn(
@@ -114,12 +115,26 @@ namespace LawyerDiaryUI
 
         private void FiltreliArama(object sender, EventArgs e)
         {
-
+            dataGrid.DataSource = _caseManager.FilterWithDate(gecmisDavalar.Checked, gelecekDavalar.Checked);
         }
 
         private void grupBox_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if(musteriAdi.Text!="")
+            {
+                var id = _clientManager.GetClientIdWithName(musteriAdi.Text);
+                if (id != -1)
+                    dataGrid.DataSource = _caseManager.GetList().Where(x => x.ClientId == id).ToList();
+            }
+            else
+            {
+                MessageBox.Show("Müvekkil adı boş bırakılamaz!");
+            }
         }
     }
 }

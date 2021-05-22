@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DataAccessLayer.Concrete
 {
-    class Context:DbContext
+    public class Context:DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -44,16 +44,17 @@ namespace BusinessLayer.Concrete
             return _caseDal.GetList().Where(x => x.Status == true).ToList();
         }
 
-        public IList<Case> Search(string clientName, bool isPast, bool isNext)
+        public IList<Case> FilterWithDate(bool isPast, bool isNext)
         {
-
-            throw new NotImplementedException();
+            var CaseList = _caseDal.GetList().Where(x=>x.Status==true).ToList();
+            if (isPast)
+                return CaseList.Where(x => x.CaseDate < DateTime.Today).ToList();
+            if (isNext)
+                return CaseList.Where(x => x.CaseDate >= DateTime.Today).ToList();
+            else
+                return CaseList;
         }
 
-        public IList<Case> Search(int CourtNo, bool isPast, bool isNext)
-        {
-            throw new NotImplementedException();
-        }
 
         public void Update(Case obj)
         {

@@ -6,7 +6,8 @@ using System.Text;
 
 namespace DataAccessLayer.Concrete
 {
-    public class CaseDal:GenericRepository<Case>,ICaseDal
+    public class CaseDal : GenericRepository<Case>, ICaseDal
     {
+      
     }
 }

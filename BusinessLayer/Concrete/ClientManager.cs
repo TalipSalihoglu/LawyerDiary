@@ -47,6 +47,8 @@ namespace BusinessLayer.Concrete
         public int GetClientIdWithName(string name) 
         {
             var cl = _clientDal.GetList().Where(x => x.ClientName == name).FirstOrDefault();
+            if (cl == null)
+                return -1;
            return cl.ClientId;
         }
 
