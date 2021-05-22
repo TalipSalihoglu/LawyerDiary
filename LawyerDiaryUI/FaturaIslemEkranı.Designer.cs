@@ -82,6 +82,7 @@ namespace LawyerDiaryUI
             this.faturaBackwardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.faturaBackwardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.faturaBackwardBtn.UseVisualStyleBackColor = true;
+            this.faturaBackwardBtn.Click += new System.EventHandler(this.faturaBackwardBtn_Click);
             // 
             // anaMenuBtn
             // 
@@ -101,6 +102,7 @@ namespace LawyerDiaryUI
             this.anaMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.anaMenuBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.anaMenuBtn.UseVisualStyleBackColor = true;
+            this.anaMenuBtn.Click += new System.EventHandler(this.anaMenuBtn_Click);
             // 
             // ıconButton1
             // 

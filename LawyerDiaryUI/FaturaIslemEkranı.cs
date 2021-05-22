@@ -109,5 +109,19 @@ namespace LawyerDiaryUI
             this.Hide();
             fae.Show();
         }
+
+        private void faturaBackwardBtn_Click(object sender, EventArgs e)
+        {
+            FaturaAnaEkran fae = new FaturaAnaEkran();
+            this.Hide();
+            fae.Show();
+        }
+
+        private void anaMenuBtn_Click(object sender, EventArgs e)
+        {
+            MainPage mp = new MainPage();
+            mp.Show();
+            this.Hide();
+        }
     }
 }

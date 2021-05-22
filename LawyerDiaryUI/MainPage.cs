@@ -101,7 +101,10 @@ namespace LawyerDiaryUI
 
         private void dava_yonetimi_Click(object sender, EventArgs e)
         {
+            DavaYonetimAnaEkran DavaYonetim = new DavaYonetimAnaEkran();
             ActivateButton(sender, RGBColors.color3);
+            DavaYonetim.Show();
+            this.Hide();
 
         }
 

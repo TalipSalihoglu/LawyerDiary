@@ -34,6 +34,7 @@ namespace LawyerDiaryUI
             this.cikisBtn = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.musteriyonetimLabel = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.grupBox = new System.Windows.Forms.GroupBox();
@@ -48,7 +49,6 @@ namespace LawyerDiaryUI
             this.davaEkleBtn = new FontAwesome.Sharp.IconButton();
             this.disaAktarBtn = new FontAwesome.Sharp.IconButton();
             this.mahkemeIsleriBtn = new FontAwesome.Sharp.IconButton();
-            this.musteriyonetimLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
@@ -84,6 +84,7 @@ namespace LawyerDiaryUI
             this.anaMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.anaMenuBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.anaMenuBtn.UseVisualStyleBackColor = true;
+            this.anaMenuBtn.Click += new System.EventHandler(this.anaMenuBtn_Click);
             // 
             // cikisBtn
             // 
@@ -125,6 +126,17 @@ namespace LawyerDiaryUI
             this.panel3.Size = new System.Drawing.Size(1250, 39);
             this.panel3.TabIndex = 1;
             // 
+            // musteriyonetimLabel
+            // 
+            this.musteriyonetimLabel.AutoSize = true;
+            this.musteriyonetimLabel.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.musteriyonetimLabel.ForeColor = System.Drawing.Color.Silver;
+            this.musteriyonetimLabel.Location = new System.Drawing.Point(0, 4);
+            this.musteriyonetimLabel.Name = "musteriyonetimLabel";
+            this.musteriyonetimLabel.Size = new System.Drawing.Size(245, 23);
+            this.musteriyonetimLabel.TabIndex = 15;
+            this.musteriyonetimLabel.Text = "Dava Yönetim Ana Ekranı";
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Navy;
@@ -165,7 +177,7 @@ namespace LawyerDiaryUI
             this.grupBox.ForeColor = System.Drawing.Color.Navy;
             this.grupBox.Location = new System.Drawing.Point(233, 72);
             this.grupBox.Name = "grupBox";
-            this.grupBox.Size = new System.Drawing.Size(588, 258);
+            this.grupBox.Size = new System.Drawing.Size(588, 276);
             this.grupBox.TabIndex = 3;
             this.grupBox.TabStop = false;
             this.grupBox.Text = "Filtreli Arama";
@@ -173,9 +185,9 @@ namespace LawyerDiaryUI
             // gelecekDavalar
             // 
             this.gelecekDavalar.AutoSize = true;
-            this.gelecekDavalar.Location = new System.Drawing.Point(343, 209);
+            this.gelecekDavalar.Location = new System.Drawing.Point(330, 217);
             this.gelecekDavalar.Name = "gelecekDavalar";
-            this.gelecekDavalar.Size = new System.Drawing.Size(202, 27);
+            this.gelecekDavalar.Size = new System.Drawing.Size(160, 25);
             this.gelecekDavalar.TabIndex = 5;
             this.gelecekDavalar.TabStop = true;
             this.gelecekDavalar.Text = "Gelecek Davalar";
@@ -184,9 +196,9 @@ namespace LawyerDiaryUI
             // gecmisDavalar
             // 
             this.gecmisDavalar.AutoSize = true;
-            this.gecmisDavalar.Location = new System.Drawing.Point(114, 209);
+            this.gecmisDavalar.Location = new System.Drawing.Point(124, 217);
             this.gecmisDavalar.Name = "gecmisDavalar";
-            this.gecmisDavalar.Size = new System.Drawing.Size(191, 27);
+            this.gecmisDavalar.Size = new System.Drawing.Size(153, 25);
             this.gecmisDavalar.TabIndex = 5;
             this.gecmisDavalar.TabStop = true;
             this.gecmisDavalar.Text = "Geçmiş Davalar";
@@ -195,33 +207,34 @@ namespace LawyerDiaryUI
             // mahkemeNo
             // 
             this.mahkemeNo.AutoSize = true;
-            this.mahkemeNo.Location = new System.Drawing.Point(20, 147);
+            this.mahkemeNo.Location = new System.Drawing.Point(30, 155);
             this.mahkemeNo.Name = "mahkemeNo";
-            this.mahkemeNo.Size = new System.Drawing.Size(147, 23);
+            this.mahkemeNo.Size = new System.Drawing.Size(119, 21);
             this.mahkemeNo.TabIndex = 4;
             this.mahkemeNo.Text = "Mahkeme No:";
             // 
             // musteriAd
             // 
             this.musteriAd.AutoSize = true;
-            this.musteriAd.Location = new System.Drawing.Point(20, 68);
+            this.musteriAd.Location = new System.Drawing.Point(30, 76);
             this.musteriAd.Name = "musteriAd";
-            this.musteriAd.Size = new System.Drawing.Size(138, 23);
+            this.musteriAd.Size = new System.Drawing.Size(112, 21);
             this.musteriAd.TabIndex = 4;
             this.musteriAd.Text = "Müvekkil Adı:";
             // 
             // musteriAdi
             // 
-            this.musteriAdi.Location = new System.Drawing.Point(173, 59);
+            this.musteriAdi.Location = new System.Drawing.Point(183, 67);
             this.musteriAdi.Name = "musteriAdi";
-            this.musteriAdi.Size = new System.Drawing.Size(372, 32);
+            this.musteriAdi.Size = new System.Drawing.Size(372, 27);
             this.musteriAdi.TabIndex = 4;
+            this.musteriAdi.TextChanged += new System.EventHandler(this.FiltreliArama);
             // 
             // mahkemeSalonNo
             // 
-            this.mahkemeSalonNo.Location = new System.Drawing.Point(173, 138);
+            this.mahkemeSalonNo.Location = new System.Drawing.Point(183, 146);
             this.mahkemeSalonNo.Name = "mahkemeSalonNo";
-            this.mahkemeSalonNo.Size = new System.Drawing.Size(372, 32);
+            this.mahkemeSalonNo.Size = new System.Drawing.Size(372, 27);
             this.mahkemeSalonNo.TabIndex = 4;
             // 
             // davaGuncelleBtn
@@ -242,6 +255,7 @@ namespace LawyerDiaryUI
             this.davaGuncelleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.davaGuncelleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.davaGuncelleBtn.UseVisualStyleBackColor = false;
+            this.davaGuncelleBtn.Click += new System.EventHandler(this.davaGuncelleBtn_Click);
             // 
             // davaSilBtn
             // 
@@ -259,6 +273,7 @@ namespace LawyerDiaryUI
             this.davaSilBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.davaSilBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.davaSilBtn.UseVisualStyleBackColor = true;
+            this.davaSilBtn.Click += new System.EventHandler(this.davaSilBtn_Click);
             // 
             // davaEkleBtn
             // 
@@ -276,6 +291,7 @@ namespace LawyerDiaryUI
             this.davaEkleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.davaEkleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.davaEkleBtn.UseVisualStyleBackColor = true;
+            this.davaEkleBtn.Click += new System.EventHandler(this.davaEkleBtn_Click);
             // 
             // disaAktarBtn
             // 
@@ -295,6 +311,7 @@ namespace LawyerDiaryUI
             this.disaAktarBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.disaAktarBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.disaAktarBtn.UseVisualStyleBackColor = false;
+            this.disaAktarBtn.Click += new System.EventHandler(this.disaAktarBtn_Click);
             // 
             // mahkemeIsleriBtn
             // 
@@ -308,27 +325,17 @@ namespace LawyerDiaryUI
             this.mahkemeIsleriBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.mahkemeIsleriBtn.Location = new System.Drawing.Point(534, 454);
             this.mahkemeIsleriBtn.Name = "mahkemeIsleriBtn";
-            this.mahkemeIsleriBtn.Size = new System.Drawing.Size(184, 59);
+            this.mahkemeIsleriBtn.Size = new System.Drawing.Size(209, 59);
             this.mahkemeIsleriBtn.TabIndex = 6;
-            this.mahkemeIsleriBtn.Text = "Mahkeme İşleri";
+            this.mahkemeIsleriBtn.Text = "Mahkeme İşlemleri";
             this.mahkemeIsleriBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mahkemeIsleriBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.mahkemeIsleriBtn.UseVisualStyleBackColor = false;
-            // 
-            // musteriyonetimLabel
-            // 
-            this.musteriyonetimLabel.AutoSize = true;
-            this.musteriyonetimLabel.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.musteriyonetimLabel.ForeColor = System.Drawing.Color.Silver;
-            this.musteriyonetimLabel.Location = new System.Drawing.Point(0, 4);
-            this.musteriyonetimLabel.Name = "musteriyonetimLabel";
-            this.musteriyonetimLabel.Size = new System.Drawing.Size(295, 27);
-            this.musteriyonetimLabel.TabIndex = 15;
-            this.musteriyonetimLabel.Text = "Dava Yönetim Ana Ekranı";
+            this.mahkemeIsleriBtn.Click += new System.EventHandler(this.mahkemeIsleriBtn_Click);
             // 
             // DavaYonetimAnaEkran
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1377, 578);
             this.Controls.Add(this.davaEkleBtn);
