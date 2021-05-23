@@ -32,15 +32,11 @@ namespace LawyerDiaryUI
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
-            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 60, 60));
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void closeBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -49,11 +45,6 @@ namespace LawyerDiaryUI
         internal static Form cs()
         {
             throw new NotImplementedException();
-        }
-
-        private void nameLogin_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void nameLogin_Click(object sender, EventArgs e)
@@ -65,15 +56,6 @@ namespace LawyerDiaryUI
 
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void passwordLogin_Click(object sender, EventArgs e)
         {
@@ -98,10 +80,6 @@ namespace LawyerDiaryUI
             Application.Exit();
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {

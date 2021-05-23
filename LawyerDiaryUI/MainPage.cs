@@ -116,6 +116,7 @@ namespace LawyerDiaryUI
 
         private void kullanici_hesap_islemleri_Click(object sender, EventArgs e)
         {
+
             ActivateButton(sender, RGBColors.color6);
 
         }

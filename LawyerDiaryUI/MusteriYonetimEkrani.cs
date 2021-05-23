@@ -19,17 +19,6 @@ namespace LawyerDiaryUI
         }
 
     
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void MusteriYonetimEkrani_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource= Manager.GetList();

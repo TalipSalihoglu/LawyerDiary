@@ -91,7 +91,6 @@ namespace LawyerDiaryUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(262, 420);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -197,7 +196,6 @@ namespace LawyerDiaryUI
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(493, 420);
             this.panel5.TabIndex = 8;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // ulasmaLinki
             // 
@@ -307,8 +305,6 @@ namespace LawyerDiaryUI
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(493, 40);
             this.panel7.TabIndex = 3;
-            this.panel7.Click += new System.EventHandler(this.panel7_Click);
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // nameLogin
             // 
@@ -322,7 +318,6 @@ namespace LawyerDiaryUI
             this.nameLogin.Size = new System.Drawing.Size(396, 20);
             this.nameLogin.TabIndex = 6;
             this.nameLogin.Click += new System.EventHandler(this.nameLogin_Click);
-            this.nameLogin.TextChanged += new System.EventHandler(this.nameLogin_TextChanged);
             // 
             // pictureBox5
             // 

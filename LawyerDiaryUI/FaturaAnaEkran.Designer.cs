@@ -171,11 +171,11 @@ namespace LawyerDiaryUI
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(180, 63);
+            this.dataGridView1.Location = new System.Drawing.Point(392, 65);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1091, 221);
+            this.dataGridView1.Size = new System.Drawing.Size(689, 221);
             this.dataGridView1.TabIndex = 6;
             // 
             // grupBox
