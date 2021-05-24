@@ -29,214 +29,18 @@ namespace LawyerDiaryUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.kontrolPaneli = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.kullanici_hesap_islemleri = new FontAwesome.Sharp.IconButton();
-            this.cikis = new FontAwesome.Sharp.IconButton();
-            this.muhasebe_yonetimi = new FontAwesome.Sharp.IconButton();
-            this.yapilacaklar_listesi = new FontAwesome.Sharp.IconButton();
-            this.dava_yonetimi = new FontAwesome.Sharp.IconButton();
-            this.randevu_yonetim_ekrani = new FontAwesome.Sharp.IconButton();
-            this.müsteri_yonetim_ekrani = new FontAwesome.Sharp.IconButton();
             this.ıconButton5 = new FontAwesome.Sharp.IconButton();
-            this.exitBtn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ıconButton1 = new FontAwesome.Sharp.IconButton();
+            this.ıconButton2 = new FontAwesome.Sharp.IconButton();
+            this.ıconButton3 = new FontAwesome.Sharp.IconButton();
+            this.ıconButton4 = new FontAwesome.Sharp.IconButton();
+            this.ıconButton6 = new FontAwesome.Sharp.IconButton();
+            this.ıconButton7 = new FontAwesome.Sharp.IconButton();
+            this.ıconButton8 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
-            this.kontrolPaneli.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.kontrolPaneli);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 580);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Location = new System.Drawing.Point(226, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(894, 41);
-            this.panel2.TabIndex = 2;
-            // 
-            // kontrolPaneli
-            // 
-            this.kontrolPaneli.BackColor = System.Drawing.Color.Navy;
-            this.kontrolPaneli.Controls.Add(this.pictureBox1);
-            this.kontrolPaneli.Controls.Add(this.kullanici_hesap_islemleri);
-            this.kontrolPaneli.Controls.Add(this.cikis);
-            this.kontrolPaneli.Controls.Add(this.muhasebe_yonetimi);
-            this.kontrolPaneli.Controls.Add(this.yapilacaklar_listesi);
-            this.kontrolPaneli.Controls.Add(this.dava_yonetimi);
-            this.kontrolPaneli.Controls.Add(this.randevu_yonetim_ekrani);
-            this.kontrolPaneli.Controls.Add(this.müsteri_yonetim_ekrani);
-            this.kontrolPaneli.Location = new System.Drawing.Point(0, 8);
-            this.kontrolPaneli.Name = "kontrolPaneli";
-            this.kontrolPaneli.Size = new System.Drawing.Size(228, 580);
-            this.kontrolPaneli.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LawyerDiaryUI.Properties.Resources.output_onlinepngtools__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 98);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // kullanici_hesap_islemleri
-            // 
-            this.kullanici_hesap_islemleri.BackColor = System.Drawing.Color.Navy;
-            this.kullanici_hesap_islemleri.FlatAppearance.BorderSize = 0;
-            this.kullanici_hesap_islemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kullanici_hesap_islemleri.ForeColor = System.Drawing.Color.Silver;
-            this.kullanici_hesap_islemleri.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.kullanici_hesap_islemleri.IconColor = System.Drawing.Color.Silver;
-            this.kullanici_hesap_islemleri.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.kullanici_hesap_islemleri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kullanici_hesap_islemleri.Location = new System.Drawing.Point(-12, 443);
-            this.kullanici_hesap_islemleri.Name = "kullanici_hesap_islemleri";
-            this.kullanici_hesap_islemleri.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.kullanici_hesap_islemleri.Size = new System.Drawing.Size(228, 60);
-            this.kullanici_hesap_islemleri.TabIndex = 7;
-            this.kullanici_hesap_islemleri.Text = "Kullanıcı Hesap İşlemleri";
-            this.kullanici_hesap_islemleri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kullanici_hesap_islemleri.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.kullanici_hesap_islemleri.UseVisualStyleBackColor = false;
-            this.kullanici_hesap_islemleri.Click += new System.EventHandler(this.kullanici_hesap_islemleri_Click);
-            // 
-            // cikis
-            // 
-            this.cikis.BackColor = System.Drawing.Color.Navy;
-            this.cikis.FlatAppearance.BorderSize = 0;
-            this.cikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cikis.ForeColor = System.Drawing.Color.Silver;
-            this.cikis.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.cikis.IconColor = System.Drawing.Color.Silver;
-            this.cikis.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.cikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cikis.Location = new System.Drawing.Point(-12, 509);
-            this.cikis.Name = "cikis";
-            this.cikis.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.cikis.Size = new System.Drawing.Size(228, 60);
-            this.cikis.TabIndex = 6;
-            this.cikis.Text = "Çıkış";
-            this.cikis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cikis.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cikis.UseVisualStyleBackColor = false;
-            this.cikis.Click += new System.EventHandler(this.cikis_Click);
-            // 
-            // muhasebe_yonetimi
-            // 
-            this.muhasebe_yonetimi.BackColor = System.Drawing.Color.Navy;
-            this.muhasebe_yonetimi.FlatAppearance.BorderSize = 0;
-            this.muhasebe_yonetimi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.muhasebe_yonetimi.ForeColor = System.Drawing.Color.Silver;
-            this.muhasebe_yonetimi.IconChar = FontAwesome.Sharp.IconChar.Calculator;
-            this.muhasebe_yonetimi.IconColor = System.Drawing.Color.Silver;
-            this.muhasebe_yonetimi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.muhasebe_yonetimi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.muhasebe_yonetimi.Location = new System.Drawing.Point(-12, 311);
-            this.muhasebe_yonetimi.Name = "muhasebe_yonetimi";
-            this.muhasebe_yonetimi.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.muhasebe_yonetimi.Size = new System.Drawing.Size(228, 60);
-            this.muhasebe_yonetimi.TabIndex = 5;
-            this.muhasebe_yonetimi.Text = "Muhasebe Yönetimi";
-            this.muhasebe_yonetimi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.muhasebe_yonetimi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.muhasebe_yonetimi.UseVisualStyleBackColor = false;
-            this.muhasebe_yonetimi.Click += new System.EventHandler(this.muhasebe_yonetimi_Click);
-            // 
-            // yapilacaklar_listesi
-            // 
-            this.yapilacaklar_listesi.BackColor = System.Drawing.Color.Navy;
-            this.yapilacaklar_listesi.FlatAppearance.BorderSize = 0;
-            this.yapilacaklar_listesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yapilacaklar_listesi.ForeColor = System.Drawing.Color.Silver;
-            this.yapilacaklar_listesi.IconChar = FontAwesome.Sharp.IconChar.Tasks;
-            this.yapilacaklar_listesi.IconColor = System.Drawing.Color.Silver;
-            this.yapilacaklar_listesi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.yapilacaklar_listesi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.yapilacaklar_listesi.Location = new System.Drawing.Point(-12, 377);
-            this.yapilacaklar_listesi.Name = "yapilacaklar_listesi";
-            this.yapilacaklar_listesi.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.yapilacaklar_listesi.Size = new System.Drawing.Size(228, 60);
-            this.yapilacaklar_listesi.TabIndex = 4;
-            this.yapilacaklar_listesi.Text = "Yapılacaklar Listesi";
-            this.yapilacaklar_listesi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.yapilacaklar_listesi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.yapilacaklar_listesi.UseVisualStyleBackColor = false;
-            this.yapilacaklar_listesi.Click += new System.EventHandler(this.yapilacaklar_listesi_Click);
-            // 
-            // dava_yonetimi
-            // 
-            this.dava_yonetimi.BackColor = System.Drawing.Color.Navy;
-            this.dava_yonetimi.FlatAppearance.BorderSize = 0;
-            this.dava_yonetimi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dava_yonetimi.ForeColor = System.Drawing.Color.Silver;
-            this.dava_yonetimi.IconChar = FontAwesome.Sharp.IconChar.Gavel;
-            this.dava_yonetimi.IconColor = System.Drawing.Color.Silver;
-            this.dava_yonetimi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.dava_yonetimi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dava_yonetimi.Location = new System.Drawing.Point(-12, 245);
-            this.dava_yonetimi.Name = "dava_yonetimi";
-            this.dava_yonetimi.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.dava_yonetimi.Size = new System.Drawing.Size(228, 60);
-            this.dava_yonetimi.TabIndex = 3;
-            this.dava_yonetimi.Text = "Dava Yönetimi";
-            this.dava_yonetimi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dava_yonetimi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.dava_yonetimi.UseVisualStyleBackColor = false;
-            this.dava_yonetimi.Click += new System.EventHandler(this.dava_yonetimi_Click);
-            // 
-            // randevu_yonetim_ekrani
-            // 
-            this.randevu_yonetim_ekrani.BackColor = System.Drawing.Color.Navy;
-            this.randevu_yonetim_ekrani.FlatAppearance.BorderSize = 0;
-            this.randevu_yonetim_ekrani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.randevu_yonetim_ekrani.ForeColor = System.Drawing.Color.Silver;
-            this.randevu_yonetim_ekrani.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
-            this.randevu_yonetim_ekrani.IconColor = System.Drawing.Color.Silver;
-            this.randevu_yonetim_ekrani.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.randevu_yonetim_ekrani.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.randevu_yonetim_ekrani.Location = new System.Drawing.Point(-12, 188);
-            this.randevu_yonetim_ekrani.Name = "randevu_yonetim_ekrani";
-            this.randevu_yonetim_ekrani.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.randevu_yonetim_ekrani.Size = new System.Drawing.Size(228, 60);
-            this.randevu_yonetim_ekrani.TabIndex = 2;
-            this.randevu_yonetim_ekrani.Text = "Randevu Yönetimi";
-            this.randevu_yonetim_ekrani.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.randevu_yonetim_ekrani.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.randevu_yonetim_ekrani.UseVisualStyleBackColor = false;
-            this.randevu_yonetim_ekrani.Click += new System.EventHandler(this.randevu_yonetim_ekrani_Click);
-            // 
-            // müsteri_yonetim_ekrani
-            // 
-            this.müsteri_yonetim_ekrani.BackColor = System.Drawing.Color.Navy;
-            this.müsteri_yonetim_ekrani.FlatAppearance.BorderSize = 0;
-            this.müsteri_yonetim_ekrani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.müsteri_yonetim_ekrani.ForeColor = System.Drawing.Color.Silver;
-            this.müsteri_yonetim_ekrani.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.müsteri_yonetim_ekrani.IconColor = System.Drawing.Color.Silver;
-            this.müsteri_yonetim_ekrani.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.müsteri_yonetim_ekrani.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.müsteri_yonetim_ekrani.Location = new System.Drawing.Point(-12, 122);
-            this.müsteri_yonetim_ekrani.Name = "müsteri_yonetim_ekrani";
-            this.müsteri_yonetim_ekrani.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.müsteri_yonetim_ekrani.Size = new System.Drawing.Size(228, 60);
-            this.müsteri_yonetim_ekrani.TabIndex = 1;
-            this.müsteri_yonetim_ekrani.Text = "Müşteri Yönetimi";
-            this.müsteri_yonetim_ekrani.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.müsteri_yonetim_ekrani.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.müsteri_yonetim_ekrani.UseVisualStyleBackColor = false;
-            this.müsteri_yonetim_ekrani.Click += new System.EventHandler(this.müsteri_yonetim_ekrani_Click);
             // 
             // ıconButton5
             // 
@@ -256,54 +60,206 @@ namespace LawyerDiaryUI
             this.ıconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ıconButton5.UseVisualStyleBackColor = true;
             // 
-            // exitBtn
+            // panel1
             // 
-            this.exitBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitBtn.FlatAppearance.BorderSize = 0;
-            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.exitBtn.ForeColor = System.Drawing.Color.Navy;
-            this.exitBtn.Location = new System.Drawing.Point(1071, 1);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(40, 40);
-            this.exitBtn.TabIndex = 1;
-            this.exitBtn.Text = "X";
-            this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Location = new System.Drawing.Point(0, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1149, 42);
+            this.panel1.TabIndex = 3;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Navy;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(1105, 1);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(39, 39);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // ıconButton1
+            // 
+            this.ıconButton1.BackColor = System.Drawing.SystemColors.Control;
+            this.ıconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ıconButton1.ForeColor = System.Drawing.Color.Navy;
+            this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.ıconButton1.IconColor = System.Drawing.Color.Navy;
+            this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton1.Location = new System.Drawing.Point(453, 286);
+            this.ıconButton1.Name = "ıconButton1";
+            this.ıconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ıconButton1.Size = new System.Drawing.Size(245, 171);
+            this.ıconButton1.TabIndex = 7;
+            this.ıconButton1.Text = "Kullanıcı Hesap İşlemleri";
+            this.ıconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ıconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ıconButton1.UseVisualStyleBackColor = false;
+            this.ıconButton1.Click += new System.EventHandler(this.kullanici_hesap_islemleri_Click);
+            // 
+            // ıconButton2
+            // 
+            this.ıconButton2.BackColor = System.Drawing.SystemColors.Control;
+            this.ıconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ıconButton2.ForeColor = System.Drawing.Color.Navy;
+            this.ıconButton2.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.ıconButton2.IconColor = System.Drawing.Color.Navy;
+            this.ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton2.Location = new System.Drawing.Point(453, 478);
+            this.ıconButton2.Name = "ıconButton2";
+            this.ıconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ıconButton2.Size = new System.Drawing.Size(245, 171);
+            this.ıconButton2.TabIndex = 6;
+            this.ıconButton2.Text = "Çıkış";
+            this.ıconButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ıconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ıconButton2.UseVisualStyleBackColor = false;
+            this.ıconButton2.Click += new System.EventHandler(this.cikis_Click);
+            // 
+            // ıconButton3
+            // 
+            this.ıconButton3.BackColor = System.Drawing.SystemColors.Control;
+            this.ıconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ıconButton3.ForeColor = System.Drawing.Color.Navy;
+            this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.Calculator;
+            this.ıconButton3.IconColor = System.Drawing.Color.Navy;
+            this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton3.Location = new System.Drawing.Point(805, 105);
+            this.ıconButton3.Name = "ıconButton3";
+            this.ıconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ıconButton3.Size = new System.Drawing.Size(245, 161);
+            this.ıconButton3.TabIndex = 5;
+            this.ıconButton3.Text = "Muhasebe Yönetimi";
+            this.ıconButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ıconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ıconButton3.UseVisualStyleBackColor = false;
+            this.ıconButton3.Click += new System.EventHandler(this.muhasebe_yonetimi_Click);
+            // 
+            // ıconButton4
+            // 
+            this.ıconButton4.BackColor = System.Drawing.SystemColors.Control;
+            this.ıconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ıconButton4.ForeColor = System.Drawing.Color.Navy;
+            this.ıconButton4.IconChar = FontAwesome.Sharp.IconChar.Tasks;
+            this.ıconButton4.IconColor = System.Drawing.Color.Navy;
+            this.ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton4.Location = new System.Drawing.Point(805, 286);
+            this.ıconButton4.Name = "ıconButton4";
+            this.ıconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ıconButton4.Size = new System.Drawing.Size(245, 171);
+            this.ıconButton4.TabIndex = 4;
+            this.ıconButton4.Text = "Yapılacaklar Listesi";
+            this.ıconButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ıconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ıconButton4.UseVisualStyleBackColor = false;
+            this.ıconButton4.Click += new System.EventHandler(this.yapilacaklar_listesi_Click);
+            // 
+            // ıconButton6
+            // 
+            this.ıconButton6.BackColor = System.Drawing.SystemColors.Control;
+            this.ıconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ıconButton6.ForeColor = System.Drawing.Color.Navy;
+            this.ıconButton6.IconChar = FontAwesome.Sharp.IconChar.Gavel;
+            this.ıconButton6.IconColor = System.Drawing.Color.Navy;
+            this.ıconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton6.Location = new System.Drawing.Point(101, 286);
+            this.ıconButton6.Name = "ıconButton6";
+            this.ıconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ıconButton6.Size = new System.Drawing.Size(245, 171);
+            this.ıconButton6.TabIndex = 3;
+            this.ıconButton6.Text = "Dava Yönetimi";
+            this.ıconButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ıconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ıconButton6.UseVisualStyleBackColor = false;
+            this.ıconButton6.Click += new System.EventHandler(this.dava_yonetimi_Click);
+            // 
+            // ıconButton7
+            // 
+            this.ıconButton7.BackColor = System.Drawing.SystemColors.Control;
+            this.ıconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ıconButton7.ForeColor = System.Drawing.Color.Navy;
+            this.ıconButton7.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
+            this.ıconButton7.IconColor = System.Drawing.Color.Navy;
+            this.ıconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton7.Location = new System.Drawing.Point(453, 95);
+            this.ıconButton7.Name = "ıconButton7";
+            this.ıconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ıconButton7.Size = new System.Drawing.Size(245, 171);
+            this.ıconButton7.TabIndex = 2;
+            this.ıconButton7.Text = "Randevu Yönetimi";
+            this.ıconButton7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ıconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ıconButton7.UseVisualStyleBackColor = false;
+            this.ıconButton7.Click += new System.EventHandler(this.randevu_yonetim_ekrani_Click);
+            // 
+            // ıconButton8
+            // 
+            this.ıconButton8.BackColor = System.Drawing.SystemColors.Control;
+            this.ıconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ıconButton8.ForeColor = System.Drawing.Color.Navy;
+            this.ıconButton8.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.ıconButton8.IconColor = System.Drawing.Color.Navy;
+            this.ıconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton8.Location = new System.Drawing.Point(101, 95);
+            this.ıconButton8.Name = "ıconButton8";
+            this.ıconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ıconButton8.Size = new System.Drawing.Size(245, 171);
+            this.ıconButton8.TabIndex = 1;
+            this.ıconButton8.Text = "Müşteri Yönetimi";
+            this.ıconButton8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ıconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ıconButton8.UseVisualStyleBackColor = false;
+            this.ıconButton8.Click += new System.EventHandler(this.müsteri_yonetim_ekrani_Click);
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1114, 582);
-            this.Controls.Add(this.exitBtn);
+            this.ClientSize = new System.Drawing.Size(1148, 804);
+            this.Controls.Add(this.ıconButton2);
+            this.Controls.Add(this.ıconButton1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ıconButton8);
+            this.Controls.Add(this.ıconButton4);
+            this.Controls.Add(this.ıconButton3);
+            this.Controls.Add(this.ıconButton7);
+            this.Controls.Add(this.ıconButton6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainPage";
             this.Text = "MüsteriYönetim";
             this.panel1.ResumeLayout(false);
-            this.kontrolPaneli.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel kontrolPaneli;
-        private FontAwesome.Sharp.IconButton kullanici_hesap_islemleri;
-        private FontAwesome.Sharp.IconButton cikis;
-        private FontAwesome.Sharp.IconButton muhasebe_yonetimi;
-        private FontAwesome.Sharp.IconButton yapilacaklar_listesi;
-        private FontAwesome.Sharp.IconButton dava_yonetimi;
-        private FontAwesome.Sharp.IconButton randevu_yonetim_ekrani;
-        private FontAwesome.Sharp.IconButton müsteri_yonetim_ekrani;
         private FontAwesome.Sharp.IconButton ıconButton5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton ıconButton1;
+        private FontAwesome.Sharp.IconButton ıconButton2;
+        private FontAwesome.Sharp.IconButton ıconButton3;
+        private FontAwesome.Sharp.IconButton ıconButton4;
+        private FontAwesome.Sharp.IconButton ıconButton6;
+        private FontAwesome.Sharp.IconButton ıconButton7;
+        private FontAwesome.Sharp.IconButton ıconButton8;
+        private System.Windows.Forms.Button button3;
     }
 }

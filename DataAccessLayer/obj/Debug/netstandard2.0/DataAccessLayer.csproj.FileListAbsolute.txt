@@ -22,3 +22,15 @@ C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\DataAccessLayer\obj\Debug\netstandar
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csproj.CopyComplete
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.dll
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.pdb
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.deps.json
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.dll
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.pdb
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\bin\Debug\netstandard2.0\EntityLayer.dll
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\bin\Debug\netstandard2.0\EntityLayer.pdb
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.dll
+C:\Users\serhat\Documents\GitHub\LawyerDiary\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.pdb

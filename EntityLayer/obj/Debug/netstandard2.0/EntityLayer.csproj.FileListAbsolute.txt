@@ -16,3 +16,12 @@ C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\EntityLayer\obj\Debug\netstandard2.0
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.csproj.CoreCompileInputs.cache
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.dll
 C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.pdb
+C:\Users\serhat\Documents\GitHub\LawyerDiary\EntityLayer\bin\Debug\netstandard2.0\EntityLayer.deps.json
+C:\Users\serhat\Documents\GitHub\LawyerDiary\EntityLayer\bin\Debug\netstandard2.0\EntityLayer.dll
+C:\Users\serhat\Documents\GitHub\LawyerDiary\EntityLayer\bin\Debug\netstandard2.0\EntityLayer.pdb
+C:\Users\serhat\Documents\GitHub\LawyerDiary\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.csprojAssemblyReference.cache
+C:\Users\serhat\Documents\GitHub\LawyerDiary\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\serhat\Documents\GitHub\LawyerDiary\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.AssemblyInfo.cs
+C:\Users\serhat\Documents\GitHub\LawyerDiary\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\serhat\Documents\GitHub\LawyerDiary\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.dll
+C:\Users\serhat\Documents\GitHub\LawyerDiary\EntityLayer\obj\Debug\netstandard2.0\EntityLayer.pdb

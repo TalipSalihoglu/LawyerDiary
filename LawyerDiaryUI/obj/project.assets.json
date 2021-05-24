@@ -5770,19 +5770,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\EV\\.nuget\\packages\\": {}
+    "C:\\Users\\serhat\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\LawyerDiaryUI\\LawyerDiaryUI.csproj",
+      "projectUniqueName": "C:\\Users\\serhat\\Documents\\GitHub\\LawyerDiary\\LawyerDiaryUI\\LawyerDiaryUI.csproj",
       "projectName": "LawyerDiaryUI",
-      "projectPath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\LawyerDiaryUI\\LawyerDiaryUI.csproj",
-      "packagesPath": "C:\\Users\\EV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\LawyerDiaryUI\\obj\\",
+      "projectPath": "C:\\Users\\serhat\\Documents\\GitHub\\LawyerDiary\\LawyerDiaryUI\\LawyerDiaryUI.csproj",
+      "packagesPath": "C:\\Users\\serhat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\serhat\\Documents\\GitHub\\LawyerDiary\\LawyerDiaryUI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\EV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\serhat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5796,11 +5801,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\serhat\\Documents\\GitHub\\LawyerDiary\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\serhat\\Documents\\GitHub\\LawyerDiary\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\EntityLayer\\EntityLayer.csproj": {
-              "projectPath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\EntityLayer\\EntityLayer.csproj"
+            "C:\\Users\\serhat\\Documents\\GitHub\\LawyerDiary\\EntityLayer\\EntityLayer.csproj": {
+              "projectPath": "C:\\Users\\serhat\\Documents\\GitHub\\LawyerDiary\\EntityLayer\\EntityLayer.csproj"
             }
           }
         }
@@ -5844,14 +5849,11 @@
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           },
-          "Microsoft.WindowsDesktop.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.WindowsDesktop.App.WindowsForms": {
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

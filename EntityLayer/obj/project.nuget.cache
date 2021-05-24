@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "g7UJpspa82pOt8BnBahsw1ic0T+aM5YUWHlBCvl1pdKo53FvR2CzwzV82uCqU5X1RuBg6kuKTkIw25/4UzYfgA==",
+  "dgSpecHash": "K2+FG6ZUiZWb5BpLfijR1J0Wi6GhevT+UfEjpNj53GRd6NBjdSGcqSKM7jxjTYG1JHlkBGJtoGF1j9I+Js84lg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\EntityLayer\\EntityLayer.csproj",
+  "projectFilePath": "C:\\Users\\serhat\\Documents\\GitHub\\LawyerDiary\\EntityLayer\\EntityLayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\EV\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\EV\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\serhat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\serhat\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

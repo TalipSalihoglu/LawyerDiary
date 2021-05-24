@@ -56,10 +56,9 @@ namespace LawyerDiaryUI
             this.panel1.BackColor = System.Drawing.Color.Navy;
             this.panel1.Controls.Add(this.anaMenuyeDon);
             this.panel1.Controls.Add(this.cikis);
-            this.panel1.Location = new System.Drawing.Point(-1, 26);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(-1, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(144, 408);
+            this.panel1.Size = new System.Drawing.Size(165, 544);
             this.panel1.TabIndex = 1;
             // 
             // anaMenuyeDon
@@ -73,9 +72,8 @@ namespace LawyerDiaryUI
             this.anaMenuyeDon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.anaMenuyeDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.anaMenuyeDon.Location = new System.Drawing.Point(0, 0);
-            this.anaMenuyeDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.anaMenuyeDon.Name = "anaMenuyeDon";
-            this.anaMenuyeDon.Size = new System.Drawing.Size(144, 69);
+            this.anaMenuyeDon.Size = new System.Drawing.Size(165, 92);
             this.anaMenuyeDon.TabIndex = 12;
             this.anaMenuyeDon.Text = "Ana Menü";
             this.anaMenuyeDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,11 +92,10 @@ namespace LawyerDiaryUI
             this.cikis.IconColor = System.Drawing.Color.Silver;
             this.cikis.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.cikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cikis.Location = new System.Drawing.Point(-3, 74);
-            this.cikis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cikis.Location = new System.Drawing.Point(-3, 99);
             this.cikis.Name = "cikis";
-            this.cikis.Padding = new System.Windows.Forms.Padding(9, 0, 18, 0);
-            this.cikis.Size = new System.Drawing.Size(146, 63);
+            this.cikis.Padding = new System.Windows.Forms.Padding(10, 0, 21, 0);
+            this.cikis.Size = new System.Drawing.Size(167, 84);
             this.cikis.TabIndex = 13;
             this.cikis.Text = "Çıkış";
             this.cikis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,9 +109,8 @@ namespace LawyerDiaryUI
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.musteriyonetimLabel);
             this.panel2.Location = new System.Drawing.Point(-1, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1032, 29);
+            this.panel2.Size = new System.Drawing.Size(1179, 39);
             this.panel2.TabIndex = 2;
             // 
             // button3
@@ -125,10 +121,9 @@ namespace LawyerDiaryUI
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(1003, -2);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(1146, -3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(34, 29);
+            this.button3.Size = new System.Drawing.Size(39, 39);
             this.button3.TabIndex = 12;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
@@ -139,9 +134,9 @@ namespace LawyerDiaryUI
             this.musteriyonetimLabel.AutoSize = true;
             this.musteriyonetimLabel.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.musteriyonetimLabel.ForeColor = System.Drawing.Color.Silver;
-            this.musteriyonetimLabel.Location = new System.Drawing.Point(139, 7);
+            this.musteriyonetimLabel.Location = new System.Drawing.Point(159, 9);
             this.musteriyonetimLabel.Name = "musteriyonetimLabel";
-            this.musteriyonetimLabel.Size = new System.Drawing.Size(178, 23);
+            this.musteriyonetimLabel.Size = new System.Drawing.Size(216, 27);
             this.musteriyonetimLabel.TabIndex = 14;
             this.musteriyonetimLabel.Text = "Randevu Yönetimi";
             // 
@@ -150,12 +145,11 @@ namespace LawyerDiaryUI
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.Silver;
-            this.dataGridView1.Location = new System.Drawing.Point(176, 52);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(201, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(820, 141);
+            this.dataGridView1.Size = new System.Drawing.Size(937, 188);
             this.dataGridView1.TabIndex = 3;
             // 
             // ekleBtn
@@ -167,10 +161,9 @@ namespace LawyerDiaryUI
             this.ekleBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.ekleBtn.IconColor = System.Drawing.Color.Navy;
             this.ekleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ekleBtn.Location = new System.Drawing.Point(745, 234);
-            this.ekleBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ekleBtn.Location = new System.Drawing.Point(851, 312);
             this.ekleBtn.Name = "ekleBtn";
-            this.ekleBtn.Size = new System.Drawing.Size(174, 44);
+            this.ekleBtn.Size = new System.Drawing.Size(199, 59);
             this.ekleBtn.TabIndex = 5;
             this.ekleBtn.Text = "Ekle";
             this.ekleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,10 +181,9 @@ namespace LawyerDiaryUI
             this.güncelleBtn.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.güncelleBtn.IconColor = System.Drawing.Color.Navy;
             this.güncelleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.güncelleBtn.Location = new System.Drawing.Point(761, 282);
-            this.güncelleBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.güncelleBtn.Location = new System.Drawing.Point(865, 402);
             this.güncelleBtn.Name = "güncelleBtn";
-            this.güncelleBtn.Size = new System.Drawing.Size(174, 44);
+            this.güncelleBtn.Size = new System.Drawing.Size(199, 59);
             this.güncelleBtn.TabIndex = 5;
             this.güncelleBtn.Text = "Güncelle";
             this.güncelleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,10 +200,9 @@ namespace LawyerDiaryUI
             this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.ıconButton3.IconColor = System.Drawing.Color.Navy;
             this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton3.Location = new System.Drawing.Point(745, 347);
-            this.ıconButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ıconButton3.Location = new System.Drawing.Point(845, 492);
             this.ıconButton3.Name = "ıconButton3";
-            this.ıconButton3.Size = new System.Drawing.Size(174, 44);
+            this.ıconButton3.Size = new System.Drawing.Size(199, 59);
             this.ıconButton3.TabIndex = 5;
             this.ıconButton3.Text = "Sil";
             this.ıconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,9 +220,11 @@ namespace LawyerDiaryUI
             this.grupBox.Controls.Add(this.subject);
             this.grupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupBox.ForeColor = System.Drawing.Color.Navy;
-            this.grupBox.Location = new System.Drawing.Point(176, 214);
+            this.grupBox.Location = new System.Drawing.Point(201, 285);
+            this.grupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grupBox.Name = "grupBox";
-            this.grupBox.Size = new System.Drawing.Size(498, 208);
+            this.grupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grupBox.Size = new System.Drawing.Size(569, 277);
             this.grupBox.TabIndex = 8;
             this.grupBox.TabStop = false;
             this.grupBox.Text = "Filtreli Arama";
@@ -239,9 +232,10 @@ namespace LawyerDiaryUI
             // randevular
             // 
             this.randevular.AutoSize = true;
-            this.randevular.Location = new System.Drawing.Point(137, 170);
+            this.randevular.Location = new System.Drawing.Point(157, 227);
+            this.randevular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.randevular.Name = "randevular";
-            this.randevular.Size = new System.Drawing.Size(111, 19);
+            this.randevular.Size = new System.Drawing.Size(137, 24);
             this.randevular.TabIndex = 6;
             this.randevular.TabStop = true;
             this.randevular.Text = "Tüm Randevular";
@@ -250,9 +244,10 @@ namespace LawyerDiaryUI
             // gelecekRandevular
             // 
             this.gelecekRandevular.AutoSize = true;
-            this.gelecekRandevular.Location = new System.Drawing.Point(259, 133);
+            this.gelecekRandevular.Location = new System.Drawing.Point(296, 177);
+            this.gelecekRandevular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gelecekRandevular.Name = "gelecekRandevular";
-            this.gelecekRandevular.Size = new System.Drawing.Size(128, 19);
+            this.gelecekRandevular.Size = new System.Drawing.Size(160, 24);
             this.gelecekRandevular.TabIndex = 5;
             this.gelecekRandevular.TabStop = true;
             this.gelecekRandevular.Text = "Gelecek Randevular";
@@ -261,9 +256,10 @@ namespace LawyerDiaryUI
             // gecmisRandevular
             // 
             this.gecmisRandevular.AutoSize = true;
-            this.gecmisRandevular.Location = new System.Drawing.Point(41, 133);
+            this.gecmisRandevular.Location = new System.Drawing.Point(47, 177);
+            this.gecmisRandevular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gecmisRandevular.Name = "gecmisRandevular";
-            this.gecmisRandevular.Size = new System.Drawing.Size(126, 19);
+            this.gecmisRandevular.Size = new System.Drawing.Size(156, 24);
             this.gecmisRandevular.TabIndex = 5;
             this.gecmisRandevular.TabStop = true;
             this.gecmisRandevular.Text = "Geçmiş Randevular";
@@ -272,25 +268,26 @@ namespace LawyerDiaryUI
             // musteriAd
             // 
             this.musteriAd.AutoSize = true;
-            this.musteriAd.Location = new System.Drawing.Point(20, 68);
+            this.musteriAd.Location = new System.Drawing.Point(23, 91);
             this.musteriAd.Name = "musteriAd";
-            this.musteriAd.Size = new System.Drawing.Size(0, 15);
+            this.musteriAd.Size = new System.Drawing.Size(0, 20);
             this.musteriAd.TabIndex = 4;
             // 
             // subject
             // 
-            this.subject.Location = new System.Drawing.Point(41, 65);
+            this.subject.Location = new System.Drawing.Point(47, 87);
+            this.subject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.subject.Name = "subject";
             this.subject.PlaceholderText = "Randevu Konusu giriniz";
-            this.subject.Size = new System.Drawing.Size(420, 23);
+            this.subject.Size = new System.Drawing.Size(479, 27);
             this.subject.TabIndex = 4;
             this.subject.TextChanged += new System.EventHandler(this.musteriAdi_TextChanged);
             // 
             // RandevuYonetim
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 434);
+            this.ClientSize = new System.Drawing.Size(1178, 579);
             this.Controls.Add(this.grupBox);
             this.Controls.Add(this.ıconButton3);
             this.Controls.Add(this.güncelleBtn);
@@ -299,7 +296,6 @@ namespace LawyerDiaryUI
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RandevuYonetim";
             this.Text = "RandevuYonetim";
             this.Load += new System.EventHandler(this.RandevuYonetim_Load);
