@@ -130,8 +130,10 @@ namespace LawyerDiaryUI
 
         private void kullanici_hesap_islemleri_Click(object sender, EventArgs e)
         {
-
+            KullaniciIslemleri kullaniciIslemleri = new KullaniciIslemleri();
             ActivateButton(sender, RGBColors.color6);
+            kullaniciIslemleri.Show();
+            this.Hide();
 
         }
 

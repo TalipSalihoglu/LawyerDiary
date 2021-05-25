@@ -274,3 +274,5 @@ C:\Users\serhat\Documents\GitHub\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3
 C:\Users\serhat\Documents\GitHub\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.genruntimeconfig.cache
 C:\Users\serhat\Documents\GitHub\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.ToDoList.resources
 C:\Users\serhat\Documents\GitHub\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.KullaniciIslemleri.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.KullaniciIslemleri.resources
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\LawyerDiaryUI\obj\Debug\netcoreapp3.1\LawyerDiaryUI.ToDoList.resources

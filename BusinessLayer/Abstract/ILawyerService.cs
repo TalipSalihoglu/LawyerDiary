@@ -11,5 +11,6 @@ namespace BusinessLayer.Abstract
         void Add(Lawyer lawyer);
         void Update(Lawyer lawyer);
         int Login(string email,string password);
+        bool ChangePassword(int lawyer_id,string password, string newPassword, string checkPassword);
     }
 }

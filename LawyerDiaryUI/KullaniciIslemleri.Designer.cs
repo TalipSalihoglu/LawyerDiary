@@ -36,18 +36,18 @@ namespace LawyerDiaryUI
             this.exitBtn = new System.Windows.Forms.Button();
             this.kullaniciIslemleriLabel = new System.Windows.Forms.Label();
             this.hesapBilgileriBox = new System.Windows.Forms.GroupBox();
-            this.sifreDegistirmeBox = new System.Windows.Forms.GroupBox();
-            this.isimLabel = new System.Windows.Forms.Label();
-            this.adresLabel = new System.Windows.Forms.Label();
-            this.emailLabel = new System.Windows.Forms.Label();
-            this.isimBox = new System.Windows.Forms.TextBox();
+            this.güncelleBtn = new FontAwesome.Sharp.IconButton();
             this.addressBox = new System.Windows.Forms.RichTextBox();
             this.emailBox = new System.Windows.Forms.TextBox();
-            this.güncelleBtn = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.isimBox = new System.Windows.Forms.TextBox();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.adresLabel = new System.Windows.Forms.Label();
+            this.isimLabel = new System.Windows.Forms.Label();
+            this.sifreDegistirmeBox = new System.Windows.Forms.GroupBox();
             this.btnKaydet = new FontAwesome.Sharp.IconButton();
+            this.yeniSifreTekrar = new System.Windows.Forms.TextBox();
+            this.yeniSifre = new System.Windows.Forms.TextBox();
+            this.eskiSifre = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.hesapBilgileriBox.SuspendLayout();
@@ -85,6 +85,7 @@ namespace LawyerDiaryUI
             this.anaMenuyeDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.anaMenuyeDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.anaMenuyeDon.UseVisualStyleBackColor = true;
+            this.anaMenuyeDon.Click += new System.EventHandler(this.anaMenuyeDon_Click);
             // 
             // cikis
             // 
@@ -144,7 +145,7 @@ namespace LawyerDiaryUI
             this.kullaniciIslemleriLabel.ForeColor = System.Drawing.Color.Silver;
             this.kullaniciIslemleriLabel.Location = new System.Drawing.Point(159, 9);
             this.kullaniciIslemleriLabel.Name = "kullaniciIslemleriLabel";
-            this.kullaniciIslemleriLabel.Size = new System.Drawing.Size(207, 27);
+            this.kullaniciIslemleriLabel.Size = new System.Drawing.Size(170, 23);
             this.kullaniciIslemleriLabel.TabIndex = 14;
             this.kullaniciIslemleriLabel.Text = "Kullanıcı İşlemleri";
             // 
@@ -165,69 +166,6 @@ namespace LawyerDiaryUI
             this.hesapBilgileriBox.TabStop = false;
             this.hesapBilgileriBox.Text = "Hesap İşlemleri";
             // 
-            // sifreDegistirmeBox
-            // 
-            this.sifreDegistirmeBox.Controls.Add(this.btnKaydet);
-            this.sifreDegistirmeBox.Controls.Add(this.textBox3);
-            this.sifreDegistirmeBox.Controls.Add(this.textBox2);
-            this.sifreDegistirmeBox.Controls.Add(this.textBox1);
-            this.sifreDegistirmeBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sifreDegistirmeBox.Location = new System.Drawing.Point(895, 102);
-            this.sifreDegistirmeBox.Name = "sifreDegistirmeBox";
-            this.sifreDegistirmeBox.Size = new System.Drawing.Size(445, 482);
-            this.sifreDegistirmeBox.TabIndex = 6;
-            this.sifreDegistirmeBox.TabStop = false;
-            this.sifreDegistirmeBox.Text = "Şifre Değiştirme";
-            // 
-            // isimLabel
-            // 
-            this.isimLabel.AutoSize = true;
-            this.isimLabel.Location = new System.Drawing.Point(49, 98);
-            this.isimLabel.Name = "isimLabel";
-            this.isimLabel.Size = new System.Drawing.Size(50, 23);
-            this.isimLabel.TabIndex = 0;
-            this.isimLabel.Text = "İsim:";
-            // 
-            // adresLabel
-            // 
-            this.adresLabel.AutoSize = true;
-            this.adresLabel.Location = new System.Drawing.Point(49, 186);
-            this.adresLabel.Name = "adresLabel";
-            this.adresLabel.Size = new System.Drawing.Size(71, 23);
-            this.adresLabel.TabIndex = 0;
-            this.adresLabel.Text = "Adres:";
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(49, 453);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(74, 23);
-            this.emailLabel.TabIndex = 0;
-            this.emailLabel.Text = "E-mail:";
-            // 
-            // isimBox
-            // 
-            this.isimBox.Location = new System.Drawing.Point(152, 94);
-            this.isimBox.Name = "isimBox";
-            this.isimBox.Size = new System.Drawing.Size(378, 32);
-            this.isimBox.TabIndex = 1;
-            // 
-            // addressBox
-            // 
-            this.addressBox.Location = new System.Drawing.Point(152, 186);
-            this.addressBox.Name = "addressBox";
-            this.addressBox.Size = new System.Drawing.Size(378, 204);
-            this.addressBox.TabIndex = 2;
-            this.addressBox.Text = "";
-            // 
-            // emailBox
-            // 
-            this.emailBox.Location = new System.Drawing.Point(152, 450);
-            this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(378, 32);
-            this.emailBox.TabIndex = 1;
-            // 
             // güncelleBtn
             // 
             this.güncelleBtn.BackColor = System.Drawing.SystemColors.Control;
@@ -245,33 +183,70 @@ namespace LawyerDiaryUI
             this.güncelleBtn.Text = "Güncelle";
             this.güncelleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.güncelleBtn.UseVisualStyleBackColor = false;
+            this.güncelleBtn.Click += new System.EventHandler(this.güncelleBtn_Click);
             // 
-            // textBox1
+            // addressBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Eski Şifre";
-            this.textBox1.Size = new System.Drawing.Size(378, 32);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.addressBox.Location = new System.Drawing.Point(152, 186);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(378, 204);
+            this.addressBox.TabIndex = 2;
+            this.addressBox.Text = "";
             // 
-            // textBox2
+            // emailBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(24, 186);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Yeni Şifre";
-            this.textBox2.Size = new System.Drawing.Size(378, 32);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.emailBox.Location = new System.Drawing.Point(152, 450);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(378, 27);
+            this.emailBox.TabIndex = 1;
             // 
-            // textBox3
+            // isimBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(24, 278);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = "Yeni Şifre Tekrar";
-            this.textBox3.Size = new System.Drawing.Size(378, 32);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.isimBox.Location = new System.Drawing.Point(152, 94);
+            this.isimBox.Name = "isimBox";
+            this.isimBox.Size = new System.Drawing.Size(378, 27);
+            this.isimBox.TabIndex = 1;
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Location = new System.Drawing.Point(49, 453);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(60, 21);
+            this.emailLabel.TabIndex = 0;
+            this.emailLabel.Text = "E-mail:";
+            // 
+            // adresLabel
+            // 
+            this.adresLabel.AutoSize = true;
+            this.adresLabel.Location = new System.Drawing.Point(49, 186);
+            this.adresLabel.Name = "adresLabel";
+            this.adresLabel.Size = new System.Drawing.Size(59, 21);
+            this.adresLabel.TabIndex = 0;
+            this.adresLabel.Text = "Adres:";
+            // 
+            // isimLabel
+            // 
+            this.isimLabel.AutoSize = true;
+            this.isimLabel.Location = new System.Drawing.Point(49, 98);
+            this.isimLabel.Name = "isimLabel";
+            this.isimLabel.Size = new System.Drawing.Size(43, 21);
+            this.isimLabel.TabIndex = 0;
+            this.isimLabel.Text = "İsim:";
+            // 
+            // sifreDegistirmeBox
+            // 
+            this.sifreDegistirmeBox.Controls.Add(this.btnKaydet);
+            this.sifreDegistirmeBox.Controls.Add(this.yeniSifreTekrar);
+            this.sifreDegistirmeBox.Controls.Add(this.yeniSifre);
+            this.sifreDegistirmeBox.Controls.Add(this.eskiSifre);
+            this.sifreDegistirmeBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sifreDegistirmeBox.Location = new System.Drawing.Point(895, 102);
+            this.sifreDegistirmeBox.Name = "sifreDegistirmeBox";
+            this.sifreDegistirmeBox.Size = new System.Drawing.Size(445, 482);
+            this.sifreDegistirmeBox.TabIndex = 6;
+            this.sifreDegistirmeBox.TabStop = false;
+            this.sifreDegistirmeBox.Text = "Şifre Değiştirme";
             // 
             // btnKaydet
             // 
@@ -289,10 +264,38 @@ namespace LawyerDiaryUI
             this.btnKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            // 
+            // yeniSifreTekrar
+            // 
+            this.yeniSifreTekrar.Location = new System.Drawing.Point(24, 278);
+            this.yeniSifreTekrar.Name = "yeniSifreTekrar";
+            this.yeniSifreTekrar.PlaceholderText = "Yeni Şifre Tekrar";
+            this.yeniSifreTekrar.Size = new System.Drawing.Size(378, 27);
+            this.yeniSifreTekrar.TabIndex = 1;
+            this.yeniSifreTekrar.UseSystemPasswordChar = true;
+            // 
+            // yeniSifre
+            // 
+            this.yeniSifre.Location = new System.Drawing.Point(24, 186);
+            this.yeniSifre.Name = "yeniSifre";
+            this.yeniSifre.PlaceholderText = "Yeni Şifre";
+            this.yeniSifre.Size = new System.Drawing.Size(378, 27);
+            this.yeniSifre.TabIndex = 1;
+            this.yeniSifre.UseSystemPasswordChar = true;
+            // 
+            // eskiSifre
+            // 
+            this.eskiSifre.Location = new System.Drawing.Point(24, 94);
+            this.eskiSifre.Name = "eskiSifre";
+            this.eskiSifre.PlaceholderText = "Eski Şifre";
+            this.eskiSifre.Size = new System.Drawing.Size(378, 27);
+            this.eskiSifre.TabIndex = 1;
+            this.eskiSifre.UseSystemPasswordChar = true;
             // 
             // KullaniciIslemleri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.sifreDegistirmeBox);
@@ -303,6 +306,7 @@ namespace LawyerDiaryUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "KullaniciIslemleri";
             this.Text = "KullaniciIslemleri";
+            this.Load += new System.EventHandler(this.KullaniciIslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -331,9 +335,9 @@ namespace LawyerDiaryUI
         private System.Windows.Forms.Label isimLabel;
         private System.Windows.Forms.GroupBox sifreDegistirmeBox;
         private FontAwesome.Sharp.IconButton güncelleBtn;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox yeniSifreTekrar;
+        private System.Windows.Forms.TextBox yeniSifre;
+        private System.Windows.Forms.TextBox eskiSifre;
         private FontAwesome.Sharp.IconButton btnKaydet;
     }
 }

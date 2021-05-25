@@ -6,13 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
 
 namespace LawyerDiaryUI
 {
     public partial class KullaniciIslemleri : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        LawyerManager _lawyerManager = new LawyerManager(new LawyerDal());
+        Lawyer lawyer; 
 
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
 
               int nLeftRect,
@@ -29,6 +34,7 @@ namespace LawyerDiaryUI
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 60, 60));
+            lawyer = _lawyerManager.Get(1);
         }
 
         bool mouseDown;
@@ -62,6 +68,43 @@ namespace LawyerDiaryUI
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void anaMenuyeDon_Click(object sender, EventArgs e)
+        {
+            MainPage mp = new MainPage();
+            mp.Show();
+            this.Hide();
+        }
+
+        private void KullaniciIslemleri_Load(object sender, EventArgs e)
+        {
+            isimBox.Text = lawyer.Name;
+            addressBox.Text =lawyer.Address;
+            emailBox.Text = lawyer.Email;
+        }
+
+        private void güncelleBtn_Click(object sender, EventArgs e)
+        {
+            if (isimBox.Text != "" && addressBox.Text != "" && emailBox.Text != "")
+            {
+                lawyer.Name = isimBox.Text;
+                lawyer.Address = addressBox.Text;
+                lawyer.Email = emailBox.Text;
+                _lawyerManager.Update(lawyer);
+                MessageBox.Show("Güncelleme işlemi başarıyla tamamlandı");
+            }
+            else
+                MessageBox.Show("Gerekli alanlar boş bırakılamaz!");
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+           bool result = _lawyerManager.ChangePassword(lawyer.LawyerId,eskiSifre.Text,yeniSifre.Text,yeniSifreTekrar.Text);
+            if (result)
+                MessageBox.Show("Güncelleme işlemi başarıyla tamamlandı");
+            else
+                MessageBox.Show("Bilgileri kontrol ediniz.\nGüncelleme yapılamadı!!");
         }
     }
 }

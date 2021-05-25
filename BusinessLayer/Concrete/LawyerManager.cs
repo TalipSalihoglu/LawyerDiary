@@ -26,6 +26,25 @@ namespace BusinessLayer.Concrete
             }
         }
 
+        public bool ChangePassword(int lawyer_id,string password, string newPassword, string checkPassword)
+        {
+            Lawyer lw = _lawyerDal.Get(lawyer_id);
+            string pw = lw.Password;
+            if (!password.Equals(pw))
+                return false;
+            if (newPassword.Length < 6)
+                return false;
+
+            if (checkPassword.Equals(newPassword))
+            {
+                lw.Password = newPassword;
+                _lawyerDal.Update(lw);
+                return true;
+            }
+            else
+                return false;
+        }
+
         public Lawyer Get(int id)
         {
             return _lawyerDal.Get(id);
