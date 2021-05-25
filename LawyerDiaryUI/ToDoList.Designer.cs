@@ -37,10 +37,10 @@ namespace LawyerDiaryUI
             this.cikis = new FontAwesome.Sharp.IconButton();
             this.gorevDetaylari = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.gorevAcılaması = new System.Windows.Forms.RichTextBox();
+            this.gorevAdi = new System.Windows.Forms.TextBox();
+            this.YapılacaklarListesi = new System.Windows.Forms.CheckedListBox();
+            this.YapılanlarListesi = new System.Windows.Forms.ListBox();
             this.ıconButton3 = new FontAwesome.Sharp.IconButton();
             this.güncelleBtn = new FontAwesome.Sharp.IconButton();
             this.ekleBtn = new FontAwesome.Sharp.IconButton();
@@ -87,7 +87,7 @@ namespace LawyerDiaryUI
             this.musteriyonetimLabel.ForeColor = System.Drawing.Color.Silver;
             this.musteriyonetimLabel.Location = new System.Drawing.Point(159, 9);
             this.musteriyonetimLabel.Name = "musteriyonetimLabel";
-            this.musteriyonetimLabel.Size = new System.Drawing.Size(224, 27);
+            this.musteriyonetimLabel.Size = new System.Drawing.Size(188, 23);
             this.musteriyonetimLabel.TabIndex = 14;
             this.musteriyonetimLabel.Text = "Yapılacaklar Listesi";
             // 
@@ -122,6 +122,7 @@ namespace LawyerDiaryUI
             this.anaMenuyeDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.anaMenuyeDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.anaMenuyeDon.UseVisualStyleBackColor = true;
+            this.anaMenuyeDon.Click += new System.EventHandler(this.anaMenuyeDon_Click);
             // 
             // cikis
             // 
@@ -148,13 +149,13 @@ namespace LawyerDiaryUI
             // gorevDetaylari
             // 
             this.gorevDetaylari.Controls.Add(this.label1);
-            this.gorevDetaylari.Controls.Add(this.richTextBox1);
-            this.gorevDetaylari.Controls.Add(this.textBox1);
+            this.gorevDetaylari.Controls.Add(this.gorevAcılaması);
+            this.gorevDetaylari.Controls.Add(this.gorevAdi);
             this.gorevDetaylari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gorevDetaylari.ForeColor = System.Drawing.Color.Navy;
             this.gorevDetaylari.Location = new System.Drawing.Point(202, 77);
             this.gorevDetaylari.Name = "gorevDetaylari";
-            this.gorevDetaylari.Size = new System.Drawing.Size(400, 284);
+            this.gorevDetaylari.Size = new System.Drawing.Size(429, 371);
             this.gorevDetaylari.TabIndex = 5;
             this.gorevDetaylari.TabStop = false;
             this.gorevDetaylari.Text = "Görev Detayları";
@@ -162,45 +163,48 @@ namespace LawyerDiaryUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 84);
+            this.label1.Location = new System.Drawing.Point(28, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 23);
+            this.label1.Size = new System.Drawing.Size(146, 21);
             this.label1.TabIndex = 13;
             this.label1.Text = "Görev Açıklaması";
             // 
-            // richTextBox1
+            // gorevAcılaması
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(28, 119);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(342, 148);
-            this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = "";
+            this.gorevAcılaması.Location = new System.Drawing.Point(28, 162);
+            this.gorevAcılaması.Name = "gorevAcılaması";
+            this.gorevAcılaması.Size = new System.Drawing.Size(361, 180);
+            this.gorevAcılaması.TabIndex = 12;
+            this.gorevAcılaması.Text = "";
             // 
-            // textBox1
+            // gorevAdi
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Görev Konusu";
-            this.textBox1.Size = new System.Drawing.Size(342, 32);
-            this.textBox1.TabIndex = 11;
+            this.gorevAdi.Location = new System.Drawing.Point(28, 58);
+            this.gorevAdi.Name = "gorevAdi";
+            this.gorevAdi.PlaceholderText = "Görev Konusu";
+            this.gorevAdi.Size = new System.Drawing.Size(342, 27);
+            this.gorevAdi.TabIndex = 11;
             // 
-            // checkedListBox1
+            // YapılacaklarListesi
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(770, 84);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(568, 274);
-            this.checkedListBox1.TabIndex = 6;
+            this.YapılacaklarListesi.FormattingEnabled = true;
+            this.YapılacaklarListesi.Location = new System.Drawing.Point(770, 84);
+            this.YapılacaklarListesi.Name = "YapılacaklarListesi";
+            this.YapılacaklarListesi.Size = new System.Drawing.Size(568, 268);
+            this.YapılacaklarListesi.TabIndex = 6;
+            this.YapılacaklarListesi.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.YapılacaklarListesi_ItemCheck);
+            this.YapılacaklarListesi.SelectedIndexChanged += new System.EventHandler(this.YapılacaklarListesi_SelectedIndexChanged);
+            this.YapılacaklarListesi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.YapılacaklarListesi_MouseUp);
             // 
-            // listBox1
+            // YapılanlarListesi
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 23;
-            this.listBox1.Location = new System.Drawing.Point(770, 417);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(568, 303);
-            this.listBox1.TabIndex = 7;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.YapılanlarListesi.FormattingEnabled = true;
+            this.YapılanlarListesi.ItemHeight = 21;
+            this.YapılanlarListesi.Location = new System.Drawing.Point(770, 417);
+            this.YapılanlarListesi.Name = "YapılanlarListesi";
+            this.YapılanlarListesi.Size = new System.Drawing.Size(568, 298);
+            this.YapılanlarListesi.TabIndex = 7;
+            this.YapılanlarListesi.SelectedIndexChanged += new System.EventHandler(this.YapılanlarListesi_SelectedIndexChanged);
             // 
             // ıconButton3
             // 
@@ -211,7 +215,7 @@ namespace LawyerDiaryUI
             this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.ıconButton3.IconColor = System.Drawing.Color.Navy;
             this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton3.Location = new System.Drawing.Point(344, 661);
+            this.ıconButton3.Location = new System.Drawing.Point(361, 584);
             this.ıconButton3.Name = "ıconButton3";
             this.ıconButton3.Size = new System.Drawing.Size(199, 59);
             this.ıconButton3.TabIndex = 8;
@@ -219,6 +223,7 @@ namespace LawyerDiaryUI
             this.ıconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ıconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ıconButton3.UseVisualStyleBackColor = true;
+            this.ıconButton3.Click += new System.EventHandler(this.ıconButton3_Click);
             // 
             // güncelleBtn
             // 
@@ -230,7 +235,7 @@ namespace LawyerDiaryUI
             this.güncelleBtn.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.güncelleBtn.IconColor = System.Drawing.Color.Navy;
             this.güncelleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.güncelleBtn.Location = new System.Drawing.Point(363, 539);
+            this.güncelleBtn.Location = new System.Drawing.Point(489, 485);
             this.güncelleBtn.Name = "güncelleBtn";
             this.güncelleBtn.Size = new System.Drawing.Size(199, 59);
             this.güncelleBtn.TabIndex = 9;
@@ -238,6 +243,7 @@ namespace LawyerDiaryUI
             this.güncelleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.güncelleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.güncelleBtn.UseVisualStyleBackColor = false;
+            this.güncelleBtn.Click += new System.EventHandler(this.güncelleBtn_Click);
             // 
             // ekleBtn
             // 
@@ -248,7 +254,7 @@ namespace LawyerDiaryUI
             this.ekleBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.ekleBtn.IconColor = System.Drawing.Color.Navy;
             this.ekleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ekleBtn.Location = new System.Drawing.Point(349, 417);
+            this.ekleBtn.Location = new System.Drawing.Point(202, 485);
             this.ekleBtn.Name = "ekleBtn";
             this.ekleBtn.Size = new System.Drawing.Size(199, 59);
             this.ekleBtn.TabIndex = 10;
@@ -256,13 +262,14 @@ namespace LawyerDiaryUI
             this.ekleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ekleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ekleBtn.UseVisualStyleBackColor = true;
+            this.ekleBtn.Click += new System.EventHandler(this.ekleBtn_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(770, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 23);
+            this.label2.Size = new System.Drawing.Size(108, 21);
             this.label2.TabIndex = 13;
             this.label2.Text = "Yapılacaklar";
             // 
@@ -271,13 +278,13 @@ namespace LawyerDiaryUI
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(770, 382);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 23);
+            this.label3.Size = new System.Drawing.Size(186, 21);
             this.label3.TabIndex = 13;
             this.label3.Text = "Tamamlanan Görevler";
             // 
             // ToDoList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1382, 753);
             this.Controls.Add(this.label3);
@@ -285,8 +292,8 @@ namespace LawyerDiaryUI
             this.Controls.Add(this.ıconButton3);
             this.Controls.Add(this.güncelleBtn);
             this.Controls.Add(this.ekleBtn);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.YapılanlarListesi);
+            this.Controls.Add(this.YapılacaklarListesi);
             this.Controls.Add(this.gorevDetaylari);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -295,6 +302,7 @@ namespace LawyerDiaryUI
             this.Name = "ToDoList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ToDoList";
+            this.Load += new System.EventHandler(this.ToDoList_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -314,14 +322,14 @@ namespace LawyerDiaryUI
         private FontAwesome.Sharp.IconButton anaMenuyeDon;
         private FontAwesome.Sharp.IconButton cikis;
         private System.Windows.Forms.GroupBox gorevDetaylari;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.CheckedListBox YapılacaklarListesi;
+        private System.Windows.Forms.ListBox YapılanlarListesi;
         private FontAwesome.Sharp.IconButton ıconButton3;
         private FontAwesome.Sharp.IconButton güncelleBtn;
         private FontAwesome.Sharp.IconButton ekleBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox gorevAcılaması;
+        private System.Windows.Forms.TextBox gorevAdi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }

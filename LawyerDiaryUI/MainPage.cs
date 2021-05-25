@@ -124,8 +124,10 @@ namespace LawyerDiaryUI
 
         private void yapilacaklar_listesi_Click(object sender, EventArgs e)
         {
+            ToDoList todo = new ToDoList();
             ActivateButton(sender, RGBColors.color5);
-
+            todo.Show();
+            this.Hide();
         }
 
         private void kullanici_hesap_islemleri_Click(object sender, EventArgs e)

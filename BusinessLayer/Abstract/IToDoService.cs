@@ -8,6 +8,7 @@ namespace BusinessLayer.Abstract
     public interface IToDoService
     {
         ToDo Get(int id);
+        ToDo GetWithTask(string task);
         IList<ToDo> GetList();
         void Add(ToDo obj);
         void Update(ToDo obj);

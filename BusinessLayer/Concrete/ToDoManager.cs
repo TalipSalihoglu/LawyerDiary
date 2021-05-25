@@ -3,6 +3,7 @@ using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace BusinessLayer.Concrete
@@ -19,6 +20,7 @@ namespace BusinessLayer.Concrete
         public void Add(ToDo obj)
         {
             obj.Status = true;
+            obj.LawyerId = 1;
             _todoDal.Add(obj);
         }
 
@@ -41,6 +43,11 @@ namespace BusinessLayer.Concrete
         public IList<ToDo> GetList()
         {
             return _todoDal.GetList();
+        }
+
+        public ToDo GetWithTask(string task)
+        {
+            return _todoDal.GetList().Where(x => x.Task == task).FirstOrDefault();
         }
 
         public void Update(ToDo obj)
