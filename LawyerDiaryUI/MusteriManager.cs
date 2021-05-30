@@ -95,5 +95,20 @@ namespace LawyerDiaryUI
             müsAdres.Text = "";
             müsMail.Text = "";
         }
+
+        private void mouseUpMovement(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void mouseMovementEvent(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void mouseDownEvent(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

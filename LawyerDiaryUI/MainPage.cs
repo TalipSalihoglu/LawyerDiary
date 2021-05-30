@@ -186,5 +186,10 @@ namespace LawyerDiaryUI
         {
             mouseDownEvent = false;
         }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

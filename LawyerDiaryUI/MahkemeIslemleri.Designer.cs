@@ -62,8 +62,11 @@ namespace LawyerDiaryUI
             this.panel3.Controls.Add(this.exitBtn);
             this.panel3.Location = new System.Drawing.Point(128, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1198, 39);
+            this.panel3.Size = new System.Drawing.Size(1274, 39);
             this.panel3.TabIndex = 3;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
             // 
             // musteriyonetimLabel
             // 
@@ -72,7 +75,7 @@ namespace LawyerDiaryUI
             this.musteriyonetimLabel.ForeColor = System.Drawing.Color.Silver;
             this.musteriyonetimLabel.Location = new System.Drawing.Point(1, 9);
             this.musteriyonetimLabel.Name = "musteriyonetimLabel";
-            this.musteriyonetimLabel.Size = new System.Drawing.Size(185, 23);
+            this.musteriyonetimLabel.Size = new System.Drawing.Size(226, 27);
             this.musteriyonetimLabel.TabIndex = 15;
             this.musteriyonetimLabel.Text = "Mahkeme İşlemleri";
             // 
@@ -84,7 +87,7 @@ namespace LawyerDiaryUI
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.exitBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.exitBtn.Location = new System.Drawing.Point(1159, -3);
+            this.exitBtn.Location = new System.Drawing.Point(1235, 0);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(39, 39);
             this.exitBtn.TabIndex = 11;
@@ -100,8 +103,11 @@ namespace LawyerDiaryUI
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(136, 578);
+            this.panel1.Size = new System.Drawing.Size(136, 800);
             this.panel1.TabIndex = 2;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
             // 
             // anaMenuBtn
             // 
@@ -161,17 +167,17 @@ namespace LawyerDiaryUI
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(633, 190);
+            this.dataGridView1.Size = new System.Drawing.Size(633, 244);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(177, 301);
+            this.textBox1.Location = new System.Drawing.Point(508, 352);
             this.textBox1.Name = "textBox1";
             this.textBox1.PlaceholderText = "Aramak istediğiniz mahkemenin numarasını girin";
-            this.textBox1.Size = new System.Drawing.Size(491, 27);
+            this.textBox1.Size = new System.Drawing.Size(491, 32);
             this.textBox1.TabIndex = 5;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -181,9 +187,9 @@ namespace LawyerDiaryUI
             this.groupBox1.Controls.Add(this.saveBtn);
             this.groupBox1.Controls.Add(this.hakimAdı);
             this.groupBox1.Controls.Add(this.mahkemeNo);
-            this.groupBox1.Location = new System.Drawing.Point(184, 357);
+            this.groupBox1.Location = new System.Drawing.Point(229, 441);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(484, 209);
+            this.groupBox1.Size = new System.Drawing.Size(484, 249);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Yeni Mahkeme Ekle";
@@ -197,7 +203,7 @@ namespace LawyerDiaryUI
             this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.Ban;
             this.ıconButton3.IconColor = System.Drawing.Color.Navy;
             this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton3.Location = new System.Drawing.Point(258, 151);
+            this.ıconButton3.Location = new System.Drawing.Point(258, 173);
             this.ıconButton3.Name = "ıconButton3";
             this.ıconButton3.Size = new System.Drawing.Size(146, 42);
             this.ıconButton3.TabIndex = 10;
@@ -215,7 +221,7 @@ namespace LawyerDiaryUI
             this.saveBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.saveBtn.IconColor = System.Drawing.Color.Navy;
             this.saveBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.saveBtn.Location = new System.Drawing.Point(79, 151);
+            this.saveBtn.Location = new System.Drawing.Point(79, 173);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(149, 42);
             this.saveBtn.TabIndex = 9;
@@ -230,7 +236,7 @@ namespace LawyerDiaryUI
             this.hakimAdı.Location = new System.Drawing.Point(79, 105);
             this.hakimAdı.Name = "hakimAdı";
             this.hakimAdı.PlaceholderText = "Hakim İsmi";
-            this.hakimAdı.Size = new System.Drawing.Size(325, 27);
+            this.hakimAdı.Size = new System.Drawing.Size(325, 32);
             this.hakimAdı.TabIndex = 0;
             // 
             // mahkemeNo
@@ -238,7 +244,7 @@ namespace LawyerDiaryUI
             this.mahkemeNo.Location = new System.Drawing.Point(79, 40);
             this.mahkemeNo.Name = "mahkemeNo";
             this.mahkemeNo.PlaceholderText = "Mahkeme No";
-            this.mahkemeNo.Size = new System.Drawing.Size(325, 27);
+            this.mahkemeNo.Size = new System.Drawing.Size(325, 32);
             this.mahkemeNo.TabIndex = 0;
             // 
             // groupBox2
@@ -247,9 +253,9 @@ namespace LawyerDiaryUI
             this.groupBox2.Controls.Add(this.mahkemeGuncelleBtn);
             this.groupBox2.Controls.Add(this.GüncelleHakimAdi);
             this.groupBox2.Controls.Add(this.GüncelleMahkemeNo);
-            this.groupBox2.Location = new System.Drawing.Point(778, 357);
+            this.groupBox2.Location = new System.Drawing.Point(823, 441);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(484, 209);
+            this.groupBox2.Size = new System.Drawing.Size(484, 249);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mahkeme Güncelle";
@@ -262,7 +268,7 @@ namespace LawyerDiaryUI
             this.mahkemeSilBtn.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.mahkemeSilBtn.IconColor = System.Drawing.Color.Navy;
             this.mahkemeSilBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.mahkemeSilBtn.Location = new System.Drawing.Point(253, 151);
+            this.mahkemeSilBtn.Location = new System.Drawing.Point(264, 168);
             this.mahkemeSilBtn.Name = "mahkemeSilBtn";
             this.mahkemeSilBtn.Size = new System.Drawing.Size(146, 42);
             this.mahkemeSilBtn.TabIndex = 11;
@@ -282,7 +288,7 @@ namespace LawyerDiaryUI
             this.mahkemeGuncelleBtn.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.mahkemeGuncelleBtn.IconColor = System.Drawing.Color.Navy;
             this.mahkemeGuncelleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.mahkemeGuncelleBtn.Location = new System.Drawing.Point(58, 151);
+            this.mahkemeGuncelleBtn.Location = new System.Drawing.Point(74, 168);
             this.mahkemeGuncelleBtn.Name = "mahkemeGuncelleBtn";
             this.mahkemeGuncelleBtn.Size = new System.Drawing.Size(184, 52);
             this.mahkemeGuncelleBtn.TabIndex = 7;
@@ -297,7 +303,7 @@ namespace LawyerDiaryUI
             this.GüncelleHakimAdi.Location = new System.Drawing.Point(74, 105);
             this.GüncelleHakimAdi.Name = "GüncelleHakimAdi";
             this.GüncelleHakimAdi.PlaceholderText = "Hakim İsmi";
-            this.GüncelleHakimAdi.Size = new System.Drawing.Size(325, 27);
+            this.GüncelleHakimAdi.Size = new System.Drawing.Size(325, 32);
             this.GüncelleHakimAdi.TabIndex = 0;
             // 
             // GüncelleMahkemeNo
@@ -305,14 +311,14 @@ namespace LawyerDiaryUI
             this.GüncelleMahkemeNo.Location = new System.Drawing.Point(74, 40);
             this.GüncelleMahkemeNo.Name = "GüncelleMahkemeNo";
             this.GüncelleMahkemeNo.PlaceholderText = "Mahkeme No";
-            this.GüncelleMahkemeNo.Size = new System.Drawing.Size(325, 27);
+            this.GüncelleMahkemeNo.Size = new System.Drawing.Size(325, 32);
             this.GüncelleMahkemeNo.TabIndex = 0;
             // 
             // MahkemeIslemleri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1325, 578);
+            this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);

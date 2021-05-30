@@ -50,23 +50,23 @@ namespace LawyerDiaryUI
             // 
             // müsAdı
             // 
-            this.müsAdı.Location = new System.Drawing.Point(480, 122);
+            this.müsAdı.Location = new System.Drawing.Point(574, 196);
             this.müsAdı.Name = "müsAdı";
-            this.müsAdı.Size = new System.Drawing.Size(332, 27);
+            this.müsAdı.Size = new System.Drawing.Size(421, 32);
             this.müsAdı.TabIndex = 0;
             // 
             // müsMail
             // 
-            this.müsMail.Location = new System.Drawing.Point(480, 204);
+            this.müsMail.Location = new System.Drawing.Point(574, 278);
             this.müsMail.Name = "müsMail";
-            this.müsMail.Size = new System.Drawing.Size(332, 27);
+            this.müsMail.Size = new System.Drawing.Size(421, 32);
             this.müsMail.TabIndex = 1;
             // 
             // müsAdres
             // 
-            this.müsAdres.Location = new System.Drawing.Point(480, 286);
+            this.müsAdres.Location = new System.Drawing.Point(574, 360);
             this.müsAdres.Name = "müsAdres";
-            this.müsAdres.Size = new System.Drawing.Size(332, 115);
+            this.müsAdres.Size = new System.Drawing.Size(421, 115);
             this.müsAdres.TabIndex = 2;
             this.müsAdres.Text = "";
             // 
@@ -74,9 +74,9 @@ namespace LawyerDiaryUI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(337, 122);
+            this.label1.Location = new System.Drawing.Point(431, 196);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 21);
+            this.label1.Size = new System.Drawing.Size(116, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Müşteri Adı";
             // 
@@ -84,9 +84,9 @@ namespace LawyerDiaryUI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(332, 207);
+            this.label2.Location = new System.Drawing.Point(426, 281);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 21);
+            this.label2.Size = new System.Drawing.Size(121, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Müşteri Mail";
             // 
@@ -94,9 +94,9 @@ namespace LawyerDiaryUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(315, 326);
+            this.label3.Location = new System.Drawing.Point(409, 400);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 21);
+            this.label3.Size = new System.Drawing.Size(138, 23);
             this.label3.TabIndex = 5;
             this.label3.Text = "Müşteri Adres";
             // 
@@ -109,8 +109,11 @@ namespace LawyerDiaryUI
             this.leftPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(153, 578);
+            this.leftPanel.Size = new System.Drawing.Size(153, 800);
             this.leftPanel.TabIndex = 6;
+            this.leftPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.leftPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.leftPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpMovement);
             // 
             // ıconButton1
             // 
@@ -122,7 +125,7 @@ namespace LawyerDiaryUI
             this.ıconButton1.IconColor = System.Drawing.Color.Silver;
             this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ıconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ıconButton1.Location = new System.Drawing.Point(0, 11);
+            this.ıconButton1.Location = new System.Drawing.Point(-4, 34);
             this.ıconButton1.Name = "ıconButton1";
             this.ıconButton1.Size = new System.Drawing.Size(162, 85);
             this.ıconButton1.TabIndex = 10;
@@ -162,10 +165,10 @@ namespace LawyerDiaryUI
             this.cikis.IconColor = System.Drawing.Color.Silver;
             this.cikis.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.cikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cikis.Location = new System.Drawing.Point(0, 102);
+            this.cikis.Location = new System.Drawing.Point(-10, 132);
             this.cikis.Name = "cikis";
             this.cikis.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.cikis.Size = new System.Drawing.Size(153, 85);
+            this.cikis.Size = new System.Drawing.Size(164, 85);
             this.cikis.TabIndex = 11;
             this.cikis.Text = "Çıkış";
             this.cikis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,8 +185,11 @@ namespace LawyerDiaryUI
             this.panel1.ForeColor = System.Drawing.Color.Silver;
             this.panel1.Location = new System.Drawing.Point(150, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1028, 35);
+            this.panel1.Size = new System.Drawing.Size(1249, 35);
             this.panel1.TabIndex = 7;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpMovement);
             // 
             // button3
             // 
@@ -193,9 +199,9 @@ namespace LawyerDiaryUI
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(988, -10);
+            this.button3.Location = new System.Drawing.Point(1209, -2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(61, 52);
+            this.button3.Size = new System.Drawing.Size(45, 35);
             this.button3.TabIndex = 10;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
@@ -206,9 +212,9 @@ namespace LawyerDiaryUI
             this.müsteriEklemeLabel.AutoSize = true;
             this.müsteriEklemeLabel.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.müsteriEklemeLabel.ForeColor = System.Drawing.Color.Silver;
-            this.müsteriEklemeLabel.Location = new System.Drawing.Point(9, 9);
+            this.müsteriEklemeLabel.Location = new System.Drawing.Point(-1, 9);
             this.müsteriEklemeLabel.Name = "müsteriEklemeLabel";
-            this.müsteriEklemeLabel.Size = new System.Drawing.Size(185, 18);
+            this.müsteriEklemeLabel.Size = new System.Drawing.Size(219, 22);
             this.müsteriEklemeLabel.TabIndex = 12;
             this.müsteriEklemeLabel.Text = "Müşteri Ekleme ve Silme";
             this.müsteriEklemeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,9 +227,9 @@ namespace LawyerDiaryUI
             this.saveBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.saveBtn.IconColor = System.Drawing.Color.Navy;
             this.saveBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.saveBtn.Location = new System.Drawing.Point(480, 478);
+            this.saveBtn.Location = new System.Drawing.Point(611, 549);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(149, 54);
+            this.saveBtn.Size = new System.Drawing.Size(149, 86);
             this.saveBtn.TabIndex = 8;
             this.saveBtn.Text = "Kaydet";
             this.saveBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -239,9 +245,9 @@ namespace LawyerDiaryUI
             this.deleteBtn.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.deleteBtn.IconColor = System.Drawing.Color.Navy;
             this.deleteBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.deleteBtn.Location = new System.Drawing.Point(666, 478);
+            this.deleteBtn.Location = new System.Drawing.Point(797, 549);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(146, 54);
+            this.deleteBtn.Size = new System.Drawing.Size(146, 86);
             this.deleteBtn.TabIndex = 9;
             this.deleteBtn.Text = "Sil";
             this.deleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,9 +257,9 @@ namespace LawyerDiaryUI
             // 
             // MusteriManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 578);
+            this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.panel1);

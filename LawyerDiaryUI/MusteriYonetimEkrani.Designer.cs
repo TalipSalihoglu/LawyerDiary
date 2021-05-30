@@ -55,6 +55,9 @@ namespace LawyerDiaryUI
             this.solPanel.Name = "solPanel";
             this.solPanel.Size = new System.Drawing.Size(136, 581);
             this.solPanel.TabIndex = 0;
+            this.solPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.solPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.solPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
             // 
             // cikis
             // 
@@ -67,10 +70,10 @@ namespace LawyerDiaryUI
             this.cikis.IconColor = System.Drawing.Color.Silver;
             this.cikis.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.cikis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cikis.Location = new System.Drawing.Point(0, 89);
+            this.cikis.Location = new System.Drawing.Point(0, 124);
             this.cikis.Name = "cikis";
             this.cikis.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.cikis.Size = new System.Drawing.Size(136, 60);
+            this.cikis.Size = new System.Drawing.Size(142, 81);
             this.cikis.TabIndex = 9;
             this.cikis.Text = "Çıkış";
             this.cikis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,9 +91,9 @@ namespace LawyerDiaryUI
             this.anaMenuyeDon.IconColor = System.Drawing.Color.Silver;
             this.anaMenuyeDon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.anaMenuyeDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.anaMenuyeDon.Location = new System.Drawing.Point(0, 12);
+            this.anaMenuyeDon.Location = new System.Drawing.Point(0, 39);
             this.anaMenuyeDon.Name = "anaMenuyeDon";
-            this.anaMenuyeDon.Size = new System.Drawing.Size(136, 60);
+            this.anaMenuyeDon.Size = new System.Drawing.Size(136, 79);
             this.anaMenuyeDon.TabIndex = 8;
             this.anaMenuyeDon.Text = "Ana Menü";
             this.anaMenuyeDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -107,6 +110,9 @@ namespace LawyerDiaryUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1048, 39);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
             // 
             // button3
             // 
@@ -131,7 +137,7 @@ namespace LawyerDiaryUI
             this.musteriyonetimLabel.ForeColor = System.Drawing.Color.Silver;
             this.musteriyonetimLabel.Location = new System.Drawing.Point(0, 9);
             this.musteriyonetimLabel.Name = "musteriyonetimLabel";
-            this.musteriyonetimLabel.Size = new System.Drawing.Size(161, 23);
+            this.musteriyonetimLabel.Size = new System.Drawing.Size(197, 27);
             this.musteriyonetimLabel.TabIndex = 8;
             this.musteriyonetimLabel.Text = "Müşteri Yönetimi";
             // 
@@ -139,7 +145,7 @@ namespace LawyerDiaryUI
             // 
             this.musteriAdi.Location = new System.Drawing.Point(440, 118);
             this.musteriAdi.Name = "musteriAdi";
-            this.musteriAdi.Size = new System.Drawing.Size(212, 24);
+            this.musteriAdi.Size = new System.Drawing.Size(212, 28);
             this.musteriAdi.TabIndex = 2;
             this.musteriAdi.TextChanged += new System.EventHandler(this.musteriAdi_TextChanged);
             // 
@@ -198,7 +204,7 @@ namespace LawyerDiaryUI
             this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(217, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 19);
+            this.label1.Size = new System.Drawing.Size(215, 21);
             this.label1.TabIndex = 6;
             this.label1.Text = "Aradığınız Müşterinin Adı:";
             // 
@@ -216,7 +222,7 @@ namespace LawyerDiaryUI
             // 
             // MusteriYonetimEkrani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1178, 578);

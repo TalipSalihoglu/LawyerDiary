@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Runtime.InteropServices; // köşeleri raduislamak için kullanılır.
 
 namespace LawyerDiaryUI
 {
@@ -16,9 +17,27 @@ namespace LawyerDiaryUI
         AppointmentManager _manager = new AppointmentManager(new AppointmentDal());
         ClientManager _clientManager = new ClientManager(new ClientDal());
         Appointment appointment = null;
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")] //.net'te bir dll üzerinden bir metodu getirmek için kullanılan attribute.
+
+        private static extern IntPtr CreateRoundRectRgn( //extern metodun dışarıdan implemente edildiğini gösterir, yönetilemeyen kod için çağırılır.
+
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+
+            );
+
         public RandevuIslemleri()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 60, 60));
+            //region köşeleri boyamak için kullanılır./
+            //
         }
 
         public RandevuIslemleri(int id)
@@ -108,6 +127,35 @@ namespace LawyerDiaryUI
             ry.Show();
         }
 
-        
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        bool mouseDown;
+        private Point offset;
+        private void mouseDownEvent(object sender, MouseEventArgs e)
+        {
+            offset.X = e.X;
+            offset.Y = e.Y;
+            mouseDown = true;
+        }
+        private void mouseMovementEvent(object sender, MouseEventArgs e)
+        {
+            if (mouseDown == true)
+            {
+                Point currentScreenPos = PointToScreen(e.Location);
+                Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
+            }
+        }
+        private void mouseUpEvent(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
     }
 }

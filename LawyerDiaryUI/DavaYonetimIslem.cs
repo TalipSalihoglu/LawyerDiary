@@ -136,6 +136,41 @@ namespace LawyerDiaryUI
             Hakim_Adı.Text = _courtManager.GetJudgeWithCourtNo(courtNo);
         }
 
-       
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        bool mouseDown;
+        private Point offset;
+        private void mouseDownEvent(object sender, MouseEventArgs e)
+        {
+            offset.X = e.X;
+            offset.Y = e.Y;
+            mouseDown = true;
+        }
+        private void mouseMovementEvent(object sender, MouseEventArgs e)
+        {
+            if (mouseDown == true)
+            {
+                Point currentScreenPos = PointToScreen(e.Location);
+                Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
+            }
+        }
+        private void mouseUpEvent(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void filtreliAramaBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

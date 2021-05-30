@@ -16,6 +16,7 @@ namespace LawyerDiaryUI
     {
         CaseManager _caseManager = new CaseManager(new CaseDal());
         ClientManager _clientManager = new ClientManager(new ClientDal());
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
         private static extern IntPtr CreateRoundRectRgn(
@@ -156,9 +157,6 @@ namespace LawyerDiaryUI
             }
         }
 
-        private void mouseUpEvent(object sender, MouseEventArgs e)
-        {
-            mouseDown = false;
-        }
+       
     }
 }

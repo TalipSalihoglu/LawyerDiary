@@ -180,19 +180,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\EV\\.nuget\\packages\\": {}
+    "C:\\Users\\serhat\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\EntityLayer\\EntityLayer.csproj",
+      "projectUniqueName": "D:\\Github\\LawyerDiary\\EntityLayer\\EntityLayer.csproj",
       "projectName": "EntityLayer",
-      "projectPath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\EntityLayer\\EntityLayer.csproj",
-      "packagesPath": "C:\\Users\\EV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EV\\Desktop\\LawyerDiary\\LawyerDiary\\EntityLayer\\obj\\",
+      "projectPath": "D:\\Github\\LawyerDiary\\EntityLayer\\EntityLayer.csproj",
+      "packagesPath": "C:\\Users\\serhat\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\LawyerDiary\\EntityLayer\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\EV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\serhat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -235,7 +240,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

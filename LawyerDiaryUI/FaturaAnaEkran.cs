@@ -102,5 +102,28 @@ namespace LawyerDiaryUI
             if(musteriAdi.Text != " ")
                 dataGridView1.DataSource=_billManager.Search(musteriAdi.Text,gecmisDavalar.Checked,gelecekDavalar.Checked);
         }
+
+        bool mouseDown;
+        private Point offset;
+        private void mouseDownEvent(object sender, MouseEventArgs e)
+        {
+            offset.X = e.X;
+            offset.Y = e.Y;
+            mouseDown = true;
+        }
+        private void mouseMovementEvent(object sender, MouseEventArgs e)
+        {
+            if (mouseDown == true)
+            {
+                Point currentScreenPos = PointToScreen(e.Location);
+                Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
+            }
+        }
+        private void mouseUpEvent(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
     }
+
+
 }

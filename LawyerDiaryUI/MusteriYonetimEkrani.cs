@@ -7,18 +7,36 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Runtime.InteropServices; // köşeleri raduislamak için kullanılır.
 
 namespace LawyerDiaryUI
 {
+    
     public partial class MusteriYonetimEkrani : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")] //.net'te bir dll üzerinden bir metodu getirmek için kullanılan attribute.
+        private static extern IntPtr CreateRoundRectRgn( //extern metodun dışarıdan implemente edildiğini gösterir, yönetilemeyen kod için çağırılır.
+
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+
+            );
+
         ClientManager Manager = new ClientManager(new ClientDal());
         public MusteriYonetimEkrani()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 60, 60));
+            //region köşeleri boyamak için kullanılır./
+            //
         }
 
-    
+
         private void MusteriYonetimEkrani_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource= Manager.GetList();
@@ -87,6 +105,27 @@ namespace LawyerDiaryUI
                 MessageBox.Show("Lütfen silmek istediğiniz sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
             }
             
+        }
+
+        bool mouseDown;
+        private Point offset;
+        private void mouseDownEvent(object sender, MouseEventArgs e)
+        {
+            offset.X = e.X;
+            offset.Y = e.Y;
+            mouseDown = true;
+        }
+        private void mouseMovementEvent(object sender, MouseEventArgs e)
+        {
+            if (mouseDown == true)
+            {
+                Point currentScreenPos = PointToScreen(e.Location);
+                Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
+            }
+        }
+        private void mouseUpEvent(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }

@@ -31,6 +31,7 @@ namespace LawyerDiaryUI
         {
             this.ıconButton5 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.mainPageLabel = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.ıconButton1 = new FontAwesome.Sharp.IconButton();
             this.ıconButton2 = new FontAwesome.Sharp.IconButton();
@@ -63,14 +64,27 @@ namespace LawyerDiaryUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.mainPageLabel);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1149, 42);
+            this.panel1.Size = new System.Drawing.Size(1400, 40);
             this.panel1.TabIndex = 3;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
+            // 
+            // mainPageLabel
+            // 
+            this.mainPageLabel.AutoSize = true;
+            this.mainPageLabel.BackColor = System.Drawing.Color.Navy;
+            this.mainPageLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mainPageLabel.ForeColor = System.Drawing.Color.Silver;
+            this.mainPageLabel.Location = new System.Drawing.Point(9, 11);
+            this.mainPageLabel.Name = "mainPageLabel";
+            this.mainPageLabel.Size = new System.Drawing.Size(110, 23);
+            this.mainPageLabel.TabIndex = 13;
+            this.mainPageLabel.Text = "Ana Sayfa";
             // 
             // button3
             // 
@@ -80,9 +94,9 @@ namespace LawyerDiaryUI
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(1105, 1);
+            this.button3.Location = new System.Drawing.Point(1348, -20);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(39, 39);
+            this.button3.Size = new System.Drawing.Size(69, 80);
             this.button3.TabIndex = 12;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
@@ -97,7 +111,7 @@ namespace LawyerDiaryUI
             this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
             this.ıconButton1.IconColor = System.Drawing.Color.Navy;
             this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton1.Location = new System.Drawing.Point(453, 286);
+            this.ıconButton1.Location = new System.Drawing.Point(578, 344);
             this.ıconButton1.Name = "ıconButton1";
             this.ıconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ıconButton1.Size = new System.Drawing.Size(245, 171);
@@ -117,7 +131,7 @@ namespace LawyerDiaryUI
             this.ıconButton2.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.ıconButton2.IconColor = System.Drawing.Color.Navy;
             this.ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton2.Location = new System.Drawing.Point(453, 478);
+            this.ıconButton2.Location = new System.Drawing.Point(578, 582);
             this.ıconButton2.Name = "ıconButton2";
             this.ıconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ıconButton2.Size = new System.Drawing.Size(245, 171);
@@ -137,7 +151,7 @@ namespace LawyerDiaryUI
             this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.Calculator;
             this.ıconButton3.IconColor = System.Drawing.Color.Navy;
             this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton3.Location = new System.Drawing.Point(805, 105);
+            this.ıconButton3.Location = new System.Drawing.Point(1022, 103);
             this.ıconButton3.Name = "ıconButton3";
             this.ıconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ıconButton3.Size = new System.Drawing.Size(245, 161);
@@ -157,7 +171,7 @@ namespace LawyerDiaryUI
             this.ıconButton4.IconChar = FontAwesome.Sharp.IconChar.Tasks;
             this.ıconButton4.IconColor = System.Drawing.Color.Navy;
             this.ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton4.Location = new System.Drawing.Point(805, 286);
+            this.ıconButton4.Location = new System.Drawing.Point(1022, 344);
             this.ıconButton4.Name = "ıconButton4";
             this.ıconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ıconButton4.Size = new System.Drawing.Size(245, 171);
@@ -177,7 +191,7 @@ namespace LawyerDiaryUI
             this.ıconButton6.IconChar = FontAwesome.Sharp.IconChar.Gavel;
             this.ıconButton6.IconColor = System.Drawing.Color.Navy;
             this.ıconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton6.Location = new System.Drawing.Point(101, 286);
+            this.ıconButton6.Location = new System.Drawing.Point(134, 344);
             this.ıconButton6.Name = "ıconButton6";
             this.ıconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ıconButton6.Size = new System.Drawing.Size(245, 171);
@@ -197,7 +211,7 @@ namespace LawyerDiaryUI
             this.ıconButton7.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
             this.ıconButton7.IconColor = System.Drawing.Color.Navy;
             this.ıconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton7.Location = new System.Drawing.Point(453, 95);
+            this.ıconButton7.Location = new System.Drawing.Point(578, 103);
             this.ıconButton7.Name = "ıconButton7";
             this.ıconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ıconButton7.Size = new System.Drawing.Size(245, 171);
@@ -217,7 +231,7 @@ namespace LawyerDiaryUI
             this.ıconButton8.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.ıconButton8.IconColor = System.Drawing.Color.Navy;
             this.ıconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton8.Location = new System.Drawing.Point(101, 95);
+            this.ıconButton8.Location = new System.Drawing.Point(134, 103);
             this.ıconButton8.Name = "ıconButton8";
             this.ıconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ıconButton8.Size = new System.Drawing.Size(245, 171);
@@ -233,7 +247,7 @@ namespace LawyerDiaryUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1148, 804);
+            this.ClientSize = new System.Drawing.Size(1400, 804);
             this.Controls.Add(this.ıconButton2);
             this.Controls.Add(this.ıconButton1);
             this.Controls.Add(this.panel1);
@@ -245,7 +259,9 @@ namespace LawyerDiaryUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainPage";
             this.Text = "MüsteriYönetim";
+            this.Load += new System.EventHandler(this.MainPage_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -261,5 +277,6 @@ namespace LawyerDiaryUI
         private FontAwesome.Sharp.IconButton ıconButton7;
         private FontAwesome.Sharp.IconButton ıconButton8;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label mainPageLabel;
     }
 }

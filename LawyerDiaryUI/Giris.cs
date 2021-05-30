@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
+using System.Runtime.InteropServices; // köşeleri raduislamak için kullanılır.
 using BusinessLayer.Concrete;
 using DataAccessLayer.Concrete;
 
@@ -14,9 +14,10 @@ namespace LawyerDiaryUI
     public partial class Giris : Form
     {
 
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")] //.net'te bir dll üzerinden bir metodu getirmek için kullanılan attribute.
 
-        private static extern IntPtr CreateRoundRectRgn(
+
+        private static extern IntPtr CreateRoundRectRgn( //extern metodun dışarıdan implemente edildiğini gösterir, yönetilemeyen kod için çağırılır.
 
             int nLeftRect,
             int nTopRect,
@@ -33,6 +34,8 @@ namespace LawyerDiaryUI
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 60, 60));
+            //region köşeleri boyamak için kullanılır./
+            //
 
         }
 

@@ -60,6 +60,9 @@ namespace LawyerDiaryUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 544);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
             // 
             // anaMenuyeDon
             // 
@@ -112,6 +115,9 @@ namespace LawyerDiaryUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1179, 39);
             this.panel2.TabIndex = 2;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
             // 
             // button3
             // 

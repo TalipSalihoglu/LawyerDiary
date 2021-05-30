@@ -63,6 +63,9 @@ namespace LawyerDiaryUI
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1198, 39);
             this.panel3.TabIndex = 5;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
             // 
             // button1
             // 
@@ -87,7 +90,7 @@ namespace LawyerDiaryUI
             this.faturaAnaEkraniLabel.ForeColor = System.Drawing.Color.Silver;
             this.faturaAnaEkraniLabel.Location = new System.Drawing.Point(1, 9);
             this.faturaAnaEkraniLabel.Name = "faturaAnaEkraniLabel";
-            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(172, 23);
+            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(206, 27);
             this.faturaAnaEkraniLabel.TabIndex = 15;
             this.faturaAnaEkraniLabel.Text = "Fatura Ana Ekranı";
             // 
@@ -116,6 +119,9 @@ namespace LawyerDiaryUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(151, 536);
             this.panel1.TabIndex = 4;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
             // 
             // anaMenuBtn
             // 
@@ -199,7 +205,7 @@ namespace LawyerDiaryUI
             this.gelecekDavalar.AutoSize = true;
             this.gelecekDavalar.Location = new System.Drawing.Point(259, 133);
             this.gelecekDavalar.Name = "gelecekDavalar";
-            this.gelecekDavalar.Size = new System.Drawing.Size(160, 25);
+            this.gelecekDavalar.Size = new System.Drawing.Size(202, 27);
             this.gelecekDavalar.TabIndex = 5;
             this.gelecekDavalar.TabStop = true;
             this.gelecekDavalar.Text = "Gelecek Davalar";
@@ -210,7 +216,7 @@ namespace LawyerDiaryUI
             this.gecmisDavalar.AutoSize = true;
             this.gecmisDavalar.Location = new System.Drawing.Point(41, 133);
             this.gecmisDavalar.Name = "gecmisDavalar";
-            this.gecmisDavalar.Size = new System.Drawing.Size(153, 25);
+            this.gecmisDavalar.Size = new System.Drawing.Size(191, 27);
             this.gecmisDavalar.TabIndex = 5;
             this.gecmisDavalar.TabStop = true;
             this.gecmisDavalar.Text = "Geçmiş Davalar";
@@ -221,7 +227,7 @@ namespace LawyerDiaryUI
             this.musteriAd.AutoSize = true;
             this.musteriAd.Location = new System.Drawing.Point(20, 68);
             this.musteriAd.Name = "musteriAd";
-            this.musteriAd.Size = new System.Drawing.Size(0, 21);
+            this.musteriAd.Size = new System.Drawing.Size(0, 23);
             this.musteriAd.TabIndex = 4;
             // 
             // musteriAdi
@@ -229,7 +235,7 @@ namespace LawyerDiaryUI
             this.musteriAdi.Location = new System.Drawing.Point(41, 65);
             this.musteriAdi.Name = "musteriAdi";
             this.musteriAdi.PlaceholderText = "Müvekkil Adı";
-            this.musteriAdi.Size = new System.Drawing.Size(420, 27);
+            this.musteriAdi.Size = new System.Drawing.Size(420, 32);
             this.musteriAdi.TabIndex = 4;
             this.musteriAdi.TextChanged += new System.EventHandler(this.musteriAdi_TextChanged);
             // 
@@ -310,7 +316,7 @@ namespace LawyerDiaryUI
             // 
             // FaturaAnaEkran
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1307, 531);
             this.Controls.Add(this.FaturaEkleBtn);

@@ -61,8 +61,11 @@ namespace LawyerDiaryUI
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(155, 652);
+            this.panel1.Size = new System.Drawing.Size(155, 800);
             this.panel1.TabIndex = 5;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
             // 
             // faturaBackwardBtn
             // 
@@ -163,17 +166,20 @@ namespace LawyerDiaryUI
             this.panel3.Controls.Add(this.exitBtn);
             this.panel3.Location = new System.Drawing.Point(154, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1030, 39);
+            this.panel3.Size = new System.Drawing.Size(1265, 39);
             this.panel3.TabIndex = 6;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
+            this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
             // 
             // faturaAnaEkraniLabel
             // 
             this.faturaAnaEkraniLabel.AutoSize = true;
             this.faturaAnaEkraniLabel.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.faturaAnaEkraniLabel.ForeColor = System.Drawing.Color.Silver;
-            this.faturaAnaEkraniLabel.Location = new System.Drawing.Point(-6, 9);
+            this.faturaAnaEkraniLabel.Location = new System.Drawing.Point(-6, 6);
             this.faturaAnaEkraniLabel.Name = "faturaAnaEkraniLabel";
-            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(182, 23);
+            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(219, 27);
             this.faturaAnaEkraniLabel.TabIndex = 15;
             this.faturaAnaEkraniLabel.Text = "Fatura İşlem Ekranı";
             // 
@@ -185,7 +191,7 @@ namespace LawyerDiaryUI
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.exitBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.exitBtn.Location = new System.Drawing.Point(994, -3);
+            this.exitBtn.Location = new System.Drawing.Point(1212, -2);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(39, 39);
             this.exitBtn.TabIndex = 11;
@@ -200,18 +206,18 @@ namespace LawyerDiaryUI
             this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(249, 71);
+            this.groupBox1.Location = new System.Drawing.Point(333, 98);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(843, 408);
+            this.groupBox1.Size = new System.Drawing.Size(915, 509);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
             // CB_FaturaMusteri
             // 
             this.CB_FaturaMusteri.FormattingEnabled = true;
-            this.CB_FaturaMusteri.Location = new System.Drawing.Point(160, 326);
+            this.CB_FaturaMusteri.Location = new System.Drawing.Point(160, 409);
             this.CB_FaturaMusteri.Name = "CB_FaturaMusteri";
-            this.CB_FaturaMusteri.Size = new System.Drawing.Size(221, 29);
+            this.CB_FaturaMusteri.Size = new System.Drawing.Size(221, 31);
             this.CB_FaturaMusteri.TabIndex = 3;
             // 
             // label1
@@ -219,7 +225,7 @@ namespace LawyerDiaryUI
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(160, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 21);
+            this.label1.Size = new System.Drawing.Size(187, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Fatura Açıklaması";
             // 
@@ -227,16 +233,16 @@ namespace LawyerDiaryUI
             // 
             this.richTextBox1.Location = new System.Drawing.Point(160, 130);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(539, 130);
+            this.richTextBox1.Size = new System.Drawing.Size(539, 206);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(160, 278);
+            this.textBox2.Location = new System.Drawing.Point(160, 361);
             this.textBox2.Name = "textBox2";
             this.textBox2.PlaceholderText = "Tarih";
-            this.textBox2.Size = new System.Drawing.Size(539, 27);
+            this.textBox2.Size = new System.Drawing.Size(539, 32);
             this.textBox2.TabIndex = 0;
             // 
             // textBox1
@@ -244,7 +250,7 @@ namespace LawyerDiaryUI
             this.textBox1.Location = new System.Drawing.Point(160, 39);
             this.textBox1.Name = "textBox1";
             this.textBox1.PlaceholderText = "Ücret";
-            this.textBox1.Size = new System.Drawing.Size(539, 27);
+            this.textBox1.Size = new System.Drawing.Size(539, 32);
             this.textBox1.TabIndex = 0;
             // 
             // ıconButton3
@@ -256,9 +262,9 @@ namespace LawyerDiaryUI
             this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.Ban;
             this.ıconButton3.IconColor = System.Drawing.Color.Navy;
             this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton3.Location = new System.Drawing.Point(707, 529);
+            this.ıconButton3.Location = new System.Drawing.Point(818, 626);
             this.ıconButton3.Name = "ıconButton3";
-            this.ıconButton3.Size = new System.Drawing.Size(146, 76);
+            this.ıconButton3.Size = new System.Drawing.Size(218, 88);
             this.ıconButton3.TabIndex = 8;
             this.ıconButton3.Text = "Vazgeç";
             this.ıconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -274,9 +280,9 @@ namespace LawyerDiaryUI
             this.kaydetBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.kaydetBtn.IconColor = System.Drawing.Color.Navy;
             this.kaydetBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.kaydetBtn.Location = new System.Drawing.Point(476, 529);
+            this.kaydetBtn.Location = new System.Drawing.Point(582, 626);
             this.kaydetBtn.Name = "kaydetBtn";
-            this.kaydetBtn.Size = new System.Drawing.Size(139, 76);
+            this.kaydetBtn.Size = new System.Drawing.Size(211, 88);
             this.kaydetBtn.TabIndex = 9;
             this.kaydetBtn.Text = "Kaydet";
             this.kaydetBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -286,9 +292,9 @@ namespace LawyerDiaryUI
             // 
             // FaturaIslemEkranı
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 650);
+            this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.ıconButton3);
             this.Controls.Add(this.kaydetBtn);
             this.Controls.Add(this.groupBox1);
