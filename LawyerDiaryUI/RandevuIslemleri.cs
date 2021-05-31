@@ -55,15 +55,15 @@ namespace LawyerDiaryUI
             if (appointment != null)
             {
                 RandevuKonu.Text = appointment.Subject;
-                textBoxAcıklama.Text = appointment.Description;  
-                textBoxTarih.Text = appointment.AppointmentDate.ToString();
+                textBoxAcıklama.Text = appointment.Description;
+                textBoxTarih.Value = appointment.AppointmentDate;
                 CB_musteriIdleri.SelectedItem = (_clientManager.Get(appointment.ClientId).ClientName);
             }
 
         }
         private void kaydetBtn_Click(object sender, EventArgs e)
         {
-            if (RandevuKonu.Text == "" || textBoxAcıklama.Text == ""|| textBoxTarih.Text=="")
+            if (RandevuKonu.Text == "" || textBoxAcıklama.Text == "")
             { 
                 MessageBox.Show("Bu alan boş olamaz");
                 return;
@@ -72,7 +72,7 @@ namespace LawyerDiaryUI
             {
                 appointment.Subject= RandevuKonu.Text;
                 appointment.Description=textBoxAcıklama.Text ;
-                appointment.AppointmentDate = DateTime.Parse(textBoxTarih.Text);
+                appointment.AppointmentDate = textBoxTarih.Value;
                 appointment.ClientId= _clientManager.GetClientIdWithName(CB_musteriIdleri.SelectedItem.ToString());
                 _manager.Update(appointment); 
             }
@@ -82,7 +82,7 @@ namespace LawyerDiaryUI
                 {
                     Subject = RandevuKonu.Text,
                     Description = textBoxAcıklama.Text,
-                    AppointmentDate = DateTime.Parse(textBoxTarih.Text),
+                    AppointmentDate = textBoxTarih.Value,
                     ClientId = _clientManager.GetClientIdWithName(CB_musteriIdleri.SelectedItem.ToString())
             };
                 _manager.Add(newAppointment);

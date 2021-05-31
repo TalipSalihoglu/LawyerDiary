@@ -50,21 +50,21 @@ namespace LawyerDiaryUI
             // 
             // müsAdı
             // 
-            this.müsAdı.Location = new System.Drawing.Point(574, 196);
+            this.müsAdı.Location = new System.Drawing.Point(372, 87);
             this.müsAdı.Name = "müsAdı";
-            this.müsAdı.Size = new System.Drawing.Size(421, 32);
+            this.müsAdı.Size = new System.Drawing.Size(421, 27);
             this.müsAdı.TabIndex = 0;
             // 
             // müsMail
             // 
-            this.müsMail.Location = new System.Drawing.Point(574, 278);
+            this.müsMail.Location = new System.Drawing.Point(372, 169);
             this.müsMail.Name = "müsMail";
-            this.müsMail.Size = new System.Drawing.Size(421, 32);
+            this.müsMail.Size = new System.Drawing.Size(421, 27);
             this.müsMail.TabIndex = 1;
             // 
             // müsAdres
             // 
-            this.müsAdres.Location = new System.Drawing.Point(574, 360);
+            this.müsAdres.Location = new System.Drawing.Point(372, 251);
             this.müsAdres.Name = "müsAdres";
             this.müsAdres.Size = new System.Drawing.Size(421, 115);
             this.müsAdres.TabIndex = 2;
@@ -74,9 +74,9 @@ namespace LawyerDiaryUI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(431, 196);
+            this.label1.Location = new System.Drawing.Point(229, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.Size = new System.Drawing.Size(97, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Müşteri Adı";
             // 
@@ -84,9 +84,9 @@ namespace LawyerDiaryUI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(426, 281);
+            this.label2.Location = new System.Drawing.Point(224, 172);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 23);
+            this.label2.Size = new System.Drawing.Size(102, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Müşteri Mail";
             // 
@@ -94,9 +94,9 @@ namespace LawyerDiaryUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(409, 400);
+            this.label3.Location = new System.Drawing.Point(207, 291);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 23);
+            this.label3.Size = new System.Drawing.Size(115, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Müşteri Adres";
             // 
@@ -199,7 +199,7 @@ namespace LawyerDiaryUI
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(1209, -2);
+            this.button3.Location = new System.Drawing.Point(693, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(45, 35);
             this.button3.TabIndex = 10;
@@ -214,7 +214,7 @@ namespace LawyerDiaryUI
             this.müsteriEklemeLabel.ForeColor = System.Drawing.Color.Silver;
             this.müsteriEklemeLabel.Location = new System.Drawing.Point(-1, 9);
             this.müsteriEklemeLabel.Name = "müsteriEklemeLabel";
-            this.müsteriEklemeLabel.Size = new System.Drawing.Size(219, 22);
+            this.müsteriEklemeLabel.Size = new System.Drawing.Size(185, 18);
             this.müsteriEklemeLabel.TabIndex = 12;
             this.müsteriEklemeLabel.Text = "Müşteri Ekleme ve Silme";
             this.müsteriEklemeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,7 +227,7 @@ namespace LawyerDiaryUI
             this.saveBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.saveBtn.IconColor = System.Drawing.Color.Navy;
             this.saveBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.saveBtn.Location = new System.Drawing.Point(611, 549);
+            this.saveBtn.Location = new System.Drawing.Point(409, 440);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(149, 86);
             this.saveBtn.TabIndex = 8;
@@ -245,7 +245,7 @@ namespace LawyerDiaryUI
             this.deleteBtn.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.deleteBtn.IconColor = System.Drawing.Color.Navy;
             this.deleteBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.deleteBtn.Location = new System.Drawing.Point(797, 549);
+            this.deleteBtn.Location = new System.Drawing.Point(595, 440);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(146, 86);
             this.deleteBtn.TabIndex = 9;
@@ -257,9 +257,9 @@ namespace LawyerDiaryUI
             // 
             // MusteriManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.ClientSize = new System.Drawing.Size(890, 578);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.panel1);

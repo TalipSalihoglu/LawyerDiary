@@ -100,6 +100,11 @@ namespace LawyerDiaryUI
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            if (davaKonu.Text==""|| davaAcıklama.Text==""|| mahkeme_No.Text=="")
+            {
+                MessageBox.Show("Boş alan bırakılamaz!!");
+                return;
+            }
             if(dava!=null)
             {
                 dava.Topic = davaKonu.Text;

@@ -44,13 +44,15 @@ namespace LawyerDiaryUI
             this.davaSilBtn = new FontAwesome.Sharp.IconButton();
             this.davaEkleBtn = new FontAwesome.Sharp.IconButton();
             this.mahkemeIsleriBtn = new FontAwesome.Sharp.IconButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.musteriAd = new System.Windows.Forms.Label();
             this.musteriAdi = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.grupBox.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -133,7 +135,7 @@ namespace LawyerDiaryUI
             this.musteriyonetimLabel.ForeColor = System.Drawing.Color.Silver;
             this.musteriyonetimLabel.Location = new System.Drawing.Point(0, 4);
             this.musteriyonetimLabel.Name = "musteriyonetimLabel";
-            this.musteriyonetimLabel.Size = new System.Drawing.Size(295, 27);
+            this.musteriyonetimLabel.Size = new System.Drawing.Size(245, 23);
             this.musteriyonetimLabel.TabIndex = 15;
             this.musteriyonetimLabel.Text = "Dava Yönetim Ana Ekranı";
             // 
@@ -155,13 +157,15 @@ namespace LawyerDiaryUI
             // 
             // dataGrid
             // 
+            this.dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGrid.BackgroundColor = System.Drawing.Color.White;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(808, 151);
+            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGrid.Location = new System.Drawing.Point(0, 0);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 29;
-            this.dataGrid.Size = new System.Drawing.Size(500, 474);
+            this.dataGrid.Size = new System.Drawing.Size(1058, 389);
             this.dataGrid.TabIndex = 2;
             // 
             // grupBox
@@ -171,7 +175,7 @@ namespace LawyerDiaryUI
             this.grupBox.Controls.Add(this.gecmisDavalar);
             this.grupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupBox.ForeColor = System.Drawing.Color.Navy;
-            this.grupBox.Location = new System.Drawing.Point(201, 163);
+            this.grupBox.Location = new System.Drawing.Point(706, 639);
             this.grupBox.Name = "grupBox";
             this.grupBox.Size = new System.Drawing.Size(588, 92);
             this.grupBox.TabIndex = 3;
@@ -183,7 +187,7 @@ namespace LawyerDiaryUI
             this.gelecekDavalar.AutoSize = true;
             this.gelecekDavalar.Location = new System.Drawing.Point(302, 42);
             this.gelecekDavalar.Name = "gelecekDavalar";
-            this.gelecekDavalar.Size = new System.Drawing.Size(202, 27);
+            this.gelecekDavalar.Size = new System.Drawing.Size(160, 25);
             this.gelecekDavalar.TabIndex = 5;
             this.gelecekDavalar.TabStop = true;
             this.gelecekDavalar.Text = "Gelecek Davalar";
@@ -195,7 +199,7 @@ namespace LawyerDiaryUI
             this.gecmisDavalar.AutoSize = true;
             this.gecmisDavalar.Location = new System.Drawing.Point(96, 42);
             this.gecmisDavalar.Name = "gecmisDavalar";
-            this.gecmisDavalar.Size = new System.Drawing.Size(191, 27);
+            this.gecmisDavalar.Size = new System.Drawing.Size(153, 25);
             this.gecmisDavalar.TabIndex = 5;
             this.gecmisDavalar.TabStop = true;
             this.gecmisDavalar.Text = "Geçmiş Davalar";
@@ -212,7 +216,7 @@ namespace LawyerDiaryUI
             this.davaGuncelleBtn.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.davaGuncelleBtn.IconColor = System.Drawing.Color.Navy;
             this.davaGuncelleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.davaGuncelleBtn.Location = new System.Drawing.Point(332, 458);
+            this.davaGuncelleBtn.Location = new System.Drawing.Point(212, 534);
             this.davaGuncelleBtn.Name = "davaGuncelleBtn";
             this.davaGuncelleBtn.Size = new System.Drawing.Size(184, 59);
             this.davaGuncelleBtn.TabIndex = 6;
@@ -230,7 +234,7 @@ namespace LawyerDiaryUI
             this.davaSilBtn.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.davaSilBtn.IconColor = System.Drawing.Color.Navy;
             this.davaSilBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.davaSilBtn.Location = new System.Drawing.Point(570, 458);
+            this.davaSilBtn.Location = new System.Drawing.Point(450, 534);
             this.davaSilBtn.Name = "davaSilBtn";
             this.davaSilBtn.Size = new System.Drawing.Size(146, 54);
             this.davaSilBtn.TabIndex = 10;
@@ -248,7 +252,7 @@ namespace LawyerDiaryUI
             this.davaEkleBtn.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.davaEkleBtn.IconColor = System.Drawing.Color.Navy;
             this.davaEkleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.davaEkleBtn.Location = new System.Drawing.Point(570, 544);
+            this.davaEkleBtn.Location = new System.Drawing.Point(468, 677);
             this.davaEkleBtn.Name = "davaEkleBtn";
             this.davaEkleBtn.Size = new System.Drawing.Size(146, 54);
             this.davaEkleBtn.TabIndex = 10;
@@ -268,7 +272,7 @@ namespace LawyerDiaryUI
             this.mahkemeIsleriBtn.IconChar = FontAwesome.Sharp.IconChar.Gavel;
             this.mahkemeIsleriBtn.IconColor = System.Drawing.Color.Navy;
             this.mahkemeIsleriBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.mahkemeIsleriBtn.Location = new System.Drawing.Point(332, 542);
+            this.mahkemeIsleriBtn.Location = new System.Drawing.Point(200, 672);
             this.mahkemeIsleriBtn.Name = "mahkemeIsleriBtn";
             this.mahkemeIsleriBtn.Size = new System.Drawing.Size(209, 59);
             this.mahkemeIsleriBtn.TabIndex = 6;
@@ -278,38 +282,52 @@ namespace LawyerDiaryUI
             this.mahkemeIsleriBtn.UseVisualStyleBackColor = false;
             this.mahkemeIsleriBtn.Click += new System.EventHandler(this.mahkemeIsleriBtn_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(415, 375);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 32);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Ara";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // musteriAd
             // 
             this.musteriAd.AutoSize = true;
-            this.musteriAd.Location = new System.Drawing.Point(191, 320);
+            this.musteriAd.Location = new System.Drawing.Point(611, 506);
             this.musteriAd.Name = "musteriAd";
-            this.musteriAd.Size = new System.Drawing.Size(138, 23);
+            this.musteriAd.Size = new System.Drawing.Size(112, 21);
             this.musteriAd.TabIndex = 11;
             this.musteriAd.Text = "Müvekkil Adı:";
             // 
             // musteriAdi
             // 
-            this.musteriAdi.Location = new System.Drawing.Point(332, 314);
+            this.musteriAdi.Location = new System.Drawing.Point(752, 500);
             this.musteriAdi.Name = "musteriAdi";
-            this.musteriAdi.Size = new System.Drawing.Size(457, 32);
+            this.musteriAdi.Size = new System.Drawing.Size(457, 27);
             this.musteriAdi.TabIndex = 12;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dataGrid);
+            this.panel4.Location = new System.Drawing.Point(236, 81);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1058, 389);
+            this.panel4.TabIndex = 14;
+            // 
+            // button
+            // 
+            this.button.FlatAppearance.BorderSize = 0;
+            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button.ForeColor = System.Drawing.Color.Navy;
+            this.button.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.button.IconColor = System.Drawing.Color.Navy;
+            this.button.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.button.Location = new System.Drawing.Point(1215, 500);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(42, 44);
+            this.button.TabIndex = 15;
+            this.button.UseVisualStyleBackColor = true;
+            this.button.Click += new System.EventHandler(this.button_Click);
             // 
             // DavaYonetimAnaEkran
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 800);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.musteriAd);
             this.Controls.Add(this.musteriAdi);
             this.Controls.Add(this.davaEkleBtn);
@@ -317,7 +335,6 @@ namespace LawyerDiaryUI
             this.Controls.Add(this.mahkemeIsleriBtn);
             this.Controls.Add(this.davaGuncelleBtn);
             this.Controls.Add(this.grupBox);
-            this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -332,6 +349,7 @@ namespace LawyerDiaryUI
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.grupBox.ResumeLayout(false);
             this.grupBox.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,8 +372,9 @@ namespace LawyerDiaryUI
         private FontAwesome.Sharp.IconButton cikisBtn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label musteriyonetimLabel;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label musteriAd;
         private System.Windows.Forms.TextBox musteriAdi;
+        private System.Windows.Forms.Panel panel4;
+        private FontAwesome.Sharp.IconButton button;
     }
 }

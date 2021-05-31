@@ -21,7 +21,7 @@ namespace BusinessLayer.Concrete
         {
             if (obj.Description.Length>5 && obj.Topic.Length>2)
             {
-                
+                obj.LawyerId = 1;
                 obj.Status = true;
                 _caseDal.Add(obj);
             }

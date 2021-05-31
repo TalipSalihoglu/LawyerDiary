@@ -14,10 +14,8 @@ namespace EntityLayer.Concrete
 
         public int LawyerId { get; set; }
         public int CourtId { get; set; }
-        public virtual Court Court{ get; set; }
-
         public int ClientId { get; set; }
-        public virtual Client Client { get; set; }
+
 
     }
 }

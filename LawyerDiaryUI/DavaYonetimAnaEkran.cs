@@ -36,6 +36,7 @@ namespace LawyerDiaryUI
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            dataGridViewSettings();
 
         }
 
@@ -109,35 +110,14 @@ namespace LawyerDiaryUI
             this.Hide();
         }
 
-        private void disaAktarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void FiltreliArama(object sender, EventArgs e)
         {
             dataGrid.DataSource = _caseManager.FilterWithDate(gecmisDavalar.Checked, gelecekDavalar.Checked);
         }
 
-        private void grupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            if(musteriAdi.Text!="")
-            {
-                var id = _clientManager.GetClientIdWithName(musteriAdi.Text);
-                if (id != -1)
-                    dataGrid.DataSource = _caseManager.GetList().Where(x => x.ClientId == id).ToList();
-            }
-            else
-            {
-                MessageBox.Show("Müvekkil adı boş bırakılamaz!");
-            }
-        }
-
+    
 
         bool mouseDown;
         private Point offset;
@@ -157,6 +137,33 @@ namespace LawyerDiaryUI
             }
         }
 
-       
+        public void dataGridViewSettings()
+        {
+            dataGrid.BorderStyle = BorderStyle.None;
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGrid.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGrid.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGrid.BackgroundColor = Color.White;
+
+            dataGrid.EnableHeadersVisualStyles = false;
+            dataGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            if (musteriAdi.Text != "")
+            {
+                var id = _clientManager.GetClientIdWithName(musteriAdi.Text);
+                if (id != -1)
+                    dataGrid.DataSource = _caseManager.GetList().Where(x => x.ClientId == id).ToList();
+            }
+            else
+            {
+                MessageBox.Show("Müvekkil adı boş bırakılamaz!");
+            }
+        }
     }
 }

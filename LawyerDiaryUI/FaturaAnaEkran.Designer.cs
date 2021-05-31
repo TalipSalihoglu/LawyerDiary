@@ -45,12 +45,13 @@ namespace LawyerDiaryUI
             this.musteriAdi = new System.Windows.Forms.TextBox();
             this.FaturaEkleBtn = new FontAwesome.Sharp.IconButton();
             this.FaturaSilBtn = new FontAwesome.Sharp.IconButton();
-            this.disaAktarBtn = new FontAwesome.Sharp.IconButton();
             this.FaturaGuncelleBtn = new FontAwesome.Sharp.IconButton();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grupBox.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -90,7 +91,7 @@ namespace LawyerDiaryUI
             this.faturaAnaEkraniLabel.ForeColor = System.Drawing.Color.Silver;
             this.faturaAnaEkraniLabel.Location = new System.Drawing.Point(1, 9);
             this.faturaAnaEkraniLabel.Name = "faturaAnaEkraniLabel";
-            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(206, 27);
+            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(172, 23);
             this.faturaAnaEkraniLabel.TabIndex = 15;
             this.faturaAnaEkraniLabel.Text = "Fatura Ana Ekranı";
             // 
@@ -175,13 +176,15 @@ namespace LawyerDiaryUI
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(392, 65);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(689, 221);
+            this.dataGridView1.Size = new System.Drawing.Size(734, 226);
             this.dataGridView1.TabIndex = 6;
             // 
             // grupBox
@@ -205,7 +208,7 @@ namespace LawyerDiaryUI
             this.gelecekDavalar.AutoSize = true;
             this.gelecekDavalar.Location = new System.Drawing.Point(259, 133);
             this.gelecekDavalar.Name = "gelecekDavalar";
-            this.gelecekDavalar.Size = new System.Drawing.Size(202, 27);
+            this.gelecekDavalar.Size = new System.Drawing.Size(160, 25);
             this.gelecekDavalar.TabIndex = 5;
             this.gelecekDavalar.TabStop = true;
             this.gelecekDavalar.Text = "Gelecek Davalar";
@@ -216,7 +219,7 @@ namespace LawyerDiaryUI
             this.gecmisDavalar.AutoSize = true;
             this.gecmisDavalar.Location = new System.Drawing.Point(41, 133);
             this.gecmisDavalar.Name = "gecmisDavalar";
-            this.gecmisDavalar.Size = new System.Drawing.Size(191, 27);
+            this.gecmisDavalar.Size = new System.Drawing.Size(153, 25);
             this.gecmisDavalar.TabIndex = 5;
             this.gecmisDavalar.TabStop = true;
             this.gecmisDavalar.Text = "Geçmiş Davalar";
@@ -227,15 +230,15 @@ namespace LawyerDiaryUI
             this.musteriAd.AutoSize = true;
             this.musteriAd.Location = new System.Drawing.Point(20, 68);
             this.musteriAd.Name = "musteriAd";
-            this.musteriAd.Size = new System.Drawing.Size(0, 23);
+            this.musteriAd.Size = new System.Drawing.Size(0, 21);
             this.musteriAd.TabIndex = 4;
             // 
             // musteriAdi
             // 
             this.musteriAdi.Location = new System.Drawing.Point(41, 65);
             this.musteriAdi.Name = "musteriAdi";
-            this.musteriAdi.PlaceholderText = "Müvekkil Adı";
-            this.musteriAdi.Size = new System.Drawing.Size(420, 32);
+            this.musteriAdi.PlaceholderText = "Fatura Açıklaması";
+            this.musteriAdi.Size = new System.Drawing.Size(420, 27);
             this.musteriAdi.TabIndex = 4;
             this.musteriAdi.TextChanged += new System.EventHandler(this.musteriAdi_TextChanged);
             // 
@@ -247,7 +250,7 @@ namespace LawyerDiaryUI
             this.FaturaEkleBtn.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.FaturaEkleBtn.IconColor = System.Drawing.Color.Navy;
             this.FaturaEkleBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.FaturaEkleBtn.Location = new System.Drawing.Point(1017, 423);
+            this.FaturaEkleBtn.Location = new System.Drawing.Point(804, 424);
             this.FaturaEkleBtn.Name = "FaturaEkleBtn";
             this.FaturaEkleBtn.Size = new System.Drawing.Size(146, 54);
             this.FaturaEkleBtn.TabIndex = 13;
@@ -265,7 +268,7 @@ namespace LawyerDiaryUI
             this.FaturaSilBtn.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.FaturaSilBtn.IconColor = System.Drawing.Color.Navy;
             this.FaturaSilBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.FaturaSilBtn.Location = new System.Drawing.Point(1007, 338);
+            this.FaturaSilBtn.Location = new System.Drawing.Point(1025, 374);
             this.FaturaSilBtn.Name = "FaturaSilBtn";
             this.FaturaSilBtn.Size = new System.Drawing.Size(156, 59);
             this.FaturaSilBtn.TabIndex = 14;
@@ -274,25 +277,6 @@ namespace LawyerDiaryUI
             this.FaturaSilBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.FaturaSilBtn.UseVisualStyleBackColor = true;
             this.FaturaSilBtn.Click += new System.EventHandler(this.FaturaSilBtn_Click);
-            // 
-            // disaAktarBtn
-            // 
-            this.disaAktarBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.disaAktarBtn.FlatAppearance.BorderSize = 0;
-            this.disaAktarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.disaAktarBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.disaAktarBtn.ForeColor = System.Drawing.Color.Navy;
-            this.disaAktarBtn.IconChar = FontAwesome.Sharp.IconChar.FileExport;
-            this.disaAktarBtn.IconColor = System.Drawing.Color.Navy;
-            this.disaAktarBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.disaAktarBtn.Location = new System.Drawing.Point(793, 423);
-            this.disaAktarBtn.Name = "disaAktarBtn";
-            this.disaAktarBtn.Size = new System.Drawing.Size(184, 59);
-            this.disaAktarBtn.TabIndex = 11;
-            this.disaAktarBtn.Text = "Dışa Aktar";
-            this.disaAktarBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.disaAktarBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.disaAktarBtn.UseVisualStyleBackColor = false;
             // 
             // FaturaGuncelleBtn
             // 
@@ -314,17 +298,24 @@ namespace LawyerDiaryUI
             this.FaturaGuncelleBtn.UseVisualStyleBackColor = false;
             this.FaturaGuncelleBtn.Click += new System.EventHandler(this.FaturaGuncelleBtn_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Location = new System.Drawing.Point(365, 52);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(734, 226);
+            this.panel4.TabIndex = 15;
+            // 
             // FaturaAnaEkran
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1307, 531);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.FaturaEkleBtn);
             this.Controls.Add(this.FaturaSilBtn);
-            this.Controls.Add(this.disaAktarBtn);
             this.Controls.Add(this.FaturaGuncelleBtn);
             this.Controls.Add(this.grupBox);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -339,6 +330,7 @@ namespace LawyerDiaryUI
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.grupBox.ResumeLayout(false);
             this.grupBox.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -361,7 +353,7 @@ namespace LawyerDiaryUI
         private System.Windows.Forms.TextBox musteriAdi;
         private FontAwesome.Sharp.IconButton FaturaEkleBtn;
         private FontAwesome.Sharp.IconButton FaturaSilBtn;
-        private FontAwesome.Sharp.IconButton disaAktarBtn;
         private FontAwesome.Sharp.IconButton FaturaGuncelleBtn;
+        private System.Windows.Forms.Panel panel4;
     }
 }

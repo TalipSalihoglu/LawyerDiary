@@ -9,7 +9,5 @@ namespace EntityLayer.Concrete
         public int CourtId { get; set; }
         public int CourtNumber { get; set; }
         public string JudgeName{ get; set; }
-
-        public ICollection<Case> Cases { get; set; }
     }
 }

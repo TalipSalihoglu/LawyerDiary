@@ -45,11 +45,6 @@ namespace LawyerDiaryUI
             Application.Exit();
         }
 
-        internal static Form cs()
-        {
-            throw new NotImplementedException();
-        }
-
         private void nameLogin_Click(object sender, EventArgs e)
         {
             nameLogin.BackColor = Color.White;
@@ -103,12 +98,6 @@ namespace LawyerDiaryUI
             }
 
         }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         bool mouseDown;
         private Point offset;
         private void mouseDownEvent(object sender, MouseEventArgs e)
@@ -131,8 +120,6 @@ namespace LawyerDiaryUI
         {
             mouseDown = false;
         }
- 
-
 
     }
 }

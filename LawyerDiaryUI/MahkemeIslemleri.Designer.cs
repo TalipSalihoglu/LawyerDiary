@@ -48,11 +48,13 @@ namespace LawyerDiaryUI
             this.mahkemeGuncelleBtn = new FontAwesome.Sharp.IconButton();
             this.GüncelleHakimAdi = new System.Windows.Forms.TextBox();
             this.GüncelleMahkemeNo = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -75,7 +77,7 @@ namespace LawyerDiaryUI
             this.musteriyonetimLabel.ForeColor = System.Drawing.Color.Silver;
             this.musteriyonetimLabel.Location = new System.Drawing.Point(1, 9);
             this.musteriyonetimLabel.Name = "musteriyonetimLabel";
-            this.musteriyonetimLabel.Size = new System.Drawing.Size(226, 27);
+            this.musteriyonetimLabel.Size = new System.Drawing.Size(185, 23);
             this.musteriyonetimLabel.TabIndex = 15;
             this.musteriyonetimLabel.Text = "Mahkeme İşlemleri";
             // 
@@ -161,13 +163,15 @@ namespace LawyerDiaryUI
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(451, 63);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(633, 244);
+            this.dataGridView1.Size = new System.Drawing.Size(735, 253);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
@@ -177,7 +181,7 @@ namespace LawyerDiaryUI
             this.textBox1.Location = new System.Drawing.Point(508, 352);
             this.textBox1.Name = "textBox1";
             this.textBox1.PlaceholderText = "Aramak istediğiniz mahkemenin numarasını girin";
-            this.textBox1.Size = new System.Drawing.Size(491, 32);
+            this.textBox1.Size = new System.Drawing.Size(491, 27);
             this.textBox1.TabIndex = 5;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -236,7 +240,7 @@ namespace LawyerDiaryUI
             this.hakimAdı.Location = new System.Drawing.Point(79, 105);
             this.hakimAdı.Name = "hakimAdı";
             this.hakimAdı.PlaceholderText = "Hakim İsmi";
-            this.hakimAdı.Size = new System.Drawing.Size(325, 32);
+            this.hakimAdı.Size = new System.Drawing.Size(325, 27);
             this.hakimAdı.TabIndex = 0;
             // 
             // mahkemeNo
@@ -244,7 +248,7 @@ namespace LawyerDiaryUI
             this.mahkemeNo.Location = new System.Drawing.Point(79, 40);
             this.mahkemeNo.Name = "mahkemeNo";
             this.mahkemeNo.PlaceholderText = "Mahkeme No";
-            this.mahkemeNo.Size = new System.Drawing.Size(325, 32);
+            this.mahkemeNo.Size = new System.Drawing.Size(325, 27);
             this.mahkemeNo.TabIndex = 0;
             // 
             // groupBox2
@@ -303,7 +307,7 @@ namespace LawyerDiaryUI
             this.GüncelleHakimAdi.Location = new System.Drawing.Point(74, 105);
             this.GüncelleHakimAdi.Name = "GüncelleHakimAdi";
             this.GüncelleHakimAdi.PlaceholderText = "Hakim İsmi";
-            this.GüncelleHakimAdi.Size = new System.Drawing.Size(325, 32);
+            this.GüncelleHakimAdi.Size = new System.Drawing.Size(325, 27);
             this.GüncelleHakimAdi.TabIndex = 0;
             // 
             // GüncelleMahkemeNo
@@ -311,18 +315,26 @@ namespace LawyerDiaryUI
             this.GüncelleMahkemeNo.Location = new System.Drawing.Point(74, 40);
             this.GüncelleMahkemeNo.Name = "GüncelleMahkemeNo";
             this.GüncelleMahkemeNo.PlaceholderText = "Mahkeme No";
-            this.GüncelleMahkemeNo.Size = new System.Drawing.Size(325, 32);
+            this.GüncelleMahkemeNo.Size = new System.Drawing.Size(325, 27);
             this.GüncelleMahkemeNo.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Location = new System.Drawing.Point(409, 80);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(735, 253);
+            this.panel4.TabIndex = 7;
             // 
             // MahkemeIslemleri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -339,6 +351,7 @@ namespace LawyerDiaryUI
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,5 +378,6 @@ namespace LawyerDiaryUI
         private FontAwesome.Sharp.IconButton mahkemeGuncelleBtn;
         private FontAwesome.Sharp.IconButton mahkemeSilBtn;
         private FontAwesome.Sharp.IconButton ıconButton3;
+        private System.Windows.Forms.Panel panel4;
     }
 }

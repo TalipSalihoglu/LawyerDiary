@@ -11,12 +11,8 @@ namespace EntityLayer.Concrete
         public string Address{ get; set; }
         public string Email { get; set; }
         public bool Status{ get; set; }
-        public ICollection<Case> Cases { get; set; }
-        public ICollection<Bill> Bills { get; set; }
-        public ICollection<Appointment> Appointments { get; set; }
-        public int LawyerId { get; set; }
-        public virtual Lawyer Lawyer { get; set; }
 
+        public int LawyerId { get; set; }
        
     }
 }

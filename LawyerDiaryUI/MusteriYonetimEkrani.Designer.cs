@@ -29,6 +29,7 @@ namespace LawyerDiaryUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.solPanel = new System.Windows.Forms.Panel();
             this.cikis = new FontAwesome.Sharp.IconButton();
             this.anaMenuyeDon = new FontAwesome.Sharp.IconButton();
@@ -41,9 +42,11 @@ namespace LawyerDiaryUI
             this.Ekle = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.solPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // solPanel
@@ -137,15 +140,15 @@ namespace LawyerDiaryUI
             this.musteriyonetimLabel.ForeColor = System.Drawing.Color.Silver;
             this.musteriyonetimLabel.Location = new System.Drawing.Point(0, 9);
             this.musteriyonetimLabel.Name = "musteriyonetimLabel";
-            this.musteriyonetimLabel.Size = new System.Drawing.Size(197, 27);
+            this.musteriyonetimLabel.Size = new System.Drawing.Size(161, 23);
             this.musteriyonetimLabel.TabIndex = 8;
             this.musteriyonetimLabel.Text = "Müşteri Yönetimi";
             // 
             // musteriAdi
             // 
-            this.musteriAdi.Location = new System.Drawing.Point(440, 118);
+            this.musteriAdi.Location = new System.Drawing.Point(656, 423);
             this.musteriAdi.Name = "musteriAdi";
-            this.musteriAdi.Size = new System.Drawing.Size(212, 28);
+            this.musteriAdi.Size = new System.Drawing.Size(212, 24);
             this.musteriAdi.TabIndex = 2;
             this.musteriAdi.TextChanged += new System.EventHandler(this.musteriAdi_TextChanged);
             // 
@@ -157,9 +160,9 @@ namespace LawyerDiaryUI
             this.Guncelle.IconChar = FontAwesome.Sharp.IconChar.None;
             this.Guncelle.IconColor = System.Drawing.Color.Navy;
             this.Guncelle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Guncelle.Location = new System.Drawing.Point(217, 268);
+            this.Guncelle.Location = new System.Drawing.Point(530, 485);
             this.Guncelle.Name = "Guncelle";
-            this.Guncelle.Size = new System.Drawing.Size(435, 34);
+            this.Guncelle.Size = new System.Drawing.Size(238, 34);
             this.Guncelle.TabIndex = 3;
             this.Guncelle.Text = "Müşteriyi Güncelle";
             this.Guncelle.UseVisualStyleBackColor = false;
@@ -173,9 +176,9 @@ namespace LawyerDiaryUI
             this.Sil.IconChar = FontAwesome.Sharp.IconChar.None;
             this.Sil.IconColor = System.Drawing.Color.Navy;
             this.Sil.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Sil.Location = new System.Drawing.Point(217, 325);
+            this.Sil.Location = new System.Drawing.Point(849, 485);
             this.Sil.Name = "Sil";
-            this.Sil.Size = new System.Drawing.Size(435, 34);
+            this.Sil.Size = new System.Drawing.Size(238, 34);
             this.Sil.TabIndex = 4;
             this.Sil.Text = "Müşteriyi Sil";
             this.Sil.UseVisualStyleBackColor = false;
@@ -189,9 +192,9 @@ namespace LawyerDiaryUI
             this.Ekle.IconChar = FontAwesome.Sharp.IconChar.None;
             this.Ekle.IconColor = System.Drawing.Color.Navy;
             this.Ekle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Ekle.Location = new System.Drawing.Point(217, 519);
+            this.Ekle.Location = new System.Drawing.Point(188, 485);
             this.Ekle.Name = "Ekle";
-            this.Ekle.Size = new System.Drawing.Size(435, 34);
+            this.Ekle.Size = new System.Drawing.Size(238, 34);
             this.Ekle.TabIndex = 5;
             this.Ekle.Text = "Yeni Müşteri Ekle";
             this.Ekle.UseVisualStyleBackColor = false;
@@ -202,31 +205,51 @@ namespace LawyerDiaryUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(217, 121);
+            this.label1.Location = new System.Drawing.Point(433, 426);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 21);
+            this.label1.Size = new System.Drawing.Size(178, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Aradığınız Müşterinin Adı:";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridView1.Location = new System.Drawing.Point(729, 67);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(417, 486);
+            this.dataGridView1.Size = new System.Drawing.Size(887, 284);
             this.dataGridView1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Location = new System.Drawing.Point(239, 71);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(887, 284);
+            this.panel2.TabIndex = 8;
             // 
             // MusteriYonetimEkrani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1178, 578);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1170, 578);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Ekle);
             this.Controls.Add(this.Sil);
@@ -243,6 +266,7 @@ namespace LawyerDiaryUI
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +286,6 @@ namespace LawyerDiaryUI
         private FontAwesome.Sharp.IconButton cikis;
         private System.Windows.Forms.Label musteriyonetimLabel;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel2;
     }
 }

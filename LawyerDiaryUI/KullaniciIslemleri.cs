@@ -70,11 +70,9 @@ namespace LawyerDiaryUI
             Application.Exit();
         }
 
-<<<<<<< HEAD
         private void KullaniciIslemleri_Load(object sender, EventArgs e)
         {
-
-=======
+        }
         private void anaMenuyeDon_Click(object sender, EventArgs e)
         {
             MainPage mp = new MainPage();
@@ -82,12 +80,7 @@ namespace LawyerDiaryUI
             this.Hide();
         }
 
-        private void KullaniciIslemleri_Load(object sender, EventArgs e)
-        {
-            isimBox.Text = lawyer.Name;
-            addressBox.Text =lawyer.Address;
-            emailBox.Text = lawyer.Email;
-        }
+       
 
         private void güncelleBtn_Click(object sender, EventArgs e)
         {
@@ -105,12 +98,18 @@ namespace LawyerDiaryUI
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-           bool result = _lawyerManager.ChangePassword(lawyer.LawyerId,eskiSifre.Text,yeniSifre.Text,yeniSifreTekrar.Text);
+            bool result = _lawyerManager.ChangePassword(lawyer.LawyerId,eskiSifre.Text,yeniSifre.Text,yeniSifreTekrar.Text);
             if (result)
                 MessageBox.Show("Güncelleme işlemi başarıyla tamamlandı");
             else
                 MessageBox.Show("Bilgileri kontrol ediniz.\nGüncelleme yapılamadı!!");
->>>>>>> e49883e9638724b7f15e367d84849c0780381c1d
+        }
+
+        private void KullaniciIslemleri_Load_1(object sender, EventArgs e)
+        {
+            isimBox.Text = lawyer.Name;
+            addressBox.Text =lawyer.Address;
+            emailBox.Text = lawyer.Email;
         }
     }
 }

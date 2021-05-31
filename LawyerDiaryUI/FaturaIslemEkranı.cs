@@ -68,20 +68,16 @@ namespace LawyerDiaryUI
             if (fatura!=null)
             {
                 textBox1.Text= fatura.Price.ToString();
-                textBox2.Text= fatura.LastDate.ToString();
+                dateTimePicker1.Value= fatura.LastDate;
                 richTextBox1.Text= fatura.Description;
                 CB_FaturaMusteri.Text = _clientManager.Get(fatura.ClientId).ClientName;   
             }
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void kaydetBtn_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || richTextBox1.Text == "")
+            if (textBox1.Text == ""  || richTextBox1.Text == "")
             {
                 MessageBox.Show("Bu alanlar boş olamaz");
                 return;
@@ -90,7 +86,7 @@ namespace LawyerDiaryUI
             {
                 fatura.Price =Convert.ToDecimal(textBox1.Text);
                 fatura.Description = richTextBox1.Text;
-                fatura.LastDate = DateTime.Parse(textBox2.Text);
+                fatura.LastDate = dateTimePicker1.Value;
                 fatura.ClientId = _clientManager.GetClientIdWithName(CB_FaturaMusteri.SelectedItem.ToString());
                 _billManager.Update(fatura);
             }
@@ -100,7 +96,7 @@ namespace LawyerDiaryUI
                 {
                     Price= Convert.ToDecimal(textBox1.Text),
                     Description = richTextBox1.Text,
-                    LastDate = DateTime.Parse(textBox2.Text),
+                    LastDate = dateTimePicker1.Value,
                     ClientId = _clientManager.GetClientIdWithName(CB_FaturaMusteri.SelectedItem.ToString())
                 };
                 _billManager.Add(newBill);
@@ -143,6 +139,14 @@ namespace LawyerDiaryUI
         private void mouseUpEvent(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void ıconButton3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("İşlem iptal edildi.");
+            FaturaAnaEkran fae = new FaturaAnaEkran();
+            this.Hide();
+            fae.Show();
         }
     }
 }

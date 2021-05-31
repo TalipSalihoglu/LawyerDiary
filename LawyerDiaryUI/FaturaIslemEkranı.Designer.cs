@@ -39,10 +39,10 @@ namespace LawyerDiaryUI
             this.faturaAnaEkraniLabel = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.CB_FaturaMusteri = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ıconButton3 = new FontAwesome.Sharp.IconButton();
             this.kaydetBtn = new FontAwesome.Sharp.IconButton();
@@ -179,7 +179,7 @@ namespace LawyerDiaryUI
             this.faturaAnaEkraniLabel.ForeColor = System.Drawing.Color.Silver;
             this.faturaAnaEkraniLabel.Location = new System.Drawing.Point(-6, 6);
             this.faturaAnaEkraniLabel.Name = "faturaAnaEkraniLabel";
-            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(219, 27);
+            this.faturaAnaEkraniLabel.Size = new System.Drawing.Size(182, 23);
             this.faturaAnaEkraniLabel.TabIndex = 15;
             this.faturaAnaEkraniLabel.Text = "Fatura İşlem Ekranı";
             // 
@@ -201,10 +201,10 @@ namespace LawyerDiaryUI
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.CB_FaturaMusteri);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(333, 98);
             this.groupBox1.Name = "groupBox1";
@@ -212,12 +212,19 @@ namespace LawyerDiaryUI
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(160, 364);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(395, 27);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
             // CB_FaturaMusteri
             // 
             this.CB_FaturaMusteri.FormattingEnabled = true;
             this.CB_FaturaMusteri.Location = new System.Drawing.Point(160, 409);
             this.CB_FaturaMusteri.Name = "CB_FaturaMusteri";
-            this.CB_FaturaMusteri.Size = new System.Drawing.Size(221, 31);
+            this.CB_FaturaMusteri.Size = new System.Drawing.Size(221, 29);
             this.CB_FaturaMusteri.TabIndex = 3;
             // 
             // label1
@@ -225,7 +232,7 @@ namespace LawyerDiaryUI
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(160, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 23);
+            this.label1.Size = new System.Drawing.Size(149, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Fatura Açıklaması";
             // 
@@ -237,20 +244,12 @@ namespace LawyerDiaryUI
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(160, 361);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Tarih";
-            this.textBox2.Size = new System.Drawing.Size(539, 32);
-            this.textBox2.TabIndex = 0;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(160, 39);
             this.textBox1.Name = "textBox1";
             this.textBox1.PlaceholderText = "Ücret";
-            this.textBox1.Size = new System.Drawing.Size(539, 32);
+            this.textBox1.Size = new System.Drawing.Size(539, 27);
             this.textBox1.TabIndex = 0;
             // 
             // ıconButton3
@@ -270,6 +269,7 @@ namespace LawyerDiaryUI
             this.ıconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ıconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ıconButton3.UseVisualStyleBackColor = true;
+            this.ıconButton3.Click += new System.EventHandler(this.ıconButton3_Click);
             // 
             // kaydetBtn
             // 
@@ -292,7 +292,7 @@ namespace LawyerDiaryUI
             // 
             // FaturaIslemEkranı
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.ıconButton3);
@@ -327,12 +327,12 @@ namespace LawyerDiaryUI
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconButton ıconButton3;
         private FontAwesome.Sharp.IconButton kaydetBtn;
         private FontAwesome.Sharp.IconButton faturaBackwardBtn;
         private FontAwesome.Sharp.IconButton ıconButton1;
         private System.Windows.Forms.ComboBox CB_FaturaMusteri;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
