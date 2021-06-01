@@ -79,7 +79,7 @@ namespace LawyerDiaryUI
         {
             if (textBox1.Text == ""  || richTextBox1.Text == "")
             {
-                MessageBox.Show("Bu alanlar boş olamaz");
+                MessageBox.Show("Tüm alanlar doldurulmalıdır!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (fatura != null)

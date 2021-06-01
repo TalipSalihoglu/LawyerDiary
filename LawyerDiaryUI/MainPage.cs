@@ -11,8 +11,6 @@ namespace LawyerDiaryUI
 {
     public partial class MainPage : Form
     {
-        //fields
-        private IconButton currentBtn;
         private Panel leftBorderBtn;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]

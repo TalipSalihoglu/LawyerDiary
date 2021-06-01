@@ -65,7 +65,7 @@ namespace LawyerDiaryUI
         {
             if (RandevuKonu.Text == "" || textBoxAcıklama.Text == "")
             { 
-                MessageBox.Show("Bu alan boş olamaz");
+                MessageBox.Show("Bu alan boş olamaz", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (appointment!=null)
@@ -121,21 +121,12 @@ namespace LawyerDiaryUI
 
         private void ıconButton3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("İşlem iptal edildi!");
+            MessageBox.Show("İşlem iptal edildi!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
             RandevuYonetim ry = new RandevuYonetim();
             this.Hide();
             ry.Show();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         bool mouseDown;
         private Point offset;

@@ -59,7 +59,7 @@ namespace LawyerDiaryUI
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            if(müsAdı.Text != "" || müsAdres.Text != "" || müsMail.Text != "")
+            if(müsAdı.Text != "" && müsAdres.Text != "" && müsMail.Text != "")
             {
                 if (musteri == null)
                 {
@@ -79,13 +79,13 @@ namespace LawyerDiaryUI
                     Manager.Update(musteri);
                 }
 
-                MessageBox.Show("İşleme başarıyla tamamlandı");
+                MessageBox.Show("İşleme başarıyla tamamlandı","Bilgilendirme",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 this.Hide();
                 mye.Show();
             }
             else
             {
-                MessageBox.Show("İşlem Başarısız!!!\nEksik bilgi olmamalıdır");
+                MessageBox.Show("İşlem Başarısız!!!\nEksik bilgi olmamalıdır","HATA",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -95,20 +95,27 @@ namespace LawyerDiaryUI
             müsAdres.Text = "";
             müsMail.Text = "";
         }
-
+        bool mouseDown;
+        private Point offset;
         private void mouseUpMovement(object sender, MouseEventArgs e)
         {
-            
+            mouseDown = false;
         }
 
         private void mouseMovementEvent(object sender, MouseEventArgs e)
         {
-
+            if (mouseDown == true)
+            {
+                Point currentScreenPos = PointToScreen(e.Location);
+                Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
+            }
         }
 
         private void mouseDownEvent(object sender, MouseEventArgs e)
         {
-
+            offset.X = e.X;
+            offset.Y = e.Y;
+            mouseDown = true;
         }
     }
 }

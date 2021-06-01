@@ -82,7 +82,7 @@ namespace LawyerDiaryUI
                 var result = _courtManager.GetIdWithCourtNo(int.Parse(mahkemeNo.Text));
                 if(result!=-1)
                 {
-                    MessageBox.Show("Bu mahkeme no ile bir kayıt zaten var!\n Lütfen farklı bir No giriniz!!");
+                    MessageBox.Show("Bu mahkeme no ile bir kayıt zaten var!\n Lütfen farklı bir No giriniz!!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -92,13 +92,13 @@ namespace LawyerDiaryUI
                         JudgeName = hakimAdı.Text,
                     };
                     _courtManager.Add(c);
-                    MessageBox.Show("İşlem başarıyla tamamlandı!");
+                    MessageBox.Show("İşlem başarıyla tamamlandı!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridView1.DataSource = _courtManager.GetList();
                 }
             }
             else 
             {
-                MessageBox.Show("Mahkeme No ve Hakim Adı boş bırakılamaz!!");
+                MessageBox.Show("Mahkeme No ve Hakim Adı boş bırakılamaz!!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -119,7 +119,7 @@ namespace LawyerDiaryUI
             catch (Exception E)
             {
 
-                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -128,7 +128,7 @@ namespace LawyerDiaryUI
         {
             if (GüncelleHakimAdi.Text == "" && GüncelleMahkemeNo.Text == "")
             {
-                MessageBox.Show("Mahkeme No ve Hakim Adı boş bırakılamaz!!");
+                MessageBox.Show("Mahkeme No ve Hakim Adı boş bırakılamaz!!","HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -139,13 +139,13 @@ namespace LawyerDiaryUI
                     court.CourtNumber = int.Parse(GüncelleMahkemeNo.Text);
                     court.JudgeName = GüncelleHakimAdi.Text;
                     _courtManager.Update(court);
-                    MessageBox.Show("Güncellem işlemi başarıyla tamamlandı");
+                    MessageBox.Show("Güncellem işlemi başarıyla tamamlandı","Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridView1.DataSource = _courtManager.GetList();
                 }
                 catch (Exception E)
                 {
 
-                    MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+                    MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -156,13 +156,13 @@ namespace LawyerDiaryUI
             {
                 int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
                 _courtManager.Delete(_courtManager.Get(id));
-                MessageBox.Show("Silme işlemi başarıyla tamamlandı");
+                MessageBox.Show("Silme işlemi başarıyla tamamlandı","Bilgilendirme",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 dataGridView1.DataSource = _courtManager.GetList();
             }
             catch (Exception E)
             {
 
-                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message,"HATA",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 

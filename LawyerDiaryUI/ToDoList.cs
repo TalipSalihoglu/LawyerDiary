@@ -106,7 +106,7 @@ namespace LawyerDiaryUI
             }
             else
             {
-                MessageBox.Show("Gerekli alanlar boş bırakılamaz.Ekleme tamamlanamadı!");
+                MessageBox.Show("Gerekli alanlar boş bırakılamaz.Ekleme tamamlanamadı!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -159,12 +159,12 @@ namespace LawyerDiaryUI
         {
             if (gorevAdi.Text == "" && gorevAcılaması.Text == "")
             {
-                MessageBox.Show("Güncellemek istediğiniz kayıdı yapılacaklar listesinden seçiniz");
+                MessageBox.Show("Güncellemek istediğiniz kayıdı yapılacaklar listesinden seçiniz", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (YapılacaklarListesi.SelectedItem == null)
             {
-                MessageBox.Show("Güncellemek istediğiniz kayıdı yapılacaklar listesinden seçiniz");
+                MessageBox.Show("Güncellemek istediğiniz kayıdı yapılacaklar listesinden seçiniz", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -175,7 +175,7 @@ namespace LawyerDiaryUI
                 todo.Task = gorevAdi.Text;
                 _todoManager.Update(todo);
                 ListeleriGüncelle();
-                MessageBox.Show("Güncelleme işlemi başarıyla tamamlandı");
+                MessageBox.Show("Güncelleme işlemi başarıyla tamamlandı", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
             }
         }
@@ -184,17 +184,17 @@ namespace LawyerDiaryUI
         {
             if (gorevAdi.Text == "" && gorevAcılaması.Text == "")
             {
-                MessageBox.Show("Silmek istediğiniz kayıdı listeden seçiniz");
+                MessageBox.Show("Silmek istediğiniz kayıdı listeden seçiniz", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             ToDo todo = _todoManager.GetWithTask(gorevAdi.Text);
             if(todo==null)
-                MessageBox.Show("Silmek istediğiniz kayıdı listeden seçiniz");
+                MessageBox.Show("Silmek istediğiniz kayıdı listeden seçiniz", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 _todoManager.Delete(todo);
                 ListeleriGüncelle();
-                MessageBox.Show("Silme işlemi başarıyla tamamlandı");
+                MessageBox.Show("Silme işlemi başarıyla tamamlandı", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             gorevAdi.Text = "";
             gorevAcılaması.Text = "";

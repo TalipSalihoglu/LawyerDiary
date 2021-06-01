@@ -85,7 +85,7 @@ namespace LawyerDiaryUI
             int result =manager.Login(nameLogin.Text,passwordLogin.Text);
             if (result == -1)
             {
-                MessageBox.Show("Kullanıcı adi veya şifre hatalı");
+                MessageBox.Show("Kullanıcı adi veya şifre hatalı!","Giriş Yapılamadı",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 nameLogin.Text = "";
                 passwordLogin.Text = "";
             }

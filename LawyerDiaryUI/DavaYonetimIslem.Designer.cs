@@ -65,9 +65,8 @@ namespace LawyerDiaryUI
             this.panel1.Controls.Add(this.cikisBtn);
             this.panel1.Location = new System.Drawing.Point(-1, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(149, 761);
+            this.panel1.Size = new System.Drawing.Size(149, 764);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
@@ -143,7 +142,6 @@ namespace LawyerDiaryUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1400, 39);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // exitBtn
             // 
@@ -168,7 +166,7 @@ namespace LawyerDiaryUI
             this.davaYonetimIslemleriLabel.ForeColor = System.Drawing.Color.Silver;
             this.davaYonetimIslemleriLabel.Location = new System.Drawing.Point(141, 10);
             this.davaYonetimIslemleriLabel.Name = "davaYonetimIslemleriLabel";
-            this.davaYonetimIslemleriLabel.Size = new System.Drawing.Size(211, 22);
+            this.davaYonetimIslemleriLabel.Size = new System.Drawing.Size(176, 18);
             this.davaYonetimIslemleriLabel.TabIndex = 13;
             this.davaYonetimIslemleriLabel.Text = "Dava Yönetim İşlemleri";
             this.davaYonetimIslemleriLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -192,21 +190,20 @@ namespace LawyerDiaryUI
             this.filtreliAramaBox.TabIndex = 4;
             this.filtreliAramaBox.TabStop = false;
             this.filtreliAramaBox.Text = "Filtreli Arama";
-            this.filtreliAramaBox.Enter += new System.EventHandler(this.filtreliAramaBox_Enter);
             // 
             // dava_musteriAdi
             // 
             this.dava_musteriAdi.FormattingEnabled = true;
             this.dava_musteriAdi.Location = new System.Drawing.Point(260, 431);
             this.dava_musteriAdi.Name = "dava_musteriAdi";
-            this.dava_musteriAdi.Size = new System.Drawing.Size(250, 31);
+            this.dava_musteriAdi.Size = new System.Drawing.Size(250, 29);
             this.dava_musteriAdi.TabIndex = 7;
             // 
             // davaTarih
             // 
             this.davaTarih.Location = new System.Drawing.Point(260, 381);
             this.davaTarih.Name = "davaTarih";
-            this.davaTarih.Size = new System.Drawing.Size(250, 32);
+            this.davaTarih.Size = new System.Drawing.Size(250, 27);
             this.davaTarih.TabIndex = 6;
             // 
             // davaAcıklama
@@ -222,7 +219,7 @@ namespace LawyerDiaryUI
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(55, 439);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 23);
+            this.label2.Size = new System.Drawing.Size(97, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Müşteri Adı";
             // 
@@ -231,7 +228,7 @@ namespace LawyerDiaryUI
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(60, 390);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 23);
+            this.label1.Size = new System.Drawing.Size(102, 21);
             this.label1.TabIndex = 4;
             this.label1.Text = "Dava Tarihi:";
             // 
@@ -240,7 +237,7 @@ namespace LawyerDiaryUI
             this.mahkemeNo.AutoSize = true;
             this.mahkemeNo.Location = new System.Drawing.Point(60, 217);
             this.mahkemeNo.Name = "mahkemeNo";
-            this.mahkemeNo.Size = new System.Drawing.Size(180, 23);
+            this.mahkemeNo.Size = new System.Drawing.Size(141, 21);
             this.mahkemeNo.TabIndex = 4;
             this.mahkemeNo.Text = "Dava Açıklaması";
             // 
@@ -249,7 +246,7 @@ namespace LawyerDiaryUI
             this.musteriAd.AutoSize = true;
             this.musteriAd.Location = new System.Drawing.Point(60, 156);
             this.musteriAd.Name = "musteriAd";
-            this.musteriAd.Size = new System.Drawing.Size(146, 23);
+            this.musteriAd.Size = new System.Drawing.Size(117, 21);
             this.musteriAd.TabIndex = 4;
             this.musteriAd.Text = "Dava Konusu:";
             // 
@@ -257,7 +254,7 @@ namespace LawyerDiaryUI
             // 
             this.davaKonu.Location = new System.Drawing.Point(260, 147);
             this.davaKonu.Name = "davaKonu";
-            this.davaKonu.Size = new System.Drawing.Size(372, 32);
+            this.davaKonu.Size = new System.Drawing.Size(372, 27);
             this.davaKonu.TabIndex = 4;
             // 
             // mahkemeBox
@@ -278,7 +275,7 @@ namespace LawyerDiaryUI
             this.mahkeme_No.FormattingEnabled = true;
             this.mahkeme_No.Location = new System.Drawing.Point(19, 172);
             this.mahkeme_No.Name = "mahkeme_No";
-            this.mahkeme_No.Size = new System.Drawing.Size(343, 31);
+            this.mahkeme_No.Size = new System.Drawing.Size(343, 29);
             this.mahkeme_No.TabIndex = 5;
             this.mahkeme_No.SelectedIndexChanged += new System.EventHandler(this.mahkeme_No_SelectedIndexChanged);
             // 
@@ -287,7 +284,7 @@ namespace LawyerDiaryUI
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(16, 246);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 23);
+            this.label4.Size = new System.Drawing.Size(93, 21);
             this.label4.TabIndex = 4;
             this.label4.Text = "Hakim Adı:";
             // 
@@ -296,7 +293,7 @@ namespace LawyerDiaryUI
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(18, 146);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 23);
+            this.label3.Size = new System.Drawing.Size(119, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "Mahkeme No:";
             // 
@@ -304,7 +301,7 @@ namespace LawyerDiaryUI
             // 
             this.Hakim_Adı.Location = new System.Drawing.Point(19, 274);
             this.Hakim_Adı.Name = "Hakim_Adı";
-            this.Hakim_Adı.Size = new System.Drawing.Size(343, 32);
+            this.Hakim_Adı.Size = new System.Drawing.Size(343, 27);
             this.Hakim_Adı.TabIndex = 4;
             // 
             // btnKaydet
@@ -327,7 +324,7 @@ namespace LawyerDiaryUI
             // 
             // DavaYonetimIslem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.btnKaydet);

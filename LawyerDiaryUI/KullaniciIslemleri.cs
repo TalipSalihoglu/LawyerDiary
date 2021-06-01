@@ -69,10 +69,6 @@ namespace LawyerDiaryUI
         {
             Application.Exit();
         }
-
-        private void KullaniciIslemleri_Load(object sender, EventArgs e)
-        {
-        }
         private void anaMenuyeDon_Click(object sender, EventArgs e)
         {
             MainPage mp = new MainPage();
@@ -90,19 +86,19 @@ namespace LawyerDiaryUI
                 lawyer.Address = addressBox.Text;
                 lawyer.Email = emailBox.Text;
                 _lawyerManager.Update(lawyer);
-                MessageBox.Show("Güncelleme işlemi başarıyla tamamlandı");
+                MessageBox.Show("Güncelleme işlemi başarıyla tamamlandı","Bilgilendirme",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Gerekli alanlar boş bırakılamaz!");
+                MessageBox.Show("Gerekli alanlar boş bırakılamaz!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             bool result = _lawyerManager.ChangePassword(lawyer.LawyerId,eskiSifre.Text,yeniSifre.Text,yeniSifreTekrar.Text);
             if (result)
-                MessageBox.Show("Güncelleme işlemi başarıyla tamamlandı");
+                MessageBox.Show("İşlem başarıyla tamamlandı", "Bilgilendirme ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MessageBox.Show("Bilgileri kontrol ediniz.\nGüncelleme yapılamadı!!");
+                MessageBox.Show("Bilgileri kontrol ediniz.\nGüncelleme yapılamadı!!","HATA",MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
 
         private void KullaniciIslemleri_Load_1(object sender, EventArgs e)

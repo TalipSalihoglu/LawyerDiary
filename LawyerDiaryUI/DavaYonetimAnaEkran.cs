@@ -75,7 +75,7 @@ namespace LawyerDiaryUI
             }
             catch (Exception E)
             {
-                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message,"Hata",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
            
         }
@@ -86,12 +86,12 @@ namespace LawyerDiaryUI
             {
                 int id = Convert.ToInt32(dataGrid.SelectedRows[0].Cells[0].Value);
                 _caseManager.Delete(_caseManager.Get(id));
-                MessageBox.Show("Silme işlemi başarıyla tamamlandı");
+                MessageBox.Show("Silme işlemi başarıyla tamamlandı","Bilgilendirme",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 dataGrid.DataSource = _caseManager.GetList();
             }
             catch (Exception E)
             {
-                MessageBox.Show("Lütfen silmek istediğiniz sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -162,7 +162,7 @@ namespace LawyerDiaryUI
             }
             else
             {
-                MessageBox.Show("Müvekkil adı boş bırakılamaz!");
+                MessageBox.Show("Müvekkil adı boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

@@ -73,7 +73,7 @@ namespace LawyerDiaryUI
             }
             catch (Exception E)
             {
-                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -83,12 +83,12 @@ namespace LawyerDiaryUI
             {
                 int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
                 _manager.Delete(_manager.Get(id));
-                MessageBox.Show("Silme işlemi başarıyla tamamlandı");
+                MessageBox.Show("Silme işlemi başarıyla tamamlandı", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dataGridView1.DataSource = _manager.GetList();
             }
             catch (Exception E)
             {
-                MessageBox.Show("Lütfen silmek istediğiniz sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+                MessageBox.Show("Lütfen silmek istediğiniz sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

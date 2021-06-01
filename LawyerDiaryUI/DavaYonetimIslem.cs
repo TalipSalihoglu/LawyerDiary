@@ -102,7 +102,7 @@ namespace LawyerDiaryUI
         {
             if (davaKonu.Text==""|| davaAcıklama.Text==""|| mahkeme_No.Text=="")
             {
-                MessageBox.Show("Boş alan bırakılamaz!!");
+                MessageBox.Show("Tüm alanlar doldurulmalıdır!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if(dava!=null)
@@ -128,7 +128,7 @@ namespace LawyerDiaryUI
                 };
                 _caseManager.Add(newCase);
             }
-            MessageBox.Show("İşlem başarıyla tamamlandı!!");
+            MessageBox.Show("İşlem başarıyla tamamlandı","Bilgilendirme ",MessageBoxButtons.OK, MessageBoxIcon.Information);
             DavaYonetimAnaEkran davaAnaEkran = new DavaYonetimAnaEkran();
             davaAnaEkran.Show();
             this.Hide();
@@ -139,16 +139,6 @@ namespace LawyerDiaryUI
 
             int courtNo =int.Parse(mahkeme_No.SelectedItem.ToString());
             Hakim_Adı.Text = _courtManager.GetJudgeWithCourtNo(courtNo);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
 
@@ -171,11 +161,6 @@ namespace LawyerDiaryUI
         private void mouseUpEvent(object sender, MouseEventArgs e)
         {
             mouseDown = false;
-        }
-
-        private void filtreliAramaBox_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

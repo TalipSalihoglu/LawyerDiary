@@ -62,7 +62,6 @@ namespace LawyerDiaryUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1122, 40);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);
@@ -115,7 +114,6 @@ namespace LawyerDiaryUI
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(140, 582);
             this.panel3.TabIndex = 1;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDownEvent);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMovementEvent);
             this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUpEvent);

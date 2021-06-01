@@ -94,7 +94,7 @@ namespace LawyerDiaryUI
             }
             catch (Exception E)
             {
-                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message,"HATA",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             
         }
@@ -110,7 +110,7 @@ namespace LawyerDiaryUI
             }
             catch (Exception E)
             {
-                MessageBox.Show("Lütfen silmek istediğiniz sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message);
+                MessageBox.Show("Lütfen silinecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
