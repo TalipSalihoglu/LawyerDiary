@@ -147,7 +147,7 @@ namespace LawyerDiaryUI
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(1213, -3);
+            this.button3.Location = new System.Drawing.Point(1191, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(39, 39);
             this.button3.TabIndex = 11;

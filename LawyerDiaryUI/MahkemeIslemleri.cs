@@ -12,8 +12,6 @@ using EntityLayer.Concrete;
 
 namespace LawyerDiaryUI
 {
-
- 
     public partial class MahkemeIslemleri : Form
     {
         CourtManager _courtManager = new CourtManager(new CourtDal());

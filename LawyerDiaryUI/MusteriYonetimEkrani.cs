@@ -74,47 +74,6 @@ namespace LawyerDiaryUI
             }
         }
 
-
-       
-        private void Ekle_Click(object sender, EventArgs e)
-        {
-            MusteriManager musteriManager = new MusteriManager();
-            musteriManager.Show();
-            this.Hide();
-        }
-
-        private void Guncelle_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
-                MusteriManager musteriManager = new MusteriManager(id);
-                musteriManager.Show();
-                this.Hide();
-            }
-            catch (Exception E)
-            {
-                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message,"HATA",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-            
-        }
-
-        private void Sil_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
-                Manager.Delete(Manager.Get(id));
-                MessageBox.Show("Silme işlemi başarıyla tamamlandı");
-                dataGridView1.DataSource = Manager.GetList();
-            }
-            catch (Exception E)
-            {
-                MessageBox.Show("Lütfen silinecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-        }
-
         bool mouseDown;
         private Point offset;
         private void mouseDownEvent(object sender, MouseEventArgs e)
@@ -149,6 +108,45 @@ namespace LawyerDiaryUI
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
-        
+
+        private void Ekle_Click_1(object sender, EventArgs e)
+        {
+            MusteriManager musteriManager = new MusteriManager();
+            musteriManager.Show();
+            this.Hide();
+        }
+
+        private void Sil_Click_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                Manager.Delete(Manager.Get(id));
+                MessageBox.Show("Silme işlemi başarıyla tamamlandı");
+                dataGridView1.DataSource = Manager.GetList();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("Lütfen silinecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void Guncelle_Click_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                MusteriManager musteriManager = new MusteriManager(id);
+                musteriManager.Show();
+                this.Hide();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("Lütfen güncellenecek sıranın tümünün seçili olduğundan emin olun\n\n\n" + E.Message, "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
@@ -14,6 +15,20 @@ namespace LawyerDiaryUI
 {
     public partial class MusteriManager : Form
     {
+        private Panel leftBorderBtn;
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+
+          int nLeftRect,
+          int nTopRect,
+          int nRightRect,
+          int nBottomRect,
+          int nWidthEllipse,
+          int nHeightEllipse
+
+          );
+
         ClientManager Manager = new ClientManager(new ClientDal());
         Client musteri = null;
         MainPage main = new MainPage();
@@ -21,11 +36,19 @@ namespace LawyerDiaryUI
         public MusteriManager()
         {
             InitializeComponent();
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(7, 60);
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 60, 60));
         }
         public MusteriManager(int id)
         {
             InitializeComponent();
-            musteri= Manager.Get(id);
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(7, 60);
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 60, 60));
+            musteri = Manager.Get(id);
         }
 
         private void MusteriManager_Load(object sender, EventArgs e)

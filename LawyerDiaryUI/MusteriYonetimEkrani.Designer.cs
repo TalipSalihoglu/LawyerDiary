@@ -29,7 +29,7 @@ namespace LawyerDiaryUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.solPanel = new System.Windows.Forms.Panel();
             this.cikis = new FontAwesome.Sharp.IconButton();
             this.anaMenuyeDon = new FontAwesome.Sharp.IconButton();
@@ -37,12 +37,12 @@ namespace LawyerDiaryUI
             this.button3 = new System.Windows.Forms.Button();
             this.musteriyonetimLabel = new System.Windows.Forms.Label();
             this.musteriAdi = new System.Windows.Forms.TextBox();
-            this.Guncelle = new FontAwesome.Sharp.IconButton();
-            this.Sil = new FontAwesome.Sharp.IconButton();
-            this.Ekle = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Ekle = new FontAwesome.Sharp.IconButton();
+            this.Sil = new FontAwesome.Sharp.IconButton();
+            this.Guncelle = new FontAwesome.Sharp.IconButton();
             this.solPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -152,54 +152,6 @@ namespace LawyerDiaryUI
             this.musteriAdi.TabIndex = 2;
             this.musteriAdi.TextChanged += new System.EventHandler(this.musteriAdi_TextChanged);
             // 
-            // Guncelle
-            // 
-            this.Guncelle.BackColor = System.Drawing.Color.Navy;
-            this.Guncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Guncelle.ForeColor = System.Drawing.Color.White;
-            this.Guncelle.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.Guncelle.IconColor = System.Drawing.Color.Navy;
-            this.Guncelle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Guncelle.Location = new System.Drawing.Point(530, 485);
-            this.Guncelle.Name = "Guncelle";
-            this.Guncelle.Size = new System.Drawing.Size(238, 34);
-            this.Guncelle.TabIndex = 3;
-            this.Guncelle.Text = "Müşteriyi Güncelle";
-            this.Guncelle.UseVisualStyleBackColor = false;
-            this.Guncelle.Click += new System.EventHandler(this.Guncelle_Click);
-            // 
-            // Sil
-            // 
-            this.Sil.BackColor = System.Drawing.Color.Navy;
-            this.Sil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Sil.ForeColor = System.Drawing.Color.White;
-            this.Sil.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.Sil.IconColor = System.Drawing.Color.Navy;
-            this.Sil.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Sil.Location = new System.Drawing.Point(849, 485);
-            this.Sil.Name = "Sil";
-            this.Sil.Size = new System.Drawing.Size(238, 34);
-            this.Sil.TabIndex = 4;
-            this.Sil.Text = "Müşteriyi Sil";
-            this.Sil.UseVisualStyleBackColor = false;
-            this.Sil.Click += new System.EventHandler(this.Sil_Click);
-            // 
-            // Ekle
-            // 
-            this.Ekle.BackColor = System.Drawing.Color.Navy;
-            this.Ekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ekle.ForeColor = System.Drawing.Color.White;
-            this.Ekle.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.Ekle.IconColor = System.Drawing.Color.Navy;
-            this.Ekle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Ekle.Location = new System.Drawing.Point(188, 485);
-            this.Ekle.Name = "Ekle";
-            this.Ekle.Size = new System.Drawing.Size(238, 34);
-            this.Ekle.TabIndex = 5;
-            this.Ekle.Text = "Yeni Müşteri Ekle";
-            this.Ekle.UseVisualStyleBackColor = false;
-            this.Ekle.Click += new System.EventHandler(this.Ekle_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -217,14 +169,14 @@ namespace LawyerDiaryUI
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
@@ -243,17 +195,73 @@ namespace LawyerDiaryUI
             this.panel2.Size = new System.Drawing.Size(887, 284);
             this.panel2.TabIndex = 8;
             // 
+            // Ekle
+            // 
+            this.Ekle.FlatAppearance.BorderSize = 0;
+            this.Ekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ekle.ForeColor = System.Drawing.Color.Navy;
+            this.Ekle.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.Ekle.IconColor = System.Drawing.Color.Navy;
+            this.Ekle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Ekle.Location = new System.Drawing.Point(326, 480);
+            this.Ekle.Name = "Ekle";
+            this.Ekle.Size = new System.Drawing.Size(146, 54);
+            this.Ekle.TabIndex = 11;
+            this.Ekle.Text = "Ekle";
+            this.Ekle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Ekle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Ekle.UseVisualStyleBackColor = true;
+            this.Ekle.Click += new System.EventHandler(this.Ekle_Click_1);
+            // 
+            // Sil
+            // 
+            this.Sil.FlatAppearance.BorderSize = 0;
+            this.Sil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sil.ForeColor = System.Drawing.Color.Navy;
+            this.Sil.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.Sil.IconColor = System.Drawing.Color.Navy;
+            this.Sil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Sil.Location = new System.Drawing.Point(852, 480);
+            this.Sil.Name = "Sil";
+            this.Sil.Size = new System.Drawing.Size(146, 54);
+            this.Sil.TabIndex = 13;
+            this.Sil.Text = "Sil";
+            this.Sil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Sil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Sil.UseVisualStyleBackColor = true;
+            this.Sil.Click += new System.EventHandler(this.Sil_Click_1);
+            // 
+            // Guncelle
+            // 
+            this.Guncelle.BackColor = System.Drawing.SystemColors.Control;
+            this.Guncelle.FlatAppearance.BorderSize = 0;
+            this.Guncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Guncelle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Guncelle.ForeColor = System.Drawing.Color.Navy;
+            this.Guncelle.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.Guncelle.IconColor = System.Drawing.Color.Navy;
+            this.Guncelle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Guncelle.Location = new System.Drawing.Point(572, 480);
+            this.Guncelle.Name = "Guncelle";
+            this.Guncelle.Size = new System.Drawing.Size(184, 59);
+            this.Guncelle.TabIndex = 12;
+            this.Guncelle.Text = "Güncelle";
+            this.Guncelle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Guncelle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Guncelle.UseVisualStyleBackColor = false;
+            this.Guncelle.Click += new System.EventHandler(this.Guncelle_Click_1);
+            // 
             // MusteriYonetimEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1170, 578);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Ekle);
             this.Controls.Add(this.Sil);
             this.Controls.Add(this.Guncelle);
+            this.Controls.Add(this.Ekle);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.musteriAdi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.solPanel);
@@ -277,15 +285,16 @@ namespace LawyerDiaryUI
         private System.Windows.Forms.Panel solPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox musteriAdi;
-        private FontAwesome.Sharp.IconButton Guncelle;
-        private FontAwesome.Sharp.IconButton Sil;
-        private FontAwesome.Sharp.IconButton Ekle;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private FontAwesome.Sharp.IconButton anaMenuyeDon;
         private FontAwesome.Sharp.IconButton cikis;
         private System.Windows.Forms.Label musteriyonetimLabel;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconButton Ekle;
+        private FontAwesome.Sharp.IconButton davaSilBtn;
+        private FontAwesome.Sharp.IconButton Guncelle;
+        private FontAwesome.Sharp.IconButton Sil;
     }
 }
