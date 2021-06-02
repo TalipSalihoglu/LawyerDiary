@@ -43,8 +43,6 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("AppointmentId");
 
-                    b.HasIndex("ClientId");
-
                     b.ToTable("Appointments");
                 });
 
@@ -68,8 +66,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("BillId");
-
-                    b.HasIndex("ClientId");
 
                     b.ToTable("Bills");
                 });
@@ -103,10 +99,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CaseId");
-
-                    b.HasIndex("ClientId");
-
-                    b.HasIndex("CourtId");
 
                     b.ToTable("Cases");
                 });
@@ -208,42 +200,9 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("ToDos");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concrete.Appointment", b =>
-                {
-                    b.HasOne("EntityLayer.Concrete.Client", "Client")
-                        .WithMany("Appointments")
-                        .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.Bill", b =>
-                {
-                    b.HasOne("EntityLayer.Concrete.Client", "Client")
-                        .WithMany("Bills")
-                        .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.Case", b =>
-                {
-                    b.HasOne("EntityLayer.Concrete.Client", "Client")
-                        .WithMany("Cases")
-                        .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EntityLayer.Concrete.Court", "Court")
-                        .WithMany("Cases")
-                        .HasForeignKey("CourtId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("EntityLayer.Concrete.Client", b =>
                 {
-                    b.HasOne("EntityLayer.Concrete.Lawyer", "Lawyer")
+                    b.HasOne("EntityLayer.Concrete.Lawyer", null)
                         .WithMany("Clients")
                         .HasForeignKey("LawyerId")
                         .OnDelete(DeleteBehavior.Cascade)

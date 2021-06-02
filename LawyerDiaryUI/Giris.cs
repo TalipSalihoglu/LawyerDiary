@@ -63,15 +63,15 @@ namespace LawyerDiaryUI
             panel7.BackColor = SystemColors.Control;
         }
 
-        private void passwordLogo_MouseDown(object sender, MouseEventArgs e)
-        {
-            passwordLogin.UseSystemPasswordChar = false;
-        }
+        //private void passwordLogo_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    passwordLogin.UseSystemPasswordChar = false;
+        //}
 
-        private void passwordLogo_MouseUp(object sender, MouseEventArgs e)
-        {
-            passwordLogin.UseSystemPasswordChar = true;
-        }
+        //private void passwordLogo_MouseUp(object sender, MouseEventArgs e)
+        //{
+        //    passwordLogin.UseSystemPasswordChar = true;
+        //}
 
         private void button3_Click(object sender, EventArgs e)
         {

@@ -282,8 +282,8 @@ namespace LawyerDiaryUI
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passwordLogo_MouseDown);
-            this.pictureBox4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.passwordLogo_MouseUp);
+            //this.pictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passwordLogo_MouseDown);
+            //this.pictureBox4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.passwordLogo_MouseUp);
             // 
             // panel7
             // 

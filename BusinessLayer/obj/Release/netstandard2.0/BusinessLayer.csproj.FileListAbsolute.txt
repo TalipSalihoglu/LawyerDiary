@@ -1,0 +1,14 @@
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\bin\Release\netstandard2.0\BusinessLayer.deps.json
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\bin\Release\netstandard2.0\BusinessLayer.dll
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\bin\Release\netstandard2.0\BusinessLayer.pdb
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\bin\Release\netstandard2.0\DataAccessLayer.dll
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\bin\Release\netstandard2.0\EntityLayer.dll
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\bin\Release\netstandard2.0\DataAccessLayer.pdb
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\bin\Release\netstandard2.0\EntityLayer.pdb
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.csproj.CopyComplete
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.dll
+C:\Users\EV\Desktop\LawyerDiary\LawyerDiary\BusinessLayer\obj\Release\netstandard2.0\BusinessLayer.pdb
